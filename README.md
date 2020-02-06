@@ -1,1 +1,1 @@
-Diskord: a discord clone
+# Diskord: a simple discord clone. Work in progress.
