@@ -1,4 +1,4 @@
-[Diskord](http://www.diskord.io "Diskord Homepage")
+[Live Site](http://www.diskord.io "Diskord Homepage")
 
 # Diskord: a simple discord clone. 
 
