@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   end
 
   def ensure_logged_in
-    render json: ["You need to be signed in to do that"], status: 404 unless current_member
+    render json: ["Sorry could not find what you were looking for"], status: 404 unless current_member
   end
 
   def login(member)
