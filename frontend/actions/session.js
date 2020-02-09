@@ -12,7 +12,7 @@ const logoutCurrentMember = () => ({
   type: LOGOUT_CURRENT_USER,
 });
 
-export const createNewMember = formMember => dispatch => postMember(formMember)
+export const signup = formMember => dispatch => postMember(formMember)
   .then(member => dispatch(receiveCurrentMember(member)));
 
 export const login = formMember => dispatch => postSession(formMember)
