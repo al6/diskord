@@ -1,11 +1,16 @@
 import React from 'react';
 import ReactDOM from "react-dom";
-import { postMember, postSession, deleteSession } from './util/session_api_util';
-
+import configureStore from "./store/store";
+import Root from "./components/root";
+import { signup, login, logout } from './actions/session_actions';
 document.addEventListener("DOMContentLoaded", () => {
+  const store = configureStore();
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
+  window.signup = signup;
+  window.login = login;
+  window.logout = logout;
+
   const root = document.getElementById("root");
-  window.signup = postMember;
-  window.login = postSession;
-  window.logout = deleteSession;
-  ReactDOM.render(<h1>Welcome to Diskord!</h1>, root);
+  ReactDOM.render(<Root store={store} />, root);
 });

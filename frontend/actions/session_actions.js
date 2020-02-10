@@ -17,14 +17,17 @@ const receiveErrors = errors => ({
   errors,
 });
 
-export const signup = formMember => dispatch => 
-  APIUtil.postMember(formMember)
-    .then(member => dispatch(receiveCurrentMember(member))), ;
+export const signup = member => dispatch => (
+  APIUtil.signup(member)
+    .then(member => dispatch(receiveCurrentMember(member)),
+    errors => dispatch(receiveErrors(errors))
+  ));
 
-export const login = formMember => dispatch => 
-  APIUtil.postSession(formMember)
-    .then(member => dispatch(receiveCurrentMember(member)));
+export const login = member => dispatch => APIUtil.login(member)
+    .then(member => dispatch(receiveCurrentMember(member)),
+    errors => dispatch(receiveErrors(errors)));
 
-export const logout = () => dispatch => 
-  APIUtil.deleteSession()
-    .then(() => dispatch(logoutCurrentMember()));
+export const logout = () => dispatch => (
+  APIUtil.logout()
+    .then(() => dispatch(logoutCurrentMember()),
+    errors => dispatch(receiveErrors(errors))));

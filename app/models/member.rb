@@ -30,7 +30,7 @@ class Member < ApplicationRecord
   private
 
   def ensure_session_token
-    self.session_token ||= self.generate_session_token
+    self.session_token ||= generate_session_token
   end
 
   def generate_session_token

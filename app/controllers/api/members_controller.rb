@@ -4,7 +4,7 @@ class Api::MembersController < ApplicationController
     if @member.save
       render :show
     else
-      render @member.errors.full_messages
+      render json: {errors: @member.errors.full_messages}, status: 409
     end
   end
 
