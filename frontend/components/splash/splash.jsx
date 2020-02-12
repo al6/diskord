@@ -51,80 +51,81 @@ class Splash extends React.Component {
             </main>
             <div className="splash-margin-container">
               <div className="splash-image-container">
-              <img className="flask" src="/app/assets/images/spawner-potion.svg"/>
-              <img className="android" src="/assets/splash/android.svg"/>
-              <img className="bomb" src="/assets/splash/bomb.svg"/>
-              <img className="monitor" src="/assets/splash/monitor.svg"/>
-              <img className="coin-left" src="/assets/splash/coin.svg"/>
-              <img className="iphone" src="/assets/splash/iphone.svg"/>
-              <img className="game-controller" src="/assets/splash/game-controller.svg"/>
-              {/* <img className="coin-top-middle" src="/assets/splash/coin.svg"/> */}
-              {/* <img className="filled-dot-above-monitor-and-laptop" src="/assets/splash/"/> */}
-              {/* <img className="game-cartridge" src="/assets/splash/game-cartridge.svg"/>
-              <img className="laptop" src="/assets/splash/laptop.svg"/>
-              <img className="headphones" src="/assets/splash/headphones.svg"/>
-              <img className="shield" src="/assets/splash/shield.svg"/>
-              <img className="filled-dot-left-of-android" src="/assets/splash/"/>
-              <img className="filled-dot-directly-above-iphone" src="/assets/splash/"/>
-              <img className="filled-dot-bottom-right" src="/assets/splash/"/>
-              <img className="filled-dot-top-right" src="/assets/splash/"/>
-              <img className="triangle-left" src="/assets/splash/"/>
-              <img className="triangle-top-middle" src="/assets/splash/"/> */}
-            </div>
+                <img className="flask" src="/app/assets/images/spawner-potion.svg"/>
+                <img className="android" src="/assets/splash/android.svg"/>
+                <img className="bomb" src="/assets/splash/bomb.svg"/>
+                <img className="monitor" src="/assets/splash/monitor.svg"/>
+                <img className="coin-left" src="/assets/splash/coin.svg"/>
+                <img className="iphone" src="/assets/splash/iphone.svg"/>
+                <img className="game-controller" src="/assets/splash/game-controller.svg"/>
+                <img className="coin-top-middle" src="/assets/splash/coin.svg"/>
+                <img className="filled-dot-above-monitor-and-laptop" src="/assets/splash/"/>
+                <img className="game-cartridge" src="/assets/splash/game-cartridge.svg"/>
+                <img className="laptop" src="/assets/splash/laptop.svg"/>
+                <img className="headphones" src="/assets/splash/headphones.svg"/>
+                <img className="shield" src="/assets/splash/shield.svg"/>
+                <img className="filled-dot-left-of-android" src="/assets/splash/"/>
+                <img className="filled-dot-directly-above-iphone" src="/assets/splash/"/>
+                <img className="filled-dot-bottom-right" src="/assets/splash/"/>
+                <img className="filled-dot-top-right" src="/assets/splash/"/>
+                <img className="triangle-left" src="/assets/splash/"/>
+                <img className="triangle-top-middle" src="/assets/splash/"/>
+              </div>
             </div>
           </div>
-          <div className="footer-main">
-            <div className="footer-links">
-                <div className="splash-footer-links-container">footer-links</div>
-                <div className="splash-footer-links-container">
-                  <div className="footer-links-category">
-                    Product
-                  </div>
-                  <div>Download</div>
-                  <div>Branding</div>
-                  <div>Nitro</div>
+        </div>
+        <div className="footer-main">
+          <div className="footer-links">
+              <div className="splash-footer-links-container">footer-links</div>
+              <div className="splash-footer-links-container">
+                <div className="footer-links-category">
+                  Product
                 </div>
-                <div className="splash-footer-links-container">
-                  <div className="footer-links-category">
-                    Developers
-                    </div> 
-                  <div>Sell Your Game</div> 
-                  <div>Rich Presence</div> 
-                  <div>Verification</div> 
-                  <div>Applications</div> 
-                  <div>Documentation</div> 
-                </div>
-                <div className="splash-footer-links-container">
-                  <div className="footer-links-category">
-                    Resources
-                  </div>
-                  <div>Help & Support</div>
-                  <div>Guidelines</div>
-                  <div>Feedback</div>
-                  <div>Terms</div>
-                  <div>Privacy</div>
-                  <div>Status</div>
-                </div>
-                <div className="splash-footer-links-container">
-                  <div className="footer-links-category">
-                    Company
-                  </div>
-                  <div>About</div>
-                  <div>Blog</div>
-                  <div>Jobs</div>
-                </div>
-                <div className="splash-footer-links-container">
-                  <div className="footer-links-category">
-                    More
-                  </div>
-                  <div>Partners</div>
-                  <div>HypeSquad</div>
-                  <div>Merch Store</div>
-                  <div>Press Inquiries</div>
-                  <div>Open Source</div>
-                </div>
+                <div>Download</div>
+                <div>Branding</div>
+                <div>Nitro</div>
               </div>
-            <footer className="splash-footer">
+              <div className="splash-footer-links-container">
+                <div className="footer-links-category">
+                  Developers
+                  </div> 
+                <div>Sell Your Game</div> 
+                <div>Rich Presence</div> 
+                <div>Verification</div> 
+                <div>Applications</div> 
+                <div>Documentation</div> 
+              </div>
+              <div className="splash-footer-links-container">
+                <div className="footer-links-category">
+                  Resources
+                </div>
+                <div>Help & Support</div>
+                <div>Guidelines</div>
+                <div>Feedback</div>
+                <div>Terms</div>
+                <div>Privacy</div>
+                <div>Status</div>
+              </div>
+              <div className="splash-footer-links-container">
+                <div className="footer-links-category">
+                  Company
+                </div>
+                <div>About</div>
+                <div>Blog</div>
+                <div>Jobs</div>
+              </div>
+              <div className="splash-footer-links-container">
+                <div className="footer-links-category">
+                  More
+                </div>
+                <div>Partners</div>
+                <div>HypeSquad</div>
+                <div>Merch Store</div>
+                <div>Press Inquiries</div>
+                <div>Open Source</div>
+              </div>
+            </div>
+          <footer className="splash-footer">
             <div className="left-splash-footer">
               <div className="splash-footer-header-main">Ready to try Discord? It's free!</div>
               <div className="splash-footer-header-sub">JOIN OVER 250 MILLION PLAYERS TODAY</div>
@@ -134,7 +135,6 @@ class Splash extends React.Component {
               <Link className="splash-footer-button" to={ currentMemberId ? `/channels/@me` : `/register`}><div className="splash-footer-button-text">{ currentMemberId ? "Open" : "Register" }</div></Link>
             </div>
           </footer>
-          </div>
         </div>
       </div>
     )
