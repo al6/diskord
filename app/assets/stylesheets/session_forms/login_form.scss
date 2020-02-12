@@ -1,3 +1,11 @@
+.login-page {
+  height: 100vh;
+  width: 100vw;
+  background: image-url("discord_background.jpeg");
+  display: flex;
+  align-items: center;
+}
+
 .login-container, .login-form {
   display: flex;
   flex-direction: column;
@@ -8,9 +16,6 @@
 }
 
 .login-container {
-  position: absolute;
-  top: 25%;
-  left: 25%;
   background: #36393F;
   margin: auto;
   border-radius: 5px;
