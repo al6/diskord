@@ -20,7 +20,28 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   font-size: 11px;
+}
+
+.splash-nav-button {
+  border-radius: 20px;
+  border: 2px solid white;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  min-width: 60px;
+  max-height: 20px;
+  font-size: 10px;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+
+.splash-nav-button-text {
+  min-height: 20px;
+  position: relative;
+  top: -5px;
 }
 
 .left-splash-nav {
@@ -38,17 +59,19 @@
   margin: 0 auto;
 }
 
-.splash-main-github-demo-buttons > button {
+.splash-main-github-demo-buttons > a {
   border-radius: 3px;
   border: none;
   display: flex;
   justify-content: center;
   padding: 10px;
   width: 150px;
+  font-size: 11px;
 }
 
 .splash-main-left-button {
   background: white;
+  color: #24242B;
 }
 
 .splash-main-right-button {
