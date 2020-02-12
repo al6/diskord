@@ -10,13 +10,14 @@ class Splash extends React.Component {
   handleDemoRequest(e){
     e.preventDefault();
     this.props.demologin();
-    //redirect to demo user channels
+    //redirect to demo user channels after demologin
   }
 
   render(){
     const {demologin} = this.props;
     return(
-      <div className="splash-container">
+      <div className="splash-background">
+        <div className="splash-container">
         <nav className="splash-nav"> 
           <div className="left-splash-nav">
             <div>Discord Logo</div>
@@ -106,6 +107,7 @@ class Splash extends React.Component {
             <button>Sign Up Now</button>
           </div>
         </footer>
+      </div>
       </div>
     )
   }
