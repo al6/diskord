@@ -50,7 +50,7 @@ class LoginForm extends React.Component {
               />
             </div>
             <div className="form-link-container">
-              <Link className="form-link" onClick={() => demologin()} to={``}>Forgot your password? Try the demo instead.</Link>
+              <Link className="form-link" onClick={() => demologin()} to={`/channels/@me`}>Forgot your password? Try the demo instead.</Link>
             </div>
             <button className="login-form-button">
               <div className="login-form-button-text">Login</div>
