@@ -1,3 +1,11 @@
+.session-page {
+  height: 100vh;
+  width: 100vw;
+  background: image-url("discord_background.jpeg");
+  display: flex;
+  align-items: center;
+}
+
 .form-link {
   color: #7289DA;
   font-size: 11px;

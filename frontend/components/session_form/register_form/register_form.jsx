@@ -19,7 +19,7 @@ class RegisterForm extends React.Component {
 
   render() {
     return(
-      <div className="register-background-container">
+        <div className="session-page">
         <div className="register-container">
         <h2 className="form-header">Create an account</h2>
         <form className="register-form" onSubmit={this.handleSubmit}>
@@ -54,7 +54,7 @@ class RegisterForm extends React.Component {
             <div className="register-form-button-text">Register</div>
           </button>
           <div className="form-link-container">
-            <Link className="form-link" to={``}>Already have an account?</Link>
+            <Link className="form-link" to={`/login`}>Already have an account?</Link>
           </div>
         </form>
       </div>

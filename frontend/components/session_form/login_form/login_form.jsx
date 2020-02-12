@@ -20,7 +20,7 @@ class LoginForm extends React.Component {
   render() {
     const {responseJSON} = this.props.errors
     return(
-      <div className="login-page">
+      <div className="session-page">
         <div className="login-container">
           <div className="form-top">
             <div className="form-header">Welcome back!</div>
@@ -58,7 +58,7 @@ class LoginForm extends React.Component {
               <div className="register-link-helper">
                 Need an account?
               </div> 
-              <Link className="form-link" to={``}>Register</Link>
+              <Link className="form-link" to={`/register`}>Register</Link>
             </div>
           </form>
         </div>
