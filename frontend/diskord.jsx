@@ -4,12 +4,19 @@ import configureStore from "./store/store";
 import Root from "./components/root";
 import { register, login, logout } from './actions/session_actions';
 document.addEventListener("DOMContentLoaded", () => {
-  const store = configureStore();
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
-  window.register = register;
-  window.login = login;
-  window.logout = logout;
+  let store;
+  if (window.currentMember) {
+    const preloadedState = {
+      entities: {
+        members: { [window.currentMember.id]: window.currentMember }
+      },
+      session: { id: window.currentMember.id }
+    };
+    store = configureStore(preloadedState);
+    delete window.currentMember;
+  } else {
+    store = configureStore();
+  }
   const root = document.getElementById("root");
   ReactDOM.render(<Root store={store} />, root);
 });
