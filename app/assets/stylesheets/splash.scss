@@ -27,7 +27,27 @@
 
 .splash-main-github-demo-buttons {
   display: flex;
+  justify-content: space-evenly;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.splash-main-github-demo-buttons > button {
+  border-radius: 3px;
+  border: none;
+  display: flex;
   justify-content: center;
+  padding: 10px;
+  width: 150px;
+}
+
+.splash-main-left-button {
+  background: white;
+}
+
+.splash-main-right-button {
+  background: #7289DA;
+  color: white;
 }
 
 .splash-main {

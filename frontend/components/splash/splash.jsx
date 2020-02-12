@@ -42,8 +42,8 @@ class Splash extends React.Component {
             <div className="splash-header-sub">All-in-one voice and text chat for gamers that's free, secure, and works on both your desktop and phone. Stop paying for TeamSpeak servers and hassling with Skype. Simplify your life.</div>
           </div>
           <div className="splash-main-github-demo-buttons">
-            <button>Public Github</button>
-            <button onClick={()=>demologin()}>Try the Demo</button>
+            <button className="splash-main-left-button">Public Github</button>
+            <button className="splash-main-right-button" onClick={()=>demologin()}>Try the Demo</button>
           </div>
         </main>
         <div className="footer-links">
