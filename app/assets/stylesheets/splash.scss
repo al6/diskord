@@ -1,13 +1,20 @@
 .splash-container {
   display: flex;
   flex-direction: column;
+  color: white;
+  font-family: 'Helvetica Neue';
   padding: 10px;
+  background: #25252B;
+  min-height: 98vh;
+  min-width: 90vw;
+  justify-content: space-between; 
 }
 
 .splash-nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  font-size: 11px;
 }
 
 .left-splash-nav {
@@ -27,9 +34,32 @@
   text-align: center;
 }
 
+.splash-header {
+  display: flex;
+  flex-direction: column;
+  max-width: 525px;
+  margin: 0 auto;
+}
+
+.splash-header-main {
+  font-size: 25px;
+  font-weight: 600;
+  padding: 20px 0;
+}
+
+.splash-header-sub {
+  font-size: 11px;
+  padding: 20px 0;
+}
+
 .footer-links {
   display: flex;
   justify-content: space-between;
+  font-size: 11px;
+}
+
+.footer-links-category {
+  padding-bottom: 20px;
 }
 
 .splash-footer-links-container {

@@ -14,7 +14,7 @@ class Splash extends React.Component {
   }
 
   render(){
-
+    const {demologin} = this.props;
     return(
       <div className="splash-container">
         <nav className="splash-nav"> 
@@ -38,24 +38,28 @@ class Splash extends React.Component {
         </nav>       
         <main className="splash-main">
           <div className="splash-header">
-            <div>It's time to ditch Skype and TeamSpeak.</div>
-            <div>All-in-one voice and text chat for gamers that's free, secure, and works on both your desktop and phone. Stop paying for TeamSpeak servers and hassling with Skype. Simplify your life.</div>
+            <div className="splash-header-main">It's time to ditch Skype and TeamSpeak.</div>
+            <div className="splash-header-sub">All-in-one voice and text chat for gamers that's free, secure, and works on both your desktop and phone. Stop paying for TeamSpeak servers and hassling with Skype. Simplify your life.</div>
           </div>
           <div className="splash-main-github-demo-buttons">
             <button>Public Github</button>
-            <button>Try the Demo</button>
+            <button onClick={()=>demologin()}>Try the Demo</button>
           </div>
         </main>
         <div className="footer-links">
           <div className="splash-footer-links-container">footer-links</div>
           <div className="splash-footer-links-container">
-            <div>Product</div>
+            <div className="footer-links-category">
+              Product
+            </div>
             <div>Download</div>
             <div>Branding</div>
             <div>Nitro</div>
           </div>
           <div className="splash-footer-links-container">
-            <div>Developers</div> 
+            <div className="footer-links-category">
+              Developers
+              </div> 
             <div>Sell Your Game</div> 
             <div>Rich Presence</div> 
             <div>Verification</div> 
@@ -63,7 +67,9 @@ class Splash extends React.Component {
             <div>Documentation</div> 
           </div>
           <div className="splash-footer-links-container">
-            <div>Resources</div>
+            <div className="footer-links-category">
+              Resources
+            </div>
             <div>Help & Support</div>
             <div>Guidelines</div>
             <div>Feedback</div>
@@ -72,13 +78,17 @@ class Splash extends React.Component {
             <div>Status</div>
           </div>
           <div className="splash-footer-links-container">
-            <div>Company</div>
+            <div className="footer-links-category">
+              Company
+            </div>
             <div>About</div>
             <div>Blog</div>
             <div>Jobs</div>
           </div>
           <div className="splash-footer-links-container">
-            <div>More</div>
+            <div className="footer-links-category">
+              More
+            </div>
             <div>Partners</div>
             <div>HypeSquad</div>
             <div>Merch Store</div>

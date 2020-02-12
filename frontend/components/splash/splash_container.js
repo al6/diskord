@@ -7,7 +7,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  demologin: () => dispatch(login({ email: 'demouser', password: 'password' }))
+  demologin: () => dispatch(login({ email: 'tommy@fakemail.com', password: 'hunter2' }))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Splash);
