@@ -51,7 +51,7 @@ class Splash extends React.Component {
             </main>
             <div className="splash-margin-container">
               <div className="splash-image-container">
-              <img className="flask" src="/assets/splash/spawner-potion.svg"/>
+              <img className="flask" src="/app/assets/images/spawner-potion.svg"/>
               <img className="android" src="/assets/splash/android.svg"/>
               <img className="bomb" src="/assets/splash/bomb.svg"/>
               <img className="monitor" src="/assets/splash/monitor.svg"/>
