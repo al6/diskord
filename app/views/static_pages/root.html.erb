@@ -1,1 +1,8 @@
+<% if logged_in? %>
+  <script type="text/javascript">
+    window.currentMember = 'placeholder'<%= #render(
+      #"api/members/member.json.jbuilder")
+      %>
+  </script>
+<% end %>
 <main id="root">If you see this, something broke on the page! Sorry :(</main>

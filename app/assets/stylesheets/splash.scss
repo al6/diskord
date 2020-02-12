@@ -1,0 +1,43 @@
+.splash-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.splash-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.left-splash-nav {
+  display: flex;
+}
+
+.right-splash-nav {
+  display: flex;
+}
+
+.splash-main-github-demo-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.splash-main {
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.splash-footer-links-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.splash-footer {
+  display: flex;
+  justify-content: space-between;
+}

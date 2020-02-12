@@ -6,8 +6,8 @@ class Member < ApplicationRecord
   after_initialize :ensure_session_token
   attr_reader :password
 
-  def self.find_by_credentials(username, password)
-    member = Member.find_by(username: username)
+  def self.find_by_credentials(email, password)
+    member = Member.find_by(email: email)
     return nil unless member
     member.is_password?(password) ? member : nil
   end

@@ -1,15 +1,15 @@
 class Api::SessionsController < ApplicationController
   def create
     @member = Member.find_by_credentials(
-      member_params[:username],
-      member_params[:password]
+      params[:member][:email],
+      params[:member][:password]
     )
 
     if @member
       login(@member)
       render "api/members/show"
     else
-      render json: { errors: "Invalid username/password combination" }, status: 401
+      render json: ["Invalid username/password combination"], status: 401
     end
   end
 
@@ -19,13 +19,7 @@ class Api::SessionsController < ApplicationController
       logout
       render json: {}
     else
-      render json: { errors: "Nobody signed in" }, status: 404
+      render json: ["Nobody signed in" ], status: 404
     end
-  end
-
-  private
-
-  def member_params
-    params.require(:member).permit(:username, :password)
   end
 end

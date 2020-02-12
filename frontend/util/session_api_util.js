@@ -1,4 +1,4 @@
-export const signup = member => (
+export const register = member => (
   $.ajax({
     method: 'POST',
     url: '/api/members',

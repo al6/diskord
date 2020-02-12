@@ -10,6 +10,6 @@ class Api::MembersController < ApplicationController
 
   private
   def member_params
-    params.require(:member).permit(:username, :password)
+    params.require(:member).permit(:email, :username, :password)
   end
 end
