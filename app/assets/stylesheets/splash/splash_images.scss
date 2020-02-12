@@ -1,0 +1,83 @@
+.splash-image-container {
+  align-items: flex-end;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-height: 1400px;
+  height: 638px;
+  width: 100%;
+}
+
+.splash-margin-container {
+  margin: 0 auto;
+}
+
+.flask {
+  max-height: 140px;
+}
+
+.android, .iphone {
+  max-height: 250px;
+  max-width: 135px;
+  z-index: 2;
+}
+
+.android {
+  right: 40px;
+}
+
+.iphone {
+  right: 175px;
+}
+
+.bomb {
+  max-height: 70px;
+  bottom: 300px;
+  right: 94px;
+  z-index: 0;
+}
+
+.coin-left, .coin-top-middle {
+  max-height: 70px;
+  max-width: 65px;
+  z-index: 2;
+}
+.coin-left {
+  bottom: 280px;
+  right: 130px;
+}
+
+.game-controller {
+  max-height: 105px;
+  max-width: 150px;
+  right: 170px;
+  z-index: 2;
+}
+
+.monitor {
+  max-height: 470px;
+  max-width: 579px;
+  left: 460px;
+  z-index: 1;
+}
+
+.coin-top-middle {
+  bottom: 515px;
+  right: 570px;
+}
+
+.laptop {
+  left: 575px;
+  z-index: 3;
+}
+
+.headphones {
+  bottom: 125px;
+  left: 868px;
+  max-height: 200px;
+  z-index: 4;
+}
+
+.shield {
+  left: 1100px;
+}

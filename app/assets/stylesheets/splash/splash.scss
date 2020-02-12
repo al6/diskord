@@ -1,3 +1,7 @@
+.landing-hero {
+  padding: px 50px;
+}
+
 .splash-background {
   background: #25252B;
   min-height: 98vh;
@@ -24,6 +28,19 @@
   font-size: 11px;
 }
 
+.splash-nav-item {
+  color: #CECCCE;
+  padding: 0 25px;
+}
+
+.github-button {
+  height: 20px;
+}
+
+.discord-logo {
+  max-height: 40px;
+}
+
 .splash-nav-button {
   border-radius: 20px;
   border: 2px solid white;
@@ -32,7 +49,7 @@
   justify-content: center;
   align-content: center;
   min-width: 60px;
-  max-height: 20px;
+  height: 20px;
   font-size: 10px;
   padding: 10px 0;
   box-sizing: border-box;
@@ -99,11 +116,13 @@
 .splash-header-sub {
   font-size: 11px;
   padding: 20px 0;
+  color: #A8A9AB;
 }
 
 .footer-links {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 50px;
   font-size: 11px;
 }
 
@@ -119,4 +138,27 @@
 .splash-footer {
   display: flex;
   justify-content: space-between;
+}
+
+.splash-footer-button {
+  border-radius: 3px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  width: 100px;
+  height: auto;
+  font-size: 11px;
+  background: #7289DA;
+  color: white;
+}
+
+.splash-footer-header-sub {
+  color: #A8A8AB;
+  font-size: 11px;
+  padding-top: 5px;
+}
+
+.footer-main {
+  padding: 30px 160px;
 }
