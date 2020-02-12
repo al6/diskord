@@ -14,7 +14,7 @@ class Splash extends React.Component {
   }
 
   render(){
-    const {demologin} = this.props;
+    const {demologin, currentMemberId} = this.props;
     return(
       <div className="splash-background">
         <div className="splash-container">
@@ -32,7 +32,7 @@ class Splash extends React.Component {
             <div>twitter</div>
             <div>facebook</div>
             <div>instagram</div>
-            <div>login/open button</div>
+            <Link className="app-button" to={ currentMemberId ? `/channels/@me` : `/login`}>{ currentMemberId ? "Open" : "Login" }</Link>
             <div>vertical bar</div>
             <div>language change button</div>
           </div>

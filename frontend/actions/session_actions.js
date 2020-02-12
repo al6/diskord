@@ -32,4 +32,4 @@ export const logout = () => dispatch => (
     .then(() => dispatch(logoutCurrentMember()),
     errors => dispatch(receiveErrors(errors))));
 
-export const demologin = () => dispatch(login({ email: 'tommy@fakemail.com', password: 'hunter2' }))
+export const demologin = () => dispatch => dispatch(login({ email: 'tommy@fakemail.com', password: 'hunter2' }))

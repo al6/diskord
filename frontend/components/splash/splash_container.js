@@ -3,7 +3,7 @@ import Splash from './splash';
 import { demologin } from '../../actions/session_actions';
 
 const mapStateToProps = state => ({
-  currentUserId: state.session.id
+  currentMemberId: state.session.id
 });
 
 const mapDispatchToProps = dispatch => ({
