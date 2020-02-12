@@ -29,12 +29,12 @@ class Splash extends React.Component {
             <div>Support</div>
           </div>
           <div className="right-splash-nav">
-            <div>twitter</div>
-            <div>facebook</div>
-            <div>instagram</div>
-            <Link className="app-button" to={ currentMemberId ? `/channels/@me` : `/login`}>{ currentMemberId ? "Open" : "Login" }</Link>
-            <div>vertical bar</div>
-            <div>language change button</div>
+            <div>github</div>
+            <div>linkedin</div>
+            <div>angelist</div>
+            <Link className="splash-nav-button" to={ currentMemberId ? `/channels/@me` : `/login`}><div className="splash-nav-button-text">{ currentMemberId ? "Open" : "Login" }</div></Link>
+            <div>verticalBar</div>
+            <div>languageChangeButton</div>
           </div>
         </nav>       
         <main className="splash-main">
@@ -43,8 +43,8 @@ class Splash extends React.Component {
             <div className="splash-header-sub">All-in-one voice and text chat for gamers that's free, secure, and works on both your desktop and phone. Stop paying for TeamSpeak servers and hassling with Skype. Simplify your life.</div>
           </div>
           <div className="splash-main-github-demo-buttons">
-            <button className="splash-main-left-button">Public Github</button>
-            <button className="splash-main-right-button" onClick={()=>demologin()}>Try the Demo</button>
+            <Link to={`/register`} className="splash-main-left-button">Sign Up</Link>
+            <Link to={`/channels/@me`} className="splash-main-right-button" onClick={()=>demologin()}>Try the Demo</Link>
           </div>
         </main>
         <div className="footer-links">
