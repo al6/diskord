@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { demologin } from '../../../actions/session_actions';
 
 class LoginForm extends React.Component {
   constructor(props){
@@ -49,7 +50,7 @@ class LoginForm extends React.Component {
               />
             </div>
             <div className="form-link-container">
-              <Link className="form-link" to={``}>Forgot your password?</Link>
+              <Link className="form-link" onClick={() => demologin()} to={``}>Forgot your password? Try the demo instead.</Link>
             </div>
             <button className="login-form-button">
               <div className="login-form-button-text">Login</div>

@@ -31,3 +31,5 @@ export const logout = () => dispatch => (
   APIUtil.logout()
     .then(() => dispatch(logoutCurrentMember()),
     errors => dispatch(receiveErrors(errors))));
+
+export const demologin = () => dispatch(login({ email: 'tommy@fakemail.com', password: 'hunter2' }))
