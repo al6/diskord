@@ -19,6 +19,7 @@ class LoginForm extends React.Component {
   }
 
   render() {
+    const { removeErrors } = this.props;
     let responseJSON = Object.values(this.props.errors);
     let error;
     responseJSON.length > 0 ? error = responseJSON[0] : responseJSON = undefined;
@@ -61,7 +62,7 @@ class LoginForm extends React.Component {
               <div className="register-link-helper">
                 Need an account?
               </div> 
-              <Link className="form-link" to={`/register`}>Register</Link>
+              <Link className="form-link" to={`/register`} onClick={()=>removeErrors()}>Register</Link>
             </div>
           </form>
         </div>
