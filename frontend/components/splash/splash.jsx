@@ -19,7 +19,7 @@ class Splash extends React.Component {
         <div className="splash-container">
           <nav className="splash-nav"> 
             <div className="left-splash-nav">
-              <img className="discord-logo" src="/assets/splash/discord-logo.svg"/>
+              <img className="diskord-logo" src="/assets/splash/diskord-logo.svg"/>
               <div className="splash-nav-item">Download</div>
               <div className="splash-nav-item">Nitro</div>
               <div className="splash-nav-item">Jobs</div>
@@ -123,7 +123,7 @@ class Splash extends React.Component {
             </div>
           <footer className="splash-footer">
             <div className="left-splash-footer">
-              <div className="splash-footer-header-main">Ready to try Discord? It's free!</div>
+              <div className="splash-footer-header-main">Ready to try Diskord? It's free!</div>
               <div className="splash-footer-header-sub">JOIN OVER 250 MILLION PLAYERS TODAY</div>
             </div>
 
