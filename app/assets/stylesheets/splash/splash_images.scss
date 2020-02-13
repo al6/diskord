@@ -13,71 +13,94 @@
 }
 
 .flask {
+  position: relative;
+  left: 230px;
   max-height: 140px;
 }
 
 .android, .iphone {
+  position: relative;
   max-height: 250px;
   max-width: 135px;
   z-index: 2;
 }
 
 .android {
-  right: 40px;
+  left: 190px;
 }
 
 .iphone {
-  right: 175px;
+  left: 200px;
 }
 
 .bomb {
+  position: relative;
   max-height: 70px;
   bottom: 300px;
-  right: 94px;
+  right: 150px;
   z-index: 0;
 }
 
 .coin-left, .coin-top-middle {
+  position: relative;
   max-height: 70px;
   max-width: 65px;
   z-index: 2;
 }
+
 .coin-left {
   bottom: 280px;
-  right: 130px;
-}
-
-.game-controller {
-  max-height: 105px;
-  max-width: 150px;
-  right: 170px;
-  z-index: 2;
-}
-
-.monitor {
-  max-height: 470px;
-  max-width: 579px;
-  left: 460px;
-  z-index: 1;
+  right: 190px;
 }
 
 .coin-top-middle {
   bottom: 515px;
-  right: 570px;
+  left: 255px;
+}
+
+.game-controller {
+  position: relative;
+  max-height: 105px;
+  max-width: 150px;
+  left: 205px;
+  z-index: 2;
+}
+
+.monitor {
+  position: absolute;
+  max-height: 470px;
+  max-width: 579px;
+  z-index: 1;
 }
 
 .laptop {
-  left: 575px;
+  position: relative;
   z-index: 3;
 }
 
+.game-cartridge {
+  position: relative;
+  bottom: 385px;
+  left: 350px;
+}
+
 .headphones {
-  bottom: 125px;
-  left: 868px;
+  position: relative;
+  right: 313px;
+  bottom: 170px;
   max-height: 200px;
   z-index: 4;
 }
 
 .shield {
-  left: 1100px;
+  position: relative;
+  right: 280px;
+}
+
+.filled-dot-left-of-android, .filled-dot-directly-above-iphone, .filled-dot-bottom-right, .filled-dot-top-right, .filled-dot-above-monitor-and-laptop {
+  position: absolute;
+}
+
+.triangle-left, .triangle-top-middle {
+  position: absolute;
 }
