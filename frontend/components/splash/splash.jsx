@@ -130,7 +130,7 @@ class Splash extends React.Component {
             </div>
 
             <div className="right-splash-footer">
-              <Link className="splash-footer-button" to={ currentMemberId ? `/channels/@me` : `/register`}><div className="splash-footer-button-text">{ currentMemberId ? "Open" : "Register" }</div></Link>
+              <Link className="splash-footer-button" to={ currentMemberId ? `/channels/@me` : `/register`}><div className="splash-footer-button-text">{ currentMemberId ? "Open" : "Register Now" }</div></Link>
             </div>
           </footer>
         </div>
