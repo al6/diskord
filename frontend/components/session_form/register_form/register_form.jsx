@@ -18,6 +18,7 @@ class RegisterForm extends React.Component {
   }
 
   render() {
+    const {removeErrors} = this.props;
     let responseJSON = Object.values(this.props.errors);
     let errors;
     responseJSON.length > 0 ? errors = responseJSON.join(", ") : responseJSON = undefined;
@@ -60,7 +61,7 @@ class RegisterForm extends React.Component {
             <div className="register-form-button-text">Register</div>
           </button>
           <div className="form-link-container">
-            <Link className="form-link" to={`/login`}>Already have an account?</Link>
+            <Link className="form-link" to={`/login`} onClick={()=>removeErrors()}>Already have an account?</Link>
           </div>
         </form>
       </div>
