@@ -33,25 +33,33 @@
   padding: 0 25px;
 }
 
-.github-button {
-  height: 20px;
+.network-buttons {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
 }
 
-.discord-logo {
-  max-height: 40px;
+.network-buttons > img {
+  height: 16px;
+}
+
+.diskord-logo {
+  height: 16px;
 }
 
 .splash-nav-button {
   border-radius: 20px;
-  border: 2px solid white;
-  color: white;
+  border: 2px solid #BDBDBE;
+  color: #BDBDBE;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-content: center;
+  text-align: center;
   min-width: 60px;
-  height: 20px;
+  height: 32px;
   font-size: 10px;
-  padding: 10px 0;
+  padding: 10px;
   box-sizing: border-box;
 }
 
@@ -67,6 +75,9 @@
 
 .right-splash-nav {
   display: flex;
+  justify-content: space-between;
+  max-width: 180px;
+  min-width: 180px;
 }
 
 .splash-main-github-demo-buttons {
@@ -172,4 +183,8 @@
 
 .footer-main {
   padding: 30px 160px;
+}
+
+.triangle {
+  color: rgba(0,0,0,.1)
 }

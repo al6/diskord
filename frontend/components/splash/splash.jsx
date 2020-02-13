@@ -19,7 +19,7 @@ class Splash extends React.Component {
         <div className="splash-container">
           <nav className="splash-nav"> 
             <div className="left-splash-nav">
-              <img className="diskord-logo" src="/assets/splash/diskord-logo.svg"/>
+              <img className="diskord-logo" src={diskordLogo}/>
               <div className="splash-nav-item">Download</div>
               <div className="splash-nav-item">Nitro</div>
               <div className="splash-nav-item">Jobs</div>
@@ -28,10 +28,12 @@ class Splash extends React.Component {
               <div className="splash-nav-item">Support</div>
             </div>
             <div className="right-splash-nav">
-              <img className="github-button" src="/assets/splash/GitHub-Mark-32px.png"/>
-              <div className="splash-nav-item">linkedin</div>
-              <div className="splash-nav-item">angelist</div>
-              <Link className="splash-nav-button" to={ currentMemberId ? `/channels/@me` : `/login`}><div className="splash-nav-button-text">{ currentMemberId ? "Open" : "Login" }</div></Link>
+              <div className="network-buttons">
+                <img className="github-button" src={githubLogo}/>
+                <img className="linkedin-button" src={linkedinLogo}/>
+                <img className="angellist-button" src={angellistLogo}/>
+              </div>
+              <Link className="splash-nav-button" to={ currentMemberId ? `/channels/@me` : `/login`}>{ currentMemberId ? "Open" : "Login" }</Link>
             </div>
           </nav>       
           <div className="landing-hero">
@@ -47,25 +49,32 @@ class Splash extends React.Component {
             </main>
             <div className="splash-margin-container">
               <div className="splash-image-container">
-                <img className="flask" src="/app/assets/images/spawner-potion.svg"/>
-                <img className="android" src="/assets/splash/android.svg"/>
-                <img className="bomb" src="/assets/splash/bomb.svg"/>
-                <img className="monitor" src="/assets/splash/monitor.svg"/>
-                <img className="coin-left" src="/assets/splash/coin.svg"/>
-                <img className="iphone" src="/assets/splash/iphone.svg"/>
-                <img className="game-controller" src="/assets/splash/game-controller.svg"/>
-                <img className="coin-top-middle" src="/assets/splash/coin.svg"/>
-                <img className="filled-dot-above-monitor-and-laptop" src="/assets/splash/"/>
-                <img className="game-cartridge" src="/assets/splash/game-cartridge.svg"/>
-                <img className="laptop" src="/assets/splash/laptop.svg"/>
-                <img className="headphones" src="/assets/splash/headphones.svg"/>
-                <img className="shield" src="/assets/splash/shield.svg"/>
-                <img className="filled-dot-left-of-android" src="/assets/splash/"/>
-                <img className="filled-dot-directly-above-iphone" src="/assets/splash/"/>
-                <img className="filled-dot-bottom-right" src="/assets/splash/"/>
-                <img className="filled-dot-top-right" src="/assets/splash/"/>
-                <img className="triangle-left" src="/assets/splash/"/>
-                <img className="triangle-top-middle" src="/assets/splash/"/>
+                {/* left of monitor */}
+                <img className="x" src={x}/>
+                <img className="triangle" src={triangle}/>
+                <img className="dot" src={dot}/>
+                <img className="flask" src={flask}/>
+                <img className="android" src={android}/>
+                <img className="iphone" src={iphone}/>
+                <img className="game-controller" src={controller}/>
+                <img className="bomb" src={bomb}/>
+                <img className="coin-left" src={coin}/>
+
+                <img className="monitor" src={monitor}/>
+
+                {/* right of monitor */}
+                <img className="coin-top-middle" src={coin}/>
+                <img className="filled-dot-above-monitor-and-laptop" src={dot}/>
+                <img className="game-cartridge" src={cartridge}/>
+                <img className="laptop" src={laptop}/>
+                <img className="headphones" src={headphones}/>
+                <img className="shield" src={shield}/>
+                <img className="filled-dot-left-of-android" src={dot}/>
+                <img className="filled-dot-directly-above-iphone" src={dot}/>
+                <img className="filled-dot-bottom-right" src={dot}/>
+                <img className="filled-dot-top-right" src={dot}/>
+                <img className="triangle-left" src={triangle}/>
+                <img className="triangle-top-middle" src={triangle}/>
               </div>
             </div>
           </div>
