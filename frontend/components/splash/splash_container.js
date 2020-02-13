@@ -1,12 +1,13 @@
 import { connect } from 'react-redux';
 import Splash from './splash';
-import { demologin } from '../../actions/session_actions';
+import { demologin, removeErrors } from '../../actions/session_actions';
 
 const mapStateToProps = state => ({
   currentMemberId: state.session.id
 });
 
 const mapDispatchToProps = dispatch => ({
+  removeErrors: () => dispatch(removeErrors()),
   demologin: () => dispatch(demologin())
 });
 

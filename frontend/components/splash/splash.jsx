@@ -13,7 +13,7 @@ class Splash extends React.Component {
   }
 
   render(){
-    const {demologin, currentMemberId} = this.props;
+    const {demologin, currentMemberId, removeErrors} = this.props;
     return(
       <div className="splash-background">
         <div className="splash-container">
@@ -33,7 +33,7 @@ class Splash extends React.Component {
                 <img className="linkedin-button" src={linkedinLogo}/>
                 <img className="angellist-button" src={angellistLogo}/>
               </div>
-              <Link className="splash-nav-button" to={ currentMemberId ? `/channels/@me` : `/login`}>{ currentMemberId ? "Open" : "Login" }</Link>
+              <Link className="splash-nav-button" to={ currentMemberId ? `/channels/@me` : `/login`} onClick={() => removeErrors()}>{ currentMemberId ? "Open" : "Login" }</Link>
             </div>
           </nav>       
           <div className="landing-hero">
@@ -43,8 +43,8 @@ class Splash extends React.Component {
               <div className="splash-header-sub">All-in-one voice and text chat for gamers that's free, secure, and works on both your desktop and phone. Stop paying for TeamSpeak servers and hassling with Skype. Simplify your life.</div>
             </div>
               <div className="splash-main-github-demo-buttons">
-              <Link to={`/register`} className="splash-main-left-button">Sign Up</Link>
-              <Link to={`/channels/@me`} className="splash-main-right-button" onClick={()=>demologin()}>Try the Demo</Link>
+              <Link to={`/register`} className="splash-main-left-button" onClick={() => removeErrors()}>Sign Up</Link>
+              <Link to={`/channels/@me`} className="splash-main-right-button" onClick={() => removeErrors(), ()=>demologin()}>Try the Demo</Link>
             </div>
             </main>
             <div className="splash-margin-container">
@@ -137,7 +137,7 @@ class Splash extends React.Component {
             </div>
 
             <div className="right-splash-footer">
-              <Link className="splash-footer-button" to={ currentMemberId ? `/channels/@me` : `/register`}><div className="splash-footer-button-text">{ currentMemberId ? "Open" : "Register Now" }</div></Link>
+              <Link className="splash-footer-button" to={ currentMemberId ? `/channels/@me` : `/register`} onClick={() => removeErrors()}><div className="splash-footer-button-text">{ currentMemberId ? "Open" : "Register Now" }</div></Link>
             </div>
           </footer>
         </div>
