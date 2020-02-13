@@ -23,7 +23,6 @@ class LoginForm extends React.Component {
     if(responseJSON) {
       errors = responseJSON.map(error => `${error}`)
     }
-    debugger
     return(
       <div className="session-page">
         <div className="login-container">
