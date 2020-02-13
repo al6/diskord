@@ -18,33 +18,39 @@ class RegisterForm extends React.Component {
   }
 
   render() {
+    let responseJSON = Object.values(this.props.errors);
+    let error;
+    responseJSON.length > 0 ? error = responseJSON[0] : responseJSON = undefined;
     return(
         <div className="session-page">
         <div className="register-container">
         <h2 className="form-header">Create an account</h2>
         <form className="register-form" onSubmit={this.handleSubmit}>
           <div className="email-container">
-            <div className="form-input-label">EMAIL</div>
+          <div className="input-label-and-errors">
+                <div className={ responseJSON ? "errors-form-input-label" : "form-input-label"}>EMAIL</div>
+                <div className="login-error">{error}</div>
+              </div>
             <input 
-              className="form-input"
+              className={ responseJSON ? "error-form-input" : "form-input" }
               type="text"
               onChange={this.update('email')}
               value={this.state.email}
             />
           </div>
           <div className="username-input-container">
-            <div className="form-input-label">USERNAME</div>
+            <div className={ responseJSON ? "errors-form-input-label" : "form-input-label"}>USERNAME</div>              
             <input 
-              className="form-input"
+              className={ responseJSON ? "error-form-input" : "form-input" }
               type="text"
               onChange={this.update('username')}
               value={this.state.username}
             />
           </div>
-          <div className="password-input-container">
-            <div className="form-input-label">PASSWORD</div>
+          <div className="password-container">
+            <div className={ responseJSON ? "errors-form-input-label" : "form-input-label"}>PASSWORD</div>
             <input 
-              className="form-input"
+              className={ responseJSON ? "error-form-input" : "form-input" }
               type="password" 
               onChange={this.update('password')}
               value={this.state.password}
