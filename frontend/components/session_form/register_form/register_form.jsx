@@ -19,8 +19,8 @@ class RegisterForm extends React.Component {
 
   render() {
     let responseJSON = Object.values(this.props.errors);
-    let error;
-    responseJSON.length > 0 ? error = responseJSON[0] : responseJSON = undefined;
+    let errors;
+    responseJSON.length > 0 ? errors = responseJSON.join(", ") : responseJSON = undefined;
     return(
         <div className="session-page">
         <div className="register-container">
@@ -29,7 +29,7 @@ class RegisterForm extends React.Component {
           <div className="email-container">
           <div className="input-label-and-errors">
                 <div className={ responseJSON ? "errors-form-input-label" : "form-input-label"}>EMAIL</div>
-                <div className="login-error">{error}</div>
+                <div className="login-error">{errors}</div>
               </div>
             <input 
               className={ responseJSON ? "error-form-input" : "form-input" }
