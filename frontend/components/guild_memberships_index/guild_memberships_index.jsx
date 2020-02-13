@@ -3,7 +3,7 @@ import React from 'react';
 class GuildMembershipsIndex extends React.Component {
   render(){
     return(
-      <div>
+      <div className="GuildMembershipsIndexComponent">
         this is the guild memberships index
       </div>  
     )
