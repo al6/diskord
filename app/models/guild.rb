@@ -1,5 +1,5 @@
 class Guild < ApplicationRecord
-  validates :name, :owner_id, uniqueness: true
+  validates :name, uniqueness: true
   validates :name, :owner_id, presence: true
 
   belongs_to :member,

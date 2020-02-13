@@ -1,6 +1,7 @@
 class Api::GuildMembershipsController < ApplicationController
   def create
-    @guild_membership = GuildMembership.new(guild_membership_params)
+    @guild = Guild.find_by(name: guild_membership_params[:name])
+    @guild_membership = GuildMembership.new(member_id: guild_membership_params[:id], guild_id: @guild.id)
     if @guild_membership.save
       render :show
     else
@@ -24,6 +25,6 @@ class Api::GuildMembershipsController < ApplicationController
 
   private
   def guild_membership_params
-    require(:guild_membership).permimt(:member_id, :guild_id)
+    require(:guild_membership).permit(:member_id, :name)
   end
 end
