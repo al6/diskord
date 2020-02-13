@@ -4,7 +4,6 @@ class Api::SessionsController < ApplicationController
       params[:member][:email],
       params[:member][:password]
     )
-
     if @member
       login(@member)
       render "api/members/show"
@@ -17,7 +16,7 @@ class Api::SessionsController < ApplicationController
     @member = current_member
     if @member
       logout
-      render json: {}
+      render json: []
     else
       render json: ["Nobody signed in" ], status: 404
     end
