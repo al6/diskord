@@ -29,6 +29,10 @@
   cursor: pointer;
 }
 
+.login-form-button:focus {
+  outline: none;
+}
+
 .excited {
   display: flex;
   justify-content: center;

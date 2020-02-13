@@ -29,6 +29,10 @@
   cursor: pointer;
 }
 
+.register-form-button:focus {
+  outline: none;
+}
+
 .register-link-helper {
   color: #6A6D74;
   display: inline;
