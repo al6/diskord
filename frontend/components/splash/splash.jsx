@@ -10,7 +10,6 @@ class Splash extends React.Component {
   handleDemoRequest(e){
     e.preventDefault();
     this.props.demologin();
-    //redirect to demo user channels after demologin
   }
 
   render(){
