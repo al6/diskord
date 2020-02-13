@@ -19,7 +19,7 @@ class LoginForm extends React.Component {
   }
 
   render() {
-    const { removeErrors } = this.props;
+    const { removeErrors, demologin } = this.props;
     let responseJSON = Object.values(this.props.errors);
     let error;
     responseJSON.length > 0 ? error = responseJSON[0] : responseJSON = undefined;
@@ -53,7 +53,7 @@ class LoginForm extends React.Component {
               />
             </div>
             <div className="form-link-container">
-              <Link className="form-link" onClick={() => demologin()} to={`/channels/@me`}>Forgot your password? Try the demo instead.</Link>
+              <Link className="form-link" onClick={() => demologin()} to={`/login`}>Forgot your password? Try the demo instead.</Link>
             </div>
             <button className="login-form-button">
               <div className="login-form-button-text">Login</div>
