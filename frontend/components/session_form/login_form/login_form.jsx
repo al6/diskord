@@ -31,7 +31,7 @@ class LoginForm extends React.Component {
             <div className="email-container">
               <div className="input-label-and-errors">
                 <div className={ responseJSON ? "errors-form-input-label" : "form-input-label"}>EMAIL</div>
-                {/* <div className="login-error">{responseJSON}</div> */}
+                <div className="login-error">{responseJSON}</div>
               </div>
               <input 
                 className={ responseJSON ? "error-form-input" : "form-input" }
