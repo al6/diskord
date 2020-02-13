@@ -1,0 +1,1 @@
+json.extract! @guild, :id, :name, :owner_id
