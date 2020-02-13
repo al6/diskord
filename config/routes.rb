@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     resources :members, only: [:create]
     resource :session, only: [:create, :destroy]
     resources :guilds, only: [:index, :create, :destroy]
-    resources :guild_memberships, only: [:index, :create, :destroy]
+    resources :guild_memberships, only: [:show, :create, :destroy]
     resources :channels, only: [:get, :post, :delete]
     resources :messages, only: [:index, :create, :destroy]
   end
