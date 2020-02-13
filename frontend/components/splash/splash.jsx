@@ -34,8 +34,6 @@ class Splash extends React.Component {
               <div className="splash-nav-item">linkedin</div>
               <div className="splash-nav-item">angelist</div>
               <Link className="splash-nav-button" to={ currentMemberId ? `/channels/@me` : `/login`}><div className="splash-nav-button-text">{ currentMemberId ? "Open" : "Login" }</div></Link>
-              <div className="splash-nav-item">verticalBar</div>
-              <div className="splash-nav-item">languageChangeButton</div>
             </div>
           </nav>       
           <div className="landing-hero">
