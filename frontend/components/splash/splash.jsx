@@ -20,7 +20,7 @@ class Splash extends React.Component {
         <div className="splash-container">
           <nav className="splash-nav"> 
             <div className="left-splash-nav">
-              {/* <img className="discord-logo" src="/assets/splash/discord-logo.svg"/> */}
+              <img className="discord-logo" src="/assets/splash/discord-logo.svg"/>
               <div className="splash-nav-item">Download</div>
               <div className="splash-nav-item">Nitro</div>
               <div className="splash-nav-item">Jobs</div>
@@ -29,7 +29,6 @@ class Splash extends React.Component {
               <div className="splash-nav-item">Support</div>
             </div>
             <div className="right-splash-nav">
-              {/* <div className="splash-nav-item">github</div> */}
               <img className="github-button" src="/assets/splash/GitHub-Mark-32px.png"/>
               <div className="splash-nav-item">linkedin</div>
               <div className="splash-nav-item">angelist</div>
