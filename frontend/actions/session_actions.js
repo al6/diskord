@@ -24,16 +24,18 @@ export const removeErrors = () => ({
 export const register = member => dispatch => (
   APIUtil.register(member)
     .then(member => dispatch(receiveCurrentMember(member)),
-    errors => dispatch(receiveErrors(errors))
+    errors => dispatch(receiveErrors(errors.responseJSON))
   ));
 
-export const login = member => dispatch => APIUtil.login(member)
+export const login = member => dispatch => {
+  return APIUtil.login(member)
     .then(member => dispatch(receiveCurrentMember(member)),
-    errors => dispatch(receiveErrors(errors)));
+    errors => dispatch(receiveErrors(errors.responseJSON)))
+};
 
 export const logout = () => dispatch => (
   APIUtil.logout()
     .then(() => dispatch(logoutCurrentMember()),
-    errors => dispatch(receiveErrors(errors))));
+    errors => dispatch(receiveErrors(errors.responseJSON))));
 
 export const demologin = () => dispatch => dispatch(login({ email: 'tommy@fakemail.com', password: 'hunter2' }))
