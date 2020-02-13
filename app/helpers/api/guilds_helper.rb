@@ -1,0 +1,2 @@
+module Api::GuildsHelper
+end

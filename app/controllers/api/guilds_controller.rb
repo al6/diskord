@@ -1,4 +1,4 @@
-class GuildsController < ApplicationController
+class Api::GuildsController < ApplicationController
   def index
     @guilds = Guild.all
     render :index
@@ -33,3 +33,4 @@ class GuildsController < ApplicationController
     params.require(:guild).permit(:name, :owner_id)
   end
 end
+
