@@ -20,9 +20,6 @@ class LoginForm extends React.Component {
 
   render() {
     const {responseJSON} = this.props.errors
-    if(responseJSON) {
-      errors = responseJSON.map(error => `${error}`)
-    }
     return(
       <div className="session-page">
         <div className="login-container">
@@ -34,7 +31,7 @@ class LoginForm extends React.Component {
             <div className="email-container">
               <div className="input-label-and-errors">
                 <div className={ responseJSON ? "errors-form-input-label" : "form-input-label"}>EMAIL</div>
-                <div className="login-error">{...errors}</div>
+                <div className="login-error"> {responseJSON ? responseJSON[0] : "" }</div>
               </div>
               <input 
                 className={ responseJSON ? "error-form-input" : "form-input" }
