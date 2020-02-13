@@ -1,0 +1,1 @@
+json.extract! @guild_membership, :member_id, :guild_id
