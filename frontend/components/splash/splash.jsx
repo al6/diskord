@@ -49,7 +49,7 @@ class Splash extends React.Component {
             </div>
               <div className="splash-main-github-demo-buttons">
               <Link to={`/register`} className="splash-main-left-button" onClick={() => removeErrors()}>Sign Up</Link>
-              <Link to={`/`} className="splash-main-right-button" onClick={this.handleDemoRequest}>Try the Demo</Link>
+              <Link to={`/channels/@me`} className="splash-main-right-button" onClick={this.handleDemoRequest}>Try the Demo</Link>
             </div>
             </main>
             <div className="splash-margin-container">
