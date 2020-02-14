@@ -33,7 +33,31 @@
   left: 260px;
 }
 
+@keyframes bombfloat {
+  0% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(4px);
+  }
+}
+
+@keyframes shortfloat {
+  0% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(3px);
+  }
+}
+
 .bomb {
+  animation-name: bombfloat;
+  animation-duration: 1.5s; 
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out; 
+
   position: relative;
   max-height: 70px;
   bottom: 260px;
@@ -41,7 +65,15 @@
   z-index: 0;
 }
 
-.coin-left, .coin-top-middle {
+.coin-left, .coin-top-middle, .game-cartridge {
+  animation-name: shortfloat;
+  animation-duration: 1.45s; 
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+.coin-left, .coin-top-middle { 
   position: relative;
   max-height: 70px;
   max-width: 65px;
