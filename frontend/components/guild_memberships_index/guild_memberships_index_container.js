@@ -6,7 +6,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  demologin: () => dispatch(demologin())
+  fetchOwnMemberships: () => dispatch(fetchOwnMemberships())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(GuildMembershipsIndex);

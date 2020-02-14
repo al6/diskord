@@ -7,10 +7,8 @@ class Api::GuildsController < ApplicationController
   def create
     @guild = Guild.new(guild_params)
     if @guild.save
-      debugger
       GuildMembership.create(member_id: guild_params[:owner_id].to_i, guild_id: @guild.id)
-      debugger
-      render :sh
+      render :show
     else
       render json: ["Sorry, that guild name is taken!"], status: 409
     end

@@ -5,3 +5,11 @@ export const create = guild_membership => (
     data: { guild_membership },
   })
 );
+
+export const fetchMemberships = member_id => (
+  $.ajax({
+    method: 'GET',
+    url: '/api/guild_memberships',
+    member_id
+  })
+);
