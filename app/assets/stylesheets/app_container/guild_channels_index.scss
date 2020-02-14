@@ -1,4 +1,12 @@
 .guild_channels_index {
-  width: 190px;
+  align-items: center;
   background: #2F3136;
+  display: flex;
+  flex-direction: column;
+  width: 190px;
+  padding-top: 20px;
+}
+
+.guild_channels_index > a {
+  color: white;
 }
