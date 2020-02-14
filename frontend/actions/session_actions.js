@@ -21,11 +21,11 @@ export const removeErrors = () => ({
   type: REMOVE_SESSION_ERRORS
 })
 
-export const register = member => dispatch => (
-  APIUtil.register(member)
+export const register = member => dispatch => {
+  return APIUtil.register(member)
     .then(member => dispatch(receiveCurrentMember(member)),
-    errors => dispatch(receiveErrors(errors.responseJSON))
-  ));
+    errors => dispatch(receiveErrors(errors.responseJSON)))
+};
 
 export const login = member => dispatch => {
   return APIUtil.login(member)
@@ -33,9 +33,10 @@ export const login = member => dispatch => {
     errors => dispatch(receiveErrors(errors.responseJSON)))
 };
 
-export const logout = () => dispatch => (
-  APIUtil.logout()
+export const logout = () => dispatch => {
+  return APIUtil.logout()
     .then(() => dispatch(logoutCurrentMember()),
-    errors => dispatch(receiveErrors(errors.responseJSON))));
+    errors => dispatch(receiveErrors(errors.responseJSON)))
+};
 
 export const demologin = () => dispatch => dispatch(login({ email: 'tommy@fakemail.com', password: 'hunter2' }))
