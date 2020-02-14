@@ -19,7 +19,7 @@ class Splash extends React.Component {
         <div className="splash-container">
           <nav className="splash-nav"> 
             <div className="left-splash-nav">
-              <img className="diskord-logo" src={diskordLogo}/>
+              {/* <img className="diskord-logo" src={diskordLogo}/> */}
               <div className="splash-nav-item">Download</div>
               <div className="splash-nav-item">Nitro</div>
               <div className="splash-nav-item">Jobs</div>
