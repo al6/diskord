@@ -4,7 +4,7 @@
   justify-content: center;
   margin: 0 auto;
   max-height: 1400px;
-  height: 638px;
+  height: 520px;
   width: 100%;
 }
 
@@ -14,8 +14,8 @@
 
 .flask {
   position: relative;
-  left: 230px;
-  height: 140px;
+  left: 235px;
+  height: 170px;
 }
 
 .android, .iphone {
@@ -54,8 +54,8 @@
 }
 
 .coin-top-middle {
-  bottom: 515px;
-  left: 255px;
+  bottom: 425px;
+  left: 130px;
 }
 
 .game-controller {
@@ -103,4 +103,8 @@
 
 .triangle-left, .triangle-top-middle {
   position: absolute;
+}
+
+.android, .iphone, .game-controller, .monitor, .laptop, .headphones, .shield, .game-cartridge {
+  zoom: 80%;
 }

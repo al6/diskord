@@ -78,68 +78,68 @@ class Splash extends React.Component {
               </div>
             </div>
           </div>
-        </div>
-        <div className="footer-main">
-          <div className="footer-links">
-              <div className="splash-footer-links-container">footer-links</div>
-              <div className="splash-footer-links-container">
-                <div className="footer-links-category">
-                  Product
+          <div className="footer-main">
+            <div className="footer-links">
+                <div className="splash-footer-links-container">footer-links</div>
+                <div className="splash-footer-links-container">
+                  <div className="footer-links-category">
+                    Product
+                  </div>
+                  <div>Download</div>
+                  <div>Branding</div>
+                  <div>Nitro</div>
                 </div>
-                <div>Download</div>
-                <div>Branding</div>
-                <div>Nitro</div>
-              </div>
-              <div className="splash-footer-links-container">
-                <div className="footer-links-category">
-                  Developers
-                  </div> 
-                <div>Sell Your Game</div> 
-                <div>Rich Presence</div> 
-                <div>Verification</div> 
-                <div>Applications</div> 
-                <div>Documentation</div> 
-              </div>
-              <div className="splash-footer-links-container">
-                <div className="footer-links-category">
-                  Resources
+                <div className="splash-footer-links-container">
+                  <div className="footer-links-category">
+                    Developers
+                    </div> 
+                  <div>Sell Your Game</div> 
+                  <div>Rich Presence</div> 
+                  <div>Verification</div> 
+                  <div>Applications</div> 
+                  <div>Documentation</div> 
                 </div>
-                <div>Help & Support</div>
-                <div>Guidelines</div>
-                <div>Feedback</div>
-                <div>Terms</div>
-                <div>Privacy</div>
-                <div>Status</div>
-              </div>
-              <div className="splash-footer-links-container">
-                <div className="footer-links-category">
-                  Company
+                <div className="splash-footer-links-container">
+                  <div className="footer-links-category">
+                    Resources
+                  </div>
+                  <div>Help & Support</div>
+                  <div>Guidelines</div>
+                  <div>Feedback</div>
+                  <div>Terms</div>
+                  <div>Privacy</div>
+                  <div>Status</div>
                 </div>
-                <div>About</div>
-                <div>Blog</div>
-                <div>Jobs</div>
-              </div>
-              <div className="splash-footer-links-container">
-                <div className="footer-links-category">
-                  More
+                <div className="splash-footer-links-container">
+                  <div className="footer-links-category">
+                    Company
+                  </div>
+                  <div>About</div>
+                  <div>Blog</div>
+                  <div>Jobs</div>
                 </div>
-                <div>Partners</div>
-                <div>HypeSquad</div>
-                <div>Merch Store</div>
-                <div>Press Inquiries</div>
-                <div>Open Source</div>
+                <div className="splash-footer-links-container">
+                  <div className="footer-links-category">
+                    More
+                  </div>
+                  <div>Partners</div>
+                  <div>HypeSquad</div>
+                  <div>Merch Store</div>
+                  <div>Press Inquiries</div>
+                  <div>Open Source</div>
+                </div>
               </div>
-            </div>
-          <footer className="splash-footer">
-            <div className="left-splash-footer">
-              <div className="splash-footer-header-main">Ready to try Diskord? It's free!</div>
-              <div className="splash-footer-header-sub">JOIN OVER 250 MILLION PLAYERS TODAY</div>
-            </div>
+            <footer className="splash-footer">
+              <div className="left-splash-footer">
+                <div className="splash-footer-header-main">Ready to try Diskord? It's free!</div>
+                <div className="splash-footer-header-sub">JOIN OVER 250 MILLION PLAYERS TODAY</div>
+              </div>
 
-            <div className="right-splash-footer">
-              <Link className="splash-footer-button" to={ currentMemberId ? `/channels/@me` : `/register`} onClick={() => removeErrors()}><div className="splash-footer-button-text">{ currentMemberId ? "Open" : "Register Now" }</div></Link>
-            </div>
-          </footer>
+              <div className="right-splash-footer">
+                <Link className="splash-footer-button" to={ currentMemberId ? `/channels/@me` : `/register`} onClick={() => removeErrors()}><div className="splash-footer-button-text">{ currentMemberId ? "Open" : "Register Now" }</div></Link>
+              </div>
+            </footer>
+          </div>
         </div>
       </div>
     )
