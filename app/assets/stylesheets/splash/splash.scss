@@ -186,6 +186,6 @@
   padding: 30px 160px;
 }
 
-.triangle {
-  color: rgba(0,0,0,.1)
+.dot, .triangle, .x {
+  position: absolute;
 }
