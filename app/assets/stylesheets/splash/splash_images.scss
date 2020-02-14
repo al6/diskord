@@ -14,7 +14,7 @@
 
 .flask {
   position: relative;
-  left: 235px;
+  left: 260px;
   height: 170px;
 }
 
@@ -26,18 +26,18 @@
 }
 
 .android {
-  left: 190px;
+  left: 250px;
 }
 
 .iphone {
-  left: 200px;
+  left: 260px;
 }
 
 .bomb {
   position: relative;
   max-height: 70px;
-  bottom: 300px;
-  right: 150px;
+  bottom: 260px;
+  right: 83px;
   z-index: 0;
 }
 
@@ -49,20 +49,20 @@
 }
 
 .coin-left {
-  bottom: 280px;
-  right: 190px;
+  bottom: 230px;
+  right: 115px;
 }
 
 .coin-top-middle {
   bottom: 425px;
-  left: 130px;
+  left: 220px;
 }
 
 .game-controller {
   position: relative;
   max-height: 105px;
   max-width: 150px;
-  left: 205px;
+  left: 270px;
   z-index: 2;
 }
 
