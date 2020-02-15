@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Modal from "../modal/Modal";
+import Modal from "../modal/modal";
 import { Button } from "../button/button";
 
 class GuildMembershipsIndex extends React.Component {
@@ -72,7 +72,9 @@ class GuildMembershipsIndex extends React.Component {
               </div>
             </div>
           </Modal.Content>
-          <Modal.OpenButton className="guild-membership">+</Modal.OpenButton>
+          <Modal.OpenButton className="guild-membership">
+            <div>+</div>
+          </Modal.OpenButton>
         </Modal>
       </div>
     );
