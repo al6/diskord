@@ -1,6 +1,7 @@
-import { RECEIVE_GUILDS } from "../actions/guild_membership_actions";
+import { RECEIVE_GUILD, RECEIVE_GUILDS } from "../actions/guild_membership_actions";
 
 const guildMembershipsReducer = (state = [], action) => {
+  debugger
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_GUILD:

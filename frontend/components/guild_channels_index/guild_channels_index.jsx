@@ -14,7 +14,7 @@ class GuildChannelsIndex extends React.Component {
         <Link to={`/channels/@me`}>General</Link>
         <Link to={`/channels/@me`}>Study</Link>
         <Link to={`/channels/@me`}>Music</Link>
-        <Link to={`/`} onClick={() => logout()} className="logout-button">Logout!</Link>
+        <a onClick={() => logout()} className="logout-button">Logout!</a>
       </div>
     )
   }
