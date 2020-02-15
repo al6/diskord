@@ -1,13 +1,8 @@
-import React from 'react';
+import React from "react";
 
 class ChannelMessagesIndex extends React.Component {
-  render(){
-
-    return(
-      <div className="channel_messages_index">
-        ChannelMessagesIndexComponent
-      </div>
-    )
+  render() {
+    return <div className="channel_messages_index">Channel Messages Index</div>;
   }
 }
 
