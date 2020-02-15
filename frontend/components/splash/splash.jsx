@@ -4,20 +4,16 @@ import { Link, Redirect } from 'react-router-dom';
 class Splash extends React.Component {
   constructor(props){
     super(props);
-    this.state = {demo: false}
     this.handleDemoRequest = this.handleDemoRequest.bind(this);
   }
 
   handleDemoRequest(e){
     e.preventDefault();
-    this.props.demologin()
-      .then(this.setState({demo: true}));
+    this.props.demologin().then(()=> this.props.history.push('/channels/@me')
+    );
   }
 
   render(){
-    if(this.state.demo){
-      return <Redirect to={`/channels/@me`}/>
-    }
     const {currentMemberId, removeErrors} = this.props;
     return(
       <div className="splash-background">
@@ -49,7 +45,7 @@ class Splash extends React.Component {
             </div>
               <div className="splash-main-github-demo-buttons">
               <Link to={`/register`} className="splash-main-left-button" onClick={() => removeErrors()}>Sign Up</Link>
-              <Link to={`/channels/@me`} className="splash-main-right-button" onClick={this.handleDemoRequest}>Try the Demo</Link>
+              <a className="splash-main-right-button" onClick={this.handleDemoRequest}>Try the Demo</a>
             </div>
             </main>
             <div className="splash-margin-container">
