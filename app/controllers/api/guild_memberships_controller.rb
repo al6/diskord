@@ -13,14 +13,15 @@ class Api::GuildMembershipsController < ApplicationController
     # @guild_memberships = GuildMembership.find_by(member_id: :member_id)
     # if @guild_memberships
   end
-  
+
   def show
-    # @guild_memberships = GuildMembership.find_by(member_id: :member_id)
-    # if @guild_memberships
-    #   render :show
-    # else
-    #   render json: ["No guild memberships found!"], status: 404
-    # end
+    @guild_member = Member.find_by(id: params[:id])
+    if @guild_member
+      @guild_memberships = @guild_member.guilds.to_a
+      render :show
+    else
+      render json: ["No guild memberships found!"], status: 404
+    end
   end
 
   private
