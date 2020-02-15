@@ -3,9 +3,9 @@ import GuildMembershipsIndex from './guild_memberships_index';
 import { fetchGuildMemberships, createGuild, createGuildMembership } from '../../actions/guild_membership_actions';
 
 const mapStateToProps = state => {
-  // console.log("heiuhuwehf", state)
   return ({
-  currentMemberId: state.session.id
+  currentMemberId: state.session.id,
+  guilds: state.entities.guilds
 });
 }
 
