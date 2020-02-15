@@ -54,7 +54,7 @@ class GuildMembershipsIndex extends React.Component {
                   <Button color="blue">Create a guild</Button>
                 </div>
                 <div className="create-guild-divider">
-                  <div className="create-join-divider-color">or</div>
+                  {/* <div className="create-join-divider-color">or</div> */}
                 </div>
                 <div className="form-circle"></div>
                 <div className="create-guild-form">

@@ -8,13 +8,18 @@
 }
 
 .guild-membership {
+  align-items: center;
   background-color: #37383f;
-  // background: image-url("logo.png");
-  color: white;
   border-radius: 40px;
+  box-sizing: border-box;
+  color: white;
+  display: flex;
+  font-weight: 400;
+  font-size: 30px;
+  justify-content: center;
+  // background: image-url("logo.png");
   height: 40px;
   margin: 10px;
-  width: 40px;
-  box-sizing: border-box;
   text-align: center;
+  width: 40px;
 }
