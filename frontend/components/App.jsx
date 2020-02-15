@@ -10,7 +10,7 @@ import ChannelMessagesIndexContainer from "./channel_messages_index/channel_mess
 const App = () => (
   <div className="app-container">
     <ProtectedRoute path="/channels/" component={GuildMembershipsIndexContainer}/>
-    <ProtectedRoute path="/channels/" component={GuildChannelsIndexContainer}/>
+    <ProtectedRoute path="/channels/:guildId/" component={GuildChannelsIndexContainer}/>
     <ProtectedRoute path="/channels/" component={ChannelMessagesIndexContainer}/>
     <Switch>
       <AuthRoute exact path="/login" component={LoginFormContainer} />
