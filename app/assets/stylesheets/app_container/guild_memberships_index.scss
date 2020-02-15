@@ -7,8 +7,8 @@
   padding-top: 10px;
 }
 
-.guild_memberships_index > a {
-  background-color: #37383F;
+.guild-membership {
+  background-color: #37383f;
   // background: image-url("logo.png");
   color: white;
   border-radius: 40px;
@@ -16,4 +16,5 @@
   margin: 10px;
   width: 40px;
   box-sizing: border-box;
+  text-align: center;
 }

@@ -14,6 +14,7 @@
 
 .modal-content {
   align-items: center;
+  border-radius: 3px;
   justify-content: center;
   height: 385px;
   width: 490px;
@@ -23,6 +24,7 @@
 
 .guild-membership-form {
   align-items: center;
+  border-radius: 3px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -41,10 +43,16 @@
 
 .create-guild-form,
 .join-guild-form {
+  align-items: center;
   border: 1px solid #e8e8e8;
-  width: 185px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   min-width: 185px;
   text-align: center;
+  width: 185px;
+  padding: 30px 0 10px 0;
+  box-sizing: border-box;
 }
 
 .form-circle {
@@ -54,7 +62,7 @@
   border: 1px solid #e8e8e8;
   background: white;
   left: 47.8%;
-  top: 50%;
+  top: 49.5%;
   position: absolute;
   height: 50px;
   width: 50px;
@@ -77,4 +85,34 @@
   height: 100%;
   justify-content: center;
   z-index: 10;
+}
+
+.create-guild-icon {
+  max-height: 70px;
+}
+
+.guild-member-form-header {
+  font-weight: 600;
+}
+
+.create-guild-instructions {
+  line-height: 18px;
+  color: #99aab5;
+  font-size: 12px;
+  max-width: 150px;
+  height: 40px;
+}
+
+.form-button {
+  padding: 10px 40px;
+  border-radius: 3px;
+  font-size: 13px;
+}
+
+.form-button:hover {
+  cursor: pointer;
+}
+
+.form-button:focus {
+  outline: none;
 }
