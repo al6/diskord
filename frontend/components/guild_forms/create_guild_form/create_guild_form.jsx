@@ -131,8 +131,39 @@ class CreateGuildForm extends React.Component {
       } else if (formType === "joinGuild") {
         return (
           <div className="create-join-form">
-            <div>i am</div>
-            <div>an idiot</div>
+            <div className="create-join-form-headers">
+              <div className="diskord-green create-join-form-main-header">
+                JOIN A GUILD (WORK IN PROGRESS)
+              </div>
+              <div className="create-join-form-sub-header">
+                Enter a guild name below to join an existing guild.
+              </div>
+            </div>
+            <div className="create-join-form-input-container">
+              <div className="create-guild-input-container">
+                <div className="create-guild-input-label">GUILD NAME</div>
+                <input
+                  placeholder={`App Academy`}
+                  className="create-guild-name-input"
+                  type="text"
+                  value={this.state.guildName}
+                  onChange={this.update("guildName")}
+                />
+                <div className="create-guild-community-guidelines">
+                  Looking for other servers to join? Try 'Hidden Ruby Gem',
+                  'BleatsFan', or 'SleepAndCode'!
+                </div>
+              </div>
+            </div>
+            <div className="create-join-form-footer">
+              <Button
+                color="blue"
+                onClick={() => this.setState({ clicked: false })}
+              >
+                BACK
+              </Button>
+              <Button color="green">Join</Button>
+            </div>
           </div>
         );
       }
