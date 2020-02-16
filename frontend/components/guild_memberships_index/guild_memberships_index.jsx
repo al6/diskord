@@ -19,7 +19,7 @@ class GuildMembershipsIndex extends React.Component {
   }
 
   render() {
-    const { guilds, createGuild } = this.props;
+    const { guilds } = this.props;
     return (
       <div className="guild_memberships_index">
         <Link className="guild-membership" to={`/channels/@me`}>
