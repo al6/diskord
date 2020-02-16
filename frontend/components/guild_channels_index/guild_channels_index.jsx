@@ -1,22 +1,28 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 class GuildChannelsIndex extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
   }
-  
-  render(){
-    const {logout} = this.props;
-    return(
+
+  componentDidMount() {
+    const { fetchChannels, guildId } = this.props;
+    fetchChannels(guildId);
+  }
+  render() {
+    const { channels } = this.state;
+    return (
       <div className="guild_channels_index">
-        <Link to={`/channels/@me`}>Announcements</Link>
-        <Link to={`/channels/@me`}>General</Link>
-        <Link to={`/channels/@me`}>Study</Link>
-        <Link to={`/channels/@me`}>Music</Link>
-        <a onClick={() => logout()} className="logout-button">Logout!</a>
+        {/* <Link to={`/channels/${guildId}`}>General</Link> */}
+        {channels.map(channel => (
+          <Link to={`/channels/${guildId}/${channel.id}`}>{channel.name}</Link>
+        ))}
+        <a onClick={() => logout()} className="logout-button">
+          Logout!
+        </a>
       </div>
-    )
+    );
   }
 }
 
