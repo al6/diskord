@@ -97,7 +97,7 @@ class CreateGuildForm extends React.Component {
               <div className="create-guild-input-container">
                 <div className="create-guild-input-label">GUILD NAME</div>
                 <input
-                  placeholder={`Type your guild name here!`}
+                  placeholder={`${this.props.currentMember}'s server`}
                   className="create-guild-name-input"
                   type="text"
                   value={this.state.guildName}
