@@ -20,8 +20,12 @@
   justify-content: center;
   // background: image-url("logo.png");
   height: 50px;
+  min-height: 50px;
+  max-height: 50px;
   text-align: center;
   width: 50px;
+  min-width: 50px;
+  max-width: 50px;
   margin-bottom: 10px;
   &:hover {
     border-radius: 12px;
