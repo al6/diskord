@@ -29,6 +29,15 @@ class Api::GuildsController < ApplicationController
     end
   end
 
+  def channels
+    @channels_array = Channel.where(guild_id: params[:id])&.to_a
+    if @channels_array
+      render 'api/channels/index'
+    else
+      render json: ["No channels found!"], status: 404
+    end
+  end
+
   private
   def guild_params
     params.require(:guild).permit(:name, :owner_id)
