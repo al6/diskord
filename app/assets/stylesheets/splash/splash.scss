@@ -140,6 +140,12 @@
   padding-top: 50px;
 }
 
+@media (min-width: 320px) and (max-width: 480px) {
+  .splash-header {
+    min-height: 350px;
+  }
+}
+
 .splash-header-main {
   font-size: 1.8rem;
   height: 44px;
