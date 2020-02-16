@@ -142,11 +142,23 @@
 .filled-dot-top-right,
 .filled-dot-above-monitor-and-laptop {
   position: absolute;
+  filter: brightness(50%);
+}
+
+.filled-dot-left-of-android {
+  right: 73rem;
+  bottom: 11rem;
 }
 
 .triangle-left,
 .triangle-top-middle {
   position: absolute;
+  filter: brightness(50%);
+}
+
+.triangle-left {
+  bottom: 19rem;
+  right: 71.7rem;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
