@@ -20,16 +20,16 @@ const receiveGuildMembership = guild_membership => ({
   guild_membership
 });
 
-export const createGuildMembership = guild_membership => dispatch =>
-  GuildMembershipAPIUtil.create(guild_membership).then(guild_membership =>
-    dispatch(receiveGuildMembership(guild_membership))
-  );
-
 export const createGuild = guild => dispatch => {
   return GuildAPIUtil.create(guild).then(guild =>
     dispatch(receiveGuild(guild))
   );
 };
+
+export const createGuildMembership = guild_membership => dispatch =>
+  GuildMembershipAPIUtil.create(guild_membership).then(guild_membership =>
+    dispatch(receiveGuildMembership(guild_membership))
+  );
 
 export const fetchGuildMemberships = id => dispatch => {
   return GuildMembershipAPIUtil.fetchMemberships(id).then(guilds =>
