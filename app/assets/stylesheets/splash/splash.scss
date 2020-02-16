@@ -15,9 +15,8 @@
   flex-direction: column;
   justify-content: space-between;
   max-width: 1350px;
-  min-height: 98vh;
-  margin: 0 auto;
-  padding: 25px;
+  min-height: 100vh;
+  padding: 0 30px;
 }
 
 .splash-nav {
@@ -26,13 +25,16 @@
   justify-content: space-between;
   align-items: center;
   font-size: 11px;
+  height: 56px;
+  padding: 8px;
 }
 
 .splash-nav-item {
-  color: #ceccce;
-  padding: 0 25px;
+  color: #b1b1b3;
+  font-family: Whitney, Helvetica Neue, Helvetica;
   &:hover {
-    cursor: default;
+    cursor: pointer;
+    color: white;
   }
 }
 
@@ -41,12 +43,15 @@
   display: flex;
   justify-content: space-between;
   width: 100px;
+  color: #b1b1b3;
 }
 
-.network-buttons > img {
+.network-buttons > a > img {
   height: 16px;
+  filter: brightness(50%);
   &:hover {
     cursor: pointer;
+    filter: none;
   }
 }
 
@@ -67,12 +72,10 @@
   font-size: 10px;
   padding: 10px;
   box-sizing: border-box;
-}
-
-.splash-nav-button-text {
-  min-height: 20px;
-  position: relative;
-  top: -5px;
+  &:hover {
+    color: white;
+    border-color: white;
+  }
 }
 
 .left-splash-nav {
@@ -81,15 +84,18 @@
 
 .right-splash-nav {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   max-width: 180px;
   min-width: 180px;
+  height: 46px;
 }
 
 .splash-main-github-demo-buttons {
   display: flex;
   justify-content: space-evenly;
   max-width: 400px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -98,7 +104,7 @@
   border: none;
   display: flex;
   justify-content: center;
-  padding: 10px;
+  padding: 15px;
   width: 150px;
   font-size: 11px;
 }
@@ -123,22 +129,30 @@
 }
 
 .splash-header {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  max-width: 525px;
+  justify-content: space-evenly;
+  max-width: 710px;
+  min-height: 250px;
+  height: 250px;
   margin: 0 auto;
+  padding-top: 50px;
 }
 
 .splash-header-main {
-  font-size: 25px;
+  font-size: 1.8rem;
+  height: 44px;
   font-weight: 600;
-  padding: 20px 0;
 }
 
 .splash-header-sub {
-  font-size: 11px;
-  padding: 20px 0;
+  font-size: 0.78rem;
   color: #a8a9ab;
+  line-height: 24px;
+  height: 48px;
+  max-width: 630px;
+  margin: 12px auto 30px auto;
 }
 
 .footer-links {

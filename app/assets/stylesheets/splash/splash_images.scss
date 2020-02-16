@@ -5,12 +5,13 @@
   justify-content: center;
   margin: 0 auto;
   max-height: 1400px;
-  height: 520px;
+  height: 638px;
   width: 100%;
 }
 
 .splash-margin-container {
   margin: 0 auto;
+  padding-bottom: 8rem;
 }
 
 .flask {
@@ -19,7 +20,8 @@
   height: 170px;
 }
 
-.android, .iphone {
+.android,
+.iphone {
   position: relative;
   max-height: 250px;
   max-width: 135px;
@@ -54,10 +56,10 @@
 
 .bomb {
   animation-name: bombfloat;
-  animation-duration: 1.5s; 
+  animation-duration: 1.5s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  animation-timing-function: ease-in-out; 
+  animation-timing-function: ease-in-out;
 
   position: relative;
   max-height: 70px;
@@ -66,15 +68,18 @@
   z-index: 0;
 }
 
-.coin-left, .coin-top-middle, .game-cartridge {
+.coin-left,
+.coin-top-middle,
+.game-cartridge {
   animation-name: shortfloat;
-  animation-duration: 1.45s; 
+  animation-duration: 1.45s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: ease-in-out;
 }
 
-.coin-left, .coin-top-middle { 
+.coin-left,
+.coin-top-middle {
   position: relative;
   max-height: 70px;
   max-width: 65px;
@@ -131,14 +136,15 @@
   right: 280px;
 }
 
-.filled-dot-left-of-android, .filled-dot-directly-above-iphone, .filled-dot-bottom-right, .filled-dot-top-right, .filled-dot-above-monitor-and-laptop {
+.filled-dot-left-of-android,
+.filled-dot-directly-above-iphone,
+.filled-dot-bottom-right,
+.filled-dot-top-right,
+.filled-dot-above-monitor-and-laptop {
   position: absolute;
 }
 
-.triangle-left, .triangle-top-middle {
+.triangle-left,
+.triangle-top-middle {
   position: absolute;
-}
-
-.android, .iphone, .game-controller, .monitor, .laptop, .headphones, .shield, .game-cartridge {
-  zoom: 80%;
 }

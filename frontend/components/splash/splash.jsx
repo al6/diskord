@@ -20,18 +20,24 @@ class Splash extends React.Component {
           <nav className="splash-nav">
             <div className="left-splash-nav">
               {/* <img className="diskord-logo" src={diskordLogo}/> */}
-              <div className="splash-nav-item">Download</div>
-              <div className="splash-nav-item">Nitro</div>
-              <div className="splash-nav-item">Jobs</div>
-              <div className="splash-nav-item">Developers</div>
-              <div className="splash-nav-item">Community</div>
-              <div className="splash-nav-item">Support</div>
+              <a
+                href="http://github.com/al6/diskord"
+                className="splash-nav-item"
+              >
+                Diskord on Github
+              </a>
             </div>
             <div className="right-splash-nav">
               <div className="network-buttons">
-                <img className="github-button" src={githubLogo} />
-                <img className="linkedin-button" src={linkedinLogo} />
-                <img className="angellist-button" src={angellistLogo} />
+                <a href="http://github.com/al6">
+                  <img className="github-button" src={githubLogo} />
+                </a>
+                <a href="https://www.linkedin.com/in/albertlee3/">
+                  <img className="linkedin-button" src={linkedinLogo} />
+                </a>
+                <a href="https://angel.co/">
+                  <img className="angellist-button" src={angellistLogo} />
+                </a>
               </div>
               <Link
                 className="splash-nav-button"
@@ -53,21 +59,21 @@ class Splash extends React.Component {
                   and works on both your desktop and phone. Stop paying for
                   TeamSpeak servers and hassling with Skype. Simplify your life.
                 </div>
-              </div>
-              <div className="splash-main-github-demo-buttons">
-                <Link
-                  to={`/register`}
-                  className="splash-main-left-button"
-                  onClick={() => removeErrors()}
-                >
-                  Sign Up
-                </Link>
-                <a
-                  className="splash-main-right-button"
-                  onClick={this.handleDemoRequest}
-                >
-                  Try the Demo
-                </a>
+                <div className="splash-main-github-demo-buttons">
+                  <Link
+                    to={`/register`}
+                    className="splash-main-left-button"
+                    onClick={() => removeErrors()}
+                  >
+                    Sign Up
+                  </Link>
+                  <a
+                    className="splash-main-right-button"
+                    onClick={this.handleDemoRequest}
+                  >
+                    Try the Demo
+                  </a>
+                </div>
               </div>
             </main>
             <div className="splash-margin-container">
