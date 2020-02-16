@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Modal from "../modal/modal";
+import Modal, { ModalContext } from "../modal/modal";
 import CreateGuildFormContainer from "../guild_forms/create_guild_form/create_guild_form_container";
 
 class GuildMembershipsIndex extends React.Component {
@@ -36,7 +36,11 @@ class GuildMembershipsIndex extends React.Component {
         ))}
         <Modal>
           <Modal.Content>
-            <CreateGuildFormContainer />
+            <ModalContext.Consumer>
+              {({ closeModal }) => (
+                <CreateGuildFormContainer closeModal={closeModal} />
+              )}
+            </ModalContext.Consumer>
           </Modal.Content>
           <Modal.OpenButton className="guild-membership">
             <div>+</div>

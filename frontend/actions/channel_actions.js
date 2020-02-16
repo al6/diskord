@@ -20,7 +20,7 @@ export const createChannel = channel => dispatch => {
 };
 
 export const fetchChannels = guild_id => dispatch => {
-  return GuildMembershipAPIUtil.fetchMemberships(guild_id).then(channels =>
+  return ChannelAPIUtil.fetchChannels(guild_id).then(channels =>
     dispatch(receiveChannels(channels))
   );
 };

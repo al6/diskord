@@ -122,7 +122,13 @@ class CreateGuildForm extends React.Component {
               >
                 BACK
               </Button>
-              <Button color="blue" onClick={this.handleCreateGuild}>
+              <Button
+                color="blue"
+                onClick={e => {
+                  this.handleCreateGuild(e);
+                  this.props.closeModal();
+                }}
+              >
                 Create
               </Button>
             </div>
