@@ -2,7 +2,7 @@ import { RECEIVE_CHANNEL, RECEIVE_CHANNELS } from "../actions/channel_actions";
 
 const channelsReducer = (state = [], action) => {
   Object.freeze(state);
-  let newState, channelIds;
+  let newState;
   switch (action.type) {
     case RECEIVE_CHANNEL:
       newState = JSON.parse(JSON.stringify(state));
