@@ -3,7 +3,7 @@
 }
 
 .splash-background {
-  background: #25252B;
+  background: #25252b;
   min-height: 100%;
   min-width: 100%;
   overflow-x: hidden;
@@ -29,8 +29,11 @@
 }
 
 .splash-nav-item {
-  color: #CECCCE;
+  color: #ceccce;
   padding: 0 25px;
+  &:hover {
+    cursor: default;
+  }
 }
 
 .network-buttons {
@@ -42,6 +45,9 @@
 
 .network-buttons > img {
   height: 16px;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .diskord-logo {
@@ -50,8 +56,8 @@
 
 .splash-nav-button {
   border-radius: 20px;
-  border: 2px solid #BDBDBE;
-  color: #BDBDBE;
+  border: 2px solid #bdbdbe;
+  color: #bdbdbe;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -99,11 +105,11 @@
 
 .splash-main-left-button {
   background: white;
-  color: #24242B;
+  color: #24242b;
 }
 
 .splash-main-right-button {
-  background: #7289DA;
+  background: #7289da;
   color: white;
 }
 
@@ -132,7 +138,7 @@
 .splash-header-sub {
   font-size: 11px;
   padding: 20px 0;
-  color: #A8A9AB;
+  color: #a8a9ab;
 }
 
 .footer-links {
@@ -140,8 +146,8 @@
   justify-content: space-between;
   padding-bottom: 50px;
   font-size: 11px;
-  font-family: 'Helvetica Neue';
-  color: #F6F6F6;
+  font-family: "Helvetica Neue";
+  color: #f6f6f6;
 }
 
 .footer-links-category {
@@ -167,21 +173,21 @@
   width: 100px;
   height: auto;
   font-size: 11px;
-  font-family: 'Helvetica Neue';
-  background: #7289DA;
+  font-family: "Helvetica Neue";
+  background: #7289da;
   color: white;
 }
 
 .left-splash-footer {
-  font-family: 'Helvetica Neue';
+  font-family: "Helvetica Neue";
 }
 
 .splash-footer-header-main {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .splash-footer-header-sub {
-  color: #A8A8AB;
+  color: #a8a8ab;
   font-size: 11px;
   padding-top: 5px;
 }
@@ -190,6 +196,8 @@
   padding: 30px 160px;
 }
 
-.dot, .triangle, .x {
+.dot,
+.triangle,
+.x {
   position: absolute;
 }
