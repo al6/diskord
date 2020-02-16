@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Modal from "../modal/modal";
-import { Button } from "../button/button";
+import CreateGuildFormContainer from "../guild_forms/create_guild_form/create_guild_form_container";
 
 class GuildMembershipsIndex extends React.Component {
   constructor(props) {
@@ -19,7 +19,7 @@ class GuildMembershipsIndex extends React.Component {
   }
 
   render() {
-    const { guilds } = this.props;
+    const { guilds, createGuild } = this.props;
     return (
       <div className="guild_memberships_index">
         <Link className="guild-membership" to={`/channels/@me`}>
@@ -36,41 +36,7 @@ class GuildMembershipsIndex extends React.Component {
         ))}
         <Modal>
           <Modal.Content>
-            <div className="guild-membership-form">
-              <div className="diskord-blue guild-member-form-header">
-                OH, ANOTHER SERVER HUH?
-              </div>
-              <div className="create-join-guild-buttons">
-                <div className="create-guild-form">
-                  <div className="diskord-blue">CREATE</div>
-                  <div className="create-guild-instructions">
-                    Create a new guild and invite your friends. It's free!
-                  </div>
-                  <img
-                    className="create-guild-icon"
-                    src={createguild}
-                    alt="createguildicon"
-                  />
-                  <Button color="blue">Create a guild</Button>
-                </div>
-                {/* <div className="create-guild-divider">
-                  <div className="create-join-divider-color">or</div>
-                </div> */}
-                {/* <div className="form-circle"></div> */}
-                <div className="create-guild-form">
-                  <div className="diskord-green">JOIN</div>
-                  <div className="create-guild-instructions">
-                    Enter a guild name and join your friend's guild.
-                  </div>
-                  <img
-                    className="create-guild-icon"
-                    src={joinguild}
-                    alt="createguildicon"
-                  />
-                  <Button color="green">Join a guild</Button>
-                </div>
-              </div>
-            </div>
+            <CreateGuildFormContainer />
           </Modal.Content>
           <Modal.OpenButton className="guild-membership">
             <div>+</div>

@@ -7,9 +7,9 @@
 }
 
 .form-link {
-  color: #7289DA;
+  color: #7289da;
   font-size: 11px;
-  font-family: 'Helvetica Neue';
+  font-family: "Helvetica Neue";
   padding: 5px 0px;
   display: inline;
 }
@@ -21,8 +21,8 @@
 
 .form-input {
   color: white;
-  background-color: rgba(0,0,0,0.1);
-  border-color: rgba(0,0,0,0.3);
+  background-color: rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 0, 0, 0.3);
   border-radius: 3px;
   border-width: 1px;
   height: 32px;
@@ -42,20 +42,20 @@
 }
 
 .form-input:focus {
-  border-color: #7289DA;
+  border-color: #7289da;
 }
 
 .form-input-label {
-  color: #8E9197;
-  font-family: 'Helvetica Neue';
+  color: #8e9197;
+  font-family: "Helvetica Neue";
   font-size: 9px;
   font-weight: 500;
   padding-bottom: 10px;
 }
 
 .errors-form-input-label {
-  color: #F04747;
-  font-family: 'Helvetica Neue';
+  color: #f04747;
+  font-family: "Helvetica Neue";
   font-size: 9px;
   font-weight: 500;
   padding-bottom: 10px;
@@ -64,7 +64,7 @@
 .form-header {
   display: flex;
   color: white;
-  font-family: 'Helvetica Neue';
+  font-family: "Helvetica Neue";
   font-size: 20px;
   font-weight: 300;
   justify-content: center;
@@ -81,9 +81,9 @@
 
 .error-form-input {
   outline-width: 0;
-  border-color: #F04747;
+  border-color: #f04747;
   color: white;
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 3px;
   border-width: 1px;
   height: 32px;
@@ -94,12 +94,12 @@
 }
 
 .error-form-input:focus {
-  border-color: #F04747;
+  border-color: #f04747;
 }
 
 .login-error {
-  color: #F04747;
-  font-family: 'Helvetica Neue';
+  color: #f04747;
+  font-family: "Helvetica Neue";
   font-size: 10px;
   padding-left: 5px;
   font-style: italic;
@@ -109,4 +109,94 @@
   display: flex;
   padding-bottom: 10px;
   box-sizing: border-box;
+}
+
+.create-join-form {
+  box-sizing: border-box;
+  min-height: 385px;
+  max-height: 385px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 40px;
+}
+
+.create-join-form-footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.create-join-form-input-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.guild-icon-upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 160px;
+  width: 200px;
+}
+
+.guild-icon-upload {
+  height: 128px;
+  width: 128px;
+  border-radius: 128px;
+  background: #7289da;
+}
+
+.create-join-form-headers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 55px;
+}
+
+.create-join-form-main-header {
+  font-weight: 600;
+  font-family: Whitney, Helvetica Neue, Helvetica;
+}
+
+.create-join-form-sub-header {
+  text-align: center;
+  color: #99aab5;
+}
+
+.create-guild-input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 160px;
+  width: 200px;
+}
+
+.guild-icon-size-instructions {
+  font-size: 9px;
+}
+
+.guild-icon-size-instructions:hover {
+  cursor: default;
+}
+
+.create-guild-name-input {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
+.create-guild-input-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: #87909c;
+}
+
+.create-guild-community-guidelines {
+  color: #99aab5;
+  font-size: 10px;
 }
