@@ -5,7 +5,6 @@ class RegisterForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = { email: "", username: "", password: "" };
-    this.state.errors = { email: "", username: "", password: "" };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -20,7 +19,6 @@ class RegisterForm extends React.Component {
 
   render() {
     const { removeErrors } = this.props;
-    // console.log(this.props.errors);
     let responseJSON = Object.values(this.props.errors);
     let errors;
     responseJSON.length > 0
