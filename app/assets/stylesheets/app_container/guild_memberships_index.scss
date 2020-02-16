@@ -15,11 +15,15 @@
   color: white;
   display: flex;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 9px;
   justify-content: center;
   // background: image-url("logo.png");
   height: 40px;
   margin: 10px;
   text-align: center;
   width: 40px;
+  &:hover {
+    border-radius: 12px;
+  }
+  overflow: hidden;
 }
