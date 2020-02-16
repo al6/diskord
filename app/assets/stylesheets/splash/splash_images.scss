@@ -16,8 +16,8 @@
 
 .flask {
   position: relative;
-  left: 250px;
-  height: 170px;
+  left: 19rem;
+  height: 12rem;
 }
 
 .android,
@@ -29,11 +29,11 @@
 }
 
 .android {
-  left: 250px;
+  left: 16rem;
 }
 
 .iphone {
-  left: 260px;
+  left: 16.4rem;
 }
 
 @keyframes bombfloat {
@@ -62,9 +62,9 @@
   animation-timing-function: ease-in-out;
 
   position: relative;
-  max-height: 70px;
-  bottom: 260px;
-  right: 83px;
+  max-height: 5rem;
+  bottom: 21rem;
+  right: 6.5rem;
   z-index: 0;
 }
 
@@ -81,34 +81,34 @@
 .coin-left,
 .coin-top-middle {
   position: relative;
-  max-height: 70px;
-  max-width: 65px;
+  max-height: 5rem;
+  max-width: 4.5rem;
   z-index: 2;
 }
 
 .coin-left {
-  bottom: 230px;
-  right: 115px;
+  bottom: 19rem;
+  right: 9rem;
 }
 
 .coin-top-middle {
-  bottom: 425px;
-  left: 220px;
+  bottom: 33.7rem;
+  left: 18.5rem;
 }
 
 .game-controller {
   position: relative;
-  max-height: 105px;
-  max-width: 150px;
-  left: 270px;
+  max-height: 7rem;
+  max-width: 10rem;
+  left: 17rem;
   z-index: 2;
 }
 
 .monitor {
   position: absolute;
   height: auto;
-  max-height: 470px;
-  max-width: 579px;
+  max-height: 30rem;
+  max-width: 36rem;
   z-index: 1;
 }
 
