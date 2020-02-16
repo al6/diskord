@@ -1,7 +1,7 @@
 import React from "react";
 import ModalPortal from "./modal_portal";
 
-const ModalContext = React.createContext();
+export const ModalContext = React.createContext();
 
 const Content = ({ children, ...otherProps }) => (
   <ModalContext.Consumer>
