@@ -20,7 +20,6 @@ class CreateGuildForm extends React.Component {
 
   handleCreateGuild(e) {
     e.preventDefault();
-    console.log(this.props);
     const guild = {
       name: this.state.guildName,
       owner_id: this.props.currentMemberId

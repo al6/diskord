@@ -19,16 +19,16 @@
   font-size: 9px;
   justify-content: center;
   // background: image-url("logo.png");
-  height: 45px;
-  min-height: 45px;
-  max-height: 45px;
+  height: 2.8rem;
+  min-height: 2.8rem;
+  max-height: 2.8rem;
   text-align: center;
-  width: 45px;
-  min-width: 45px;
-  max-width: 45px;
-  margin-bottom: 10px;
+  width: 2.8rem;
+  min-width: 2.8rem;
+  max-width: 2.8rem;
+  margin-bottom: 0.2rem;
   &:hover {
-    border-radius: 15px;
+    border-radius: 1rem;
   }
   overflow: hidden;
 }
