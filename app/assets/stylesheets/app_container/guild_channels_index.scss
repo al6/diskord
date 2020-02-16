@@ -6,21 +6,43 @@
   justify-content: space-between;
   width: 260px;
   min-height: 100%;
-  padding: 20px 5px;
 }
 
-.guild-channels-index > a {
+.logout-button {
   color: #8e9297;
-}
-
-.guild-channels-index > a:hover {
-  color: white;
+  padding-bottom: 10px;
 }
 
 .logout-button:hover {
   cursor: pointer;
+  color: white;
 }
 
 .channel-index-link {
   text-align: center;
+  color: #8e9297;
+}
+
+.channels-list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.channels-list > a {
+  color: #8e9297;
+  &:hover {
+    color: white;
+  }
+}
+
+.create-channel-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+
+.channel-index-title {
+  color: #8e9297;
 }

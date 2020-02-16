@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Modal, { ModalContext } from "../modal/modal";
 
 class GuildChannelsIndex extends React.Component {
   constructor(props) {
@@ -21,16 +22,23 @@ class GuildChannelsIndex extends React.Component {
     const { channels = [], logout, guildId, guild = {} } = this.props;
     return (
       <div className="guild-channels-index">
-        <a className="channel-index-link">{guild.name}</a>
-        {channels.map(channel => (
-          <Link
-            className="channel-index-link"
-            key={guildId}
-            to={`/channels/${guildId}/${channel.id}`}
-          >
-            #{channel.name}
-          </Link>
-        ))}
+        <div className="create-channel-container">
+          <div className="channel-index-title">{guild.name}</div>
+          <div>
+            <button>c</button>
+          </div>
+        </div>
+        <div className="channels-list">
+          {channels.map(channel => (
+            <Link
+              className="channel-index-link"
+              key={guildId}
+              to={`/channels/${guildId}/${channel.id}`}
+            >
+              #{channel.name}
+            </Link>
+          ))}
+        </div>
         <a onClick={() => logout()} className="logout-button">
           Logout!
         </a>
