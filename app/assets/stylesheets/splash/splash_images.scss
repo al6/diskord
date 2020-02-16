@@ -148,3 +148,55 @@
 .triangle-top-middle {
   position: absolute;
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .monitor,
+  .game-controller,
+  .coin-top-middle,
+  .coin-left,
+  .game-cartridge,
+  .headphones,
+  .iphone,
+  .flask,
+  .x,
+  .triangle-left,
+  .triangle-top-middle {
+    display: none;
+  }
+  .laptop {
+    left: 15rem;
+  }
+
+  .android {
+    position: relative;
+    left: 22rem;
+  }
+  .splash-image-container {
+    height: 100%;
+  }
+
+  .footer-main {
+    padding: 0;
+    min-width: 13rem;
+  }
+
+  .splash-margin-container {
+    margin-bottom: 0;
+  }
+
+  .splash-header {
+    padding: 0;
+  }
+
+  .splash-container {
+    padding: 0;
+  }
+
+  .splash-footer-header-main {
+    font-size: 10px;
+  }
+
+  .splash-footer-header-sub {
+    font-size: 8px;
+  }
+}

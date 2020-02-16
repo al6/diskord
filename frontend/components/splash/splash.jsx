@@ -51,8 +51,10 @@ class Splash extends React.Component {
           <div className="landing-hero">
             <main className="splash-main">
               <div className="splash-header">
-                <div className="splash-header-main">
-                  It's time to ditch Skype and TeamSpeak.
+                <div className="splash-header-main-container">
+                  <div className="splash-header-main">
+                    It's time to ditch Skype and TeamSpeak.
+                  </div>
                 </div>
                 <div className="splash-header-sub">
                   All-in-one voice and text chat for gamers that's free, secure,
