@@ -1,4 +1,4 @@
-.guild_channels_index {
+.guild-channels-index {
   align-items: center;
   background: #2f3136;
   display: flex;
@@ -9,14 +9,18 @@
   padding: 20px 5px;
 }
 
-.guild_channels_index > a {
+.guild-channels-index > a {
   color: #8e9297;
 }
 
-.guild_channels_index > a:hover {
+.guild-channels-index > a:hover {
   color: white;
 }
 
 .logout-button:hover {
   cursor: pointer;
+}
+
+.channel-index-link {
+  text-align: center;
 }

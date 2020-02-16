@@ -18,12 +18,18 @@ class GuildChannelsIndex extends React.Component {
   }
 
   render() {
-    const { channels = [], logout, guildId } = this.props;
-    console.log(guildId);
+    const { channels = [], logout, guildId, guild = {} } = this.props;
     return (
-      <div className="guild_channels_index">
+      <div className="guild-channels-index">
+        <a className="channel-index-link">{guild.name}</a>
         {channels.map(channel => (
-          <Link to={`/channels/${guildId}/${channel.id}`}>{channel.name}</Link>
+          <Link
+            className="channel-index-link"
+            key={guildId}
+            to={`/channels/${guildId}/${channel.id}`}
+          >
+            #{channel.name}
+          </Link>
         ))}
         <a onClick={() => logout()} className="logout-button">
           Logout!

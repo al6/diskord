@@ -4,12 +4,16 @@ import { logout } from "../../actions/session_actions";
 import { fetchChannels } from "../../actions/channel_actions";
 
 const mapStateToProps = (state, ownProps) => {
+  const guildId = ownProps.match.params.guildId;
+  const guild = state.entities.guilds.find(
+    guild => guild.id === Number.parseInt(guildId)
+  );
   return {
     currentMemberId: state.session.id,
-    guildId: ownProps.match.params.guildId,
+    guildId,
+    guild,
     channels: state.entities.channels.filter(
-      channel =>
-        channel.guild_id === Number.parseInt(ownProps.match.params.guildId)
+      channel => channel.guild_id === Number.parseInt(guildId)
     )
   };
 };
