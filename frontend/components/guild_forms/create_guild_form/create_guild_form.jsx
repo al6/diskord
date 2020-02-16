@@ -140,7 +140,7 @@ class CreateGuildForm extends React.Component {
               </div>
             </div>
             <div className="create-join-form-input-container">
-              <div className="create-guild-input-container">
+              <div className="join-guild-input-container">
                 <div className="create-guild-input-label">GUILD NAME</div>
                 <input
                   placeholder={`App Academy`}
