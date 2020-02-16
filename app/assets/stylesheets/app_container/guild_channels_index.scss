@@ -3,10 +3,20 @@
   background: #2f3136;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 260px;
-  padding-top: 20px;
+  min-height: 100%;
+  padding: 20px 5px;
 }
 
 .guild_channels_index > a {
+  color: #8e9297;
+}
+
+.guild_channels_index > a:hover {
   color: white;
+}
+
+.logout-button:hover {
+  cursor: pointer;
 }
