@@ -1,11 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { demologin } from '../../../actions/session_actions';
+import React from "react";
+import { Link } from "react-router-dom";
+import { demologin } from "../../../actions/session_actions";
 
 class LoginForm extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state = {email: '', password: ''}
+    this.state = { email: "", password: "" };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -22,8 +22,10 @@ class LoginForm extends React.Component {
     const { removeErrors, demologin } = this.props;
     let responseJSON = Object.values(this.props.errors);
     let error;
-    responseJSON.length > 0 ? error = responseJSON[0] : responseJSON = undefined;
-    return(
+    responseJSON.length > 0
+      ? (error = responseJSON[0])
+      : (responseJSON = undefined);
+    return (
       <div className="session-page">
         <div className="login-container">
           <div className="form-top">
@@ -33,41 +35,65 @@ class LoginForm extends React.Component {
           <form className="login-form" onSubmit={this.handleSubmit}>
             <div className="email-container">
               <div className="input-label-and-errors">
-                <div className={ responseJSON ? "errors-form-input-label" : "form-input-label"}>EMAIL</div>
+                <div
+                  className={
+                    responseJSON
+                      ? "errors-form-input-label"
+                      : "form-input-label"
+                  }
+                >
+                  EMAIL
+                </div>
                 <div className="login-error">{error}</div>
               </div>
-              <input 
-                className={ responseJSON ? "error-form-input" : "form-input" }
-                type="text"
-                onChange={this.update('email')}
+              <input
+                className={responseJSON ? "error-form-input" : "form-input"}
+                type="email"
+                onChange={this.update("email")}
                 value={this.state.email}
               />
             </div>
             <div className="password-container">
-              <div className={ responseJSON ? "errors-form-input-label" : "form-input-label"}>PASSWORD</div>
-              <input 
-                className={ responseJSON ? "error-form-input" : "form-input" }
-                type="password" 
-                onChange={this.update('password')}
+              <div
+                className={
+                  responseJSON ? "errors-form-input-label" : "form-input-label"
+                }
+              >
+                PASSWORD
+              </div>
+              <input
+                className={responseJSON ? "error-form-input" : "form-input"}
+                type="password"
+                onChange={this.update("password")}
                 value={this.state.password}
               />
             </div>
             <div className="form-link-container">
-              <Link className="form-link" onClick={() => demologin()} to={`/login`}>Forgot your password? Try the demo instead.</Link>
+              <Link
+                className="form-link"
+                onClick={() => demologin()}
+                to={`/login`}
+              >
+                Forgot your password? Try the demo instead.
+              </Link>
             </div>
             <button className="login-form-button">
               <div className="login-form-button-text">Login</div>
             </button>
             <div className="form-link-container">
-              <div className="register-link-helper">
-                Need an account?
-              </div> 
-              <Link className="form-link" to={`/register`} onClick={()=>removeErrors()}>Register</Link>
+              <div className="register-link-helper">Need an account?</div>
+              <Link
+                className="form-link"
+                to={`/register`}
+                onClick={() => removeErrors()}
+              >
+                Register
+              </Link>
             </div>
           </form>
         </div>
       </div>
-    )
+    );
   }
 }
 
