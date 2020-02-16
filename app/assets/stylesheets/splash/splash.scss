@@ -188,6 +188,9 @@
 .splash-footer {
   display: flex;
   justify-content: space-between;
+  &:hover {
+    cursor: default;
+  }
 }
 
 .splash-footer-button {
