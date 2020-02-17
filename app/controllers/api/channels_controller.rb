@@ -2,6 +2,7 @@ class Api::ChannelsController < ApplicationController
   def create
     @channel = Channel.new(channel_params)
     if @channel.save
+      GuildChannel.send_data("guild_#{@channel.guild_id}", @channel.as_json)
       render :show
     else
       render json: ["Channel creation failed! Try a different name"], status: 400

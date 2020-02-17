@@ -1,9 +1,14 @@
 class GuildChannel < ApplicationCable::Channel
-  def subscribed
-    # stream_from "some_channel"
+  def self.send_data(guild_name, data)
+    ActionCable.server.broadcast(guild_name, data)
   end
 
-  def unsubscribed
-    # Any cleanup needed when channel is unsubscribed
+  def subscribed
+    stream_from specific_guild
+  end
+
+  private
+  def specific_guild
+    "guild_#{params[:guildId]}"
   end
 end

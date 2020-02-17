@@ -34,7 +34,6 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
   const subscribe = channelId => subscribeToChannel(channelId, dispatch);
-
   return {
     subscribe,
     createMessage: message => dispatch(createMessage(message)),

@@ -5,6 +5,9 @@ const channelsReducer = (state = [], action) => {
   let newState;
   switch (action.type) {
     case RECEIVE_CHANNEL:
+      if (state.find(channel => channel.id === action.channel.id)) {
+        return state;
+      }
       newState = JSON.parse(JSON.stringify(state));
       return newState.concat(action.channel);
     case RECEIVE_CHANNELS:
