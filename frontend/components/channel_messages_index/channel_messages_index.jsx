@@ -44,12 +44,11 @@ class ChannelMessagesIndex extends React.Component {
 
   render() {
     const { messages = [], channel = [] } = this.props;
-    console.log(channel);
     return (
       <div className="channel-messages-index">
         <div className="channel-messages-index-header">
           <div className="channel-messages-index-header-left-right">
-            <span>Channel Name</span>
+            <span>{channel.name}</span>
             <span></span>
           </div>
         </div>
@@ -90,7 +89,7 @@ class ChannelMessagesIndex extends React.Component {
               value={this.state.body}
               onChange={this.update()}
               type="text"
-              placeholder={`Send a message`}
+              placeholder={`Message ${channel.name}`}
             />
           </form>
         </div>
