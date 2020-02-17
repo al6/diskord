@@ -13,4 +13,5 @@ Rails.application.routes.draw do
     resources :messages, only: [:index, :create, :destroy]
   end
   root to: 'static_pages#root'
+  mount ActionCable.server, at: '/cable'
 end
