@@ -16,7 +16,6 @@ function subscribeToChannel(channelId, dispatch) {
     { channel: "ChatChannel", channelId: channelId },
     {
       received: data => {
-        // console.log("live update", data);
         dispatch(receiveMessage(data));
       }
     }
