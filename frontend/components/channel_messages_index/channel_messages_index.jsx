@@ -48,9 +48,12 @@ class ChannelMessagesIndex extends React.Component {
       <div className="channel-messages-index">
         <div className="channel-messages-index-header">
           <div className="channel-messages-index-header-left-right">
-            <span>{channel.name}</span>
-            <span></span>
+            <div className="channel-messages-index-header-left">
+              <span className="channel-messages-index-header-left-hashtag">#</span>
+              <span className="channel-messages-index-header-left-channel-name">{channel.name}</span>
+            </div>
           </div>
+          <span></span>
         </div>
         <div className="channel-messages-index-main">
           {messages.map(message => (
@@ -89,7 +92,7 @@ class ChannelMessagesIndex extends React.Component {
               value={this.state.body}
               onChange={this.update()}
               type="text"
-              placeholder={`Message ${channel.name}`}
+              placeholder={`Message #${channel.name}`}
             />
           </form>
         </div>

@@ -27,6 +27,32 @@
   width: 100%;
 }
 
+.channel-messages-index-header-left {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.channel-messages-index-header-left-hashtag {
+  color: #73767d;
+  font-size: 2rem;
+  font-style: italic;
+  font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+  margin-right: 1rem;
+  &:hover {
+    cursor: default;
+  }
+}
+
+.channel-messages-index-header-left-channel-name {
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  &:hover {
+    cursor: default;
+  }
+}
+
 .channel-messages-index-main {
   border-top: 1px solid #2c2c32;
   max-width: 100%;
@@ -44,6 +70,7 @@
 }
 
 .message-body {
+  color: #dcddde;
   width: 100%;
   margin: 0 0.5rem;
 }
@@ -56,14 +83,17 @@
 }
 
 .channel-message-input {
-  border: none;
-  border-radius: 0.5rem;
-  width: 95%;
-  position: relative;
-  bottom: 1.5rem;
-  height: 2rem;
   background-color: #40444b;
+  border: none;
   border-color: #40444b;
+  border-radius: 0.5rem;
+  bottom: 1.5rem;
+  color: white;
+  font-size: 0.9rem;
+  height: 2rem;
+  padding: 0 1rem;
+  position: relative;
+  width: 89%;
   &:focus {
     outline: none;
   }
@@ -95,18 +125,20 @@
 }
 
 .message-profile-picture {
-  background-color: blue;
+  background-color: #73767d;
   height: 2.5rem;
   width: 2.5rem;
   border-radius: 2rem;
 }
 
 .message-author {
+  color: #ececed;
   height: 100%;
   margin: 0 0.5rem;
 }
 
 .recent-date {
+  color: #73767d;
   font-size: 9px;
   height: 100%;
 }
