@@ -8,6 +8,15 @@ class Api::ChannelsController < ApplicationController
     end
   end
 
+  def messages
+    @messages_array = Message.where(channel_id: params[:id])&.to_a
+    if @messages_array
+      render 'api/messages/index'
+    else
+      render json: ["No messages found!"], status: 404
+    end
+  end
+
   private
   def channel_params
     params.require(:channel).permit(:name, :guild_id)
