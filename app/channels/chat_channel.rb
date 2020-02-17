@@ -1,9 +1,18 @@
 class ChatChannel < ApplicationCable::Channel
-  def subscribed
-    # stream_from "some_channel"
+  def self.send_data(channel_name, data)
+    ActionCable.server.broadcast(channel_name, data)
   end
 
-  def unsubscribed
-    # Any cleanup needed when channel is unsubscribed
+  def subscribed
+    stream_from specific_channel
+  end 
+
+  def receive(data)
+    ActionCable.server.broadcast specific_channel, data
+  end
+
+  private
+  def specific_channel
+    "chat_#{params[:room]}"
   end
 end
