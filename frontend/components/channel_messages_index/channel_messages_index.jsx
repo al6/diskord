@@ -4,7 +4,6 @@ import ChannelMessagesIndexContainer from "./channel_messages_index_container";
 class ChannelMessagesIndex extends React.Component {
   constructor(props) {
     super(props);
-    debugger;
     this.state = {
       body: "",
       author_id: props.ownerId,

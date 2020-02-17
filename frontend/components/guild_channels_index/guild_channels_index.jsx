@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Modal, { ModalContext } from "../modal/modal";
 import CreateChannelFormContainer from "../../components/create_channel_form/create_channel_form_container";
+import get from "lodash/get";
 
 class GuildChannelsIndex extends React.Component {
   constructor(props) {
@@ -9,8 +10,15 @@ class GuildChannelsIndex extends React.Component {
   }
 
   componentDidUpdate(previousProps) {
-    if (previousProps.guildId !== this.props.guildId) {
-      this.props.fetchChannels(this.props.guildId);
+    const { guildId } = this.props;
+    if (previousProps.guildId !== guildId) {
+      this.props.fetchChannels(guildId);
+    }
+    if (
+      get(previousProps, "channels", []).length === 0 &&
+      this.props.channels.length > 0
+    ) {
+      this.props.history.push(`${this.props.channels[0].id}`);
     }
   }
 
