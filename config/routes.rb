@@ -7,7 +7,9 @@ Rails.application.routes.draw do
       get :members, on: :member
     end
     resources :guild_memberships, only: [:show, :create, :destroy]
-    resources :channels, only: [:create, :index, :destroy]
+    resources :channels, only: [:create, :index, :destroy] do
+      get :messages, on: :member
+    end
     resources :messages, only: [:index, :create, :destroy]
   end
   root to: 'static_pages#root'
