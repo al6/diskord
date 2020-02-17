@@ -7,7 +7,6 @@ let subscription;
 
 function subscribeToGuild(guildId, dispatch) {
   if (subscription) {
-    console.log("unsubscribe");
     subscription = subscription.unsubscribe();
   }
   subscription = App.cable.subscriptions.create(
@@ -18,7 +17,6 @@ function subscribeToGuild(guildId, dispatch) {
       }
     }
   );
-  console.log("subscribed");
 }
 
 const mapStateToProps = (state, ownProps) => {

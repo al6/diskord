@@ -43,12 +43,15 @@ class ChannelMessagesIndex extends React.Component {
   }
 
   render() {
-    const { messages = [] } = this.props;
+    const { messages = [], channel = [] } = this.props;
+    console.log(channel);
     return (
       <div className="channel-messages-index">
         <div className="channel-messages-index-header">
-          <span>header left</span>
-          <span>header right</span>
+          <div className="channel-messages-index-header-left-right">
+            <span>Channel Name</span>
+            <span></span>
+          </div>
         </div>
         <div className="channel-messages-index-main">
           {messages.map(message => (

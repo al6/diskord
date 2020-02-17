@@ -19,6 +19,14 @@
   width: 100%;
 }
 
+.channel-messages-index-header-left-right {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1rem;
+  width: 100%;
+}
+
 .channel-messages-index-main {
   border-top: 1px solid #2c2c32;
   max-width: 100%;
