@@ -76,17 +76,18 @@ class ChannelMessagesIndex extends React.Component {
         </div>
         <div className="channel-messages-index-footer">
           <form
+            className="channel-message-input-form"
             onSubmit={e => {
               this.handleSubmit(e);
               this.clearInput();
             }}
           >
             <input
-              className="message-body"
+              className="channel-message-input"
               value={this.state.body}
               onChange={this.update()}
               type="text"
-              placeholder="Message #general"
+              placeholder={`Send a message`}
             />
           </form>
         </div>

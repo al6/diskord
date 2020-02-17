@@ -56,7 +56,8 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  height: 3rem;
+  min-height: 3rem;
+  max-height: 3rem;
   width: 100%;
   border-bottom: 1px solid #232329;
   overflow: hidden;

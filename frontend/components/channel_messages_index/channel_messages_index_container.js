@@ -23,10 +23,11 @@ function subscribeToChannel(channelId, dispatch) {
 }
 
 const mapStateToProps = (state, ownProps) => {
+  const { guildId, channelId } = ownProps.match.params;
   return {
     ownerId: state.session.id,
-    guildId: Number.parseInt(ownProps.match.params.guildId),
-    channelId: Number.parseInt(ownProps.match.params.channelId),
+    guildId: Number.parseInt(guildId),
+    channelId: Number.parseInt(channelId),
     currentMemberId: state.session.id,
     messages: state.entities.messages
   };
