@@ -30,6 +30,12 @@ class ChannelMessagesIndex extends React.Component {
     this.props.fetchMessages(this.props.channelId);
   }
 
+  componentDidUpdate(previousProps) {
+    if (previousProps.channelId !== this.props.channelId) {
+      this.props.fetchMessages(this.props.channelId);
+    }
+  }
+
   render() {
     const { messages = [] } = this.props;
     return (
