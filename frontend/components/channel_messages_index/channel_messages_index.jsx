@@ -58,13 +58,13 @@ class ChannelMessagesIndex extends React.Component {
                   <div className="message-profile-picture"></div>
                   <div className="message-data">
                     <div className="message-header">
-                      <div className="message-author">{message.author}</div>
-                      <div className="recent-date">
+                      <span className="message-author">{message.author}</span>
+                      <span className="recent-date">
                         {Date(message.created_at)
                           .split(" ")
                           .slice(0, 5)
                           .join(" ")}
-                      </div>
+                      </span>
                     </div>
                     <div className="message-body">{message.body}</div>
                   </div>

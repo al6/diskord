@@ -34,7 +34,8 @@
 }
 
 .message-body {
-  width: 90%;
+  width: 100%;
+  margin: 0 0.5rem;
   background-color: #40444b;
   &:focus {
     outline: none;
@@ -54,8 +55,10 @@
 }
 
 .message-header {
+  align-items: center;
   display: flex;
   justify-content: space-between;
+  height: 100%;
 }
 
 .message-data {
@@ -69,4 +72,14 @@
   height: 2.5rem;
   width: 2.5rem;
   border-radius: 2rem;
+}
+
+.message-author {
+  height: 100%;
+  margin: 0 0.5rem;
+}
+
+.recent-date {
+  font-size: 9px;
+  height: 100%;
 }
