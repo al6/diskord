@@ -43,6 +43,10 @@
 
 .channels-list > a {
   color: #8e9297;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 90%;
   &:hover {
     color: white;
   }
