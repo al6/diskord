@@ -13,7 +13,7 @@ function subscribeToChannel(channelId, dispatch) {
     subscription = subscription.unsubscribe();
   }
   subscription = App.cable.subscriptions.create(
-    { channel: "ChatChannel", room: channelId },
+    { channel: "ChatChannel", channelId: channelId },
     {
       received: data => {
         // console.log("live update", data);
