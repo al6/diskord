@@ -1,4 +1,40 @@
-.channel_messages_index {
-  background: #37383F;
+.channel-messages-index {
+  align-items: center;
+  background: #37383f;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
+}
+
+.channel-messages-index-header {
+  align-items: center;
+  border-bottom: 1px solid #232329;
+  display: flex;
+  justify-content: space-between;
+  height: 3rem;
+  width: 100%;
+}
+
+.channel-messages-index-main {
+  height: 100%;
+  border-top: 1px solid #2c2c32;
+  width: 100%;
+}
+
+.channel-messages-index-footer {
+  align-items: center;
+  border-top: 1px solid #2c2c32;
+  display: flex;
+  height: 3rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.message-body {
+  width: 90%;
+  background-color: #40444b;
+  &:focus {
+    outline: none;
+  }
 }

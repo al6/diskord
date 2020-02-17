@@ -28,8 +28,8 @@ class GuildChannelsIndex extends React.Component {
         </div>
         <div className="channels-list">
           <div className="text-channel-type">
-            <p>TEXT CHANNELS</p>
-            <p className="create-channel-modal">
+            <span>TEXT CHANNELS</span>
+            <span className="create-channel-modal">
               <Modal>
                 <Modal.Content>
                   <ModalContext.Consumer>
@@ -45,7 +45,7 @@ class GuildChannelsIndex extends React.Component {
                   <p>+</p>
                 </Modal.OpenButton>
               </Modal>
-            </p>
+            </span>
           </div>
           {channels.map(channel => (
             <Link
