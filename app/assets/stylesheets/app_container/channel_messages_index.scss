@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
+  max-height: 100vh;
 }
 
 .channel-messages-index-header {
@@ -20,6 +21,7 @@
   height: 100%;
   border-top: 1px solid #2c2c32;
   width: 100%;
+  overflow: scroll;
 }
 
 .channel-messages-index-footer {

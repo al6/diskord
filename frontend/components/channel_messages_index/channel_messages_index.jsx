@@ -7,6 +7,7 @@ class ChannelMessagesIndex extends React.Component {
       body: "",
       author_id: props.ownerId
     };
+    this.messagesIndex = React.createRef();
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -36,6 +37,9 @@ class ChannelMessagesIndex extends React.Component {
       this.props.fetchMessages(this.props.channelId);
       this.props.subscribe(this.props.channelId);
     }
+    if (previousProps.messages.length !== this.props.messages.length) {
+      this.messagesIndex.current.scrollIntoView();
+    }
   }
 
   render() {
@@ -50,6 +54,7 @@ class ChannelMessagesIndex extends React.Component {
           {messages.map(message => (
             <div key={message.id}>{message.body}</div>
           ))}
+          <div ref={this.messagesIndex}></div>
         </div>
         <div className="channel-messages-index-footer">
           <form
