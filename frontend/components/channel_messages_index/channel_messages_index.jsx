@@ -52,7 +52,25 @@ class ChannelMessagesIndex extends React.Component {
         </div>
         <div className="channel-messages-index-main">
           {messages.map(message => (
-            <div key={message.id}>{message.body}</div>
+            <div key={message.id}>
+              <div className="message-width-container">
+                <div className="message-container">
+                  <div className="message-profile-picture"></div>
+                  <div className="message-data">
+                    <div className="message-header">
+                      <div className="message-author">{message.author}</div>
+                      <div className="recent-date">
+                        {Date(message.created_at)
+                          .split(" ")
+                          .slice(0, 5)
+                          .join(" ")}
+                      </div>
+                    </div>
+                    <div className="message-body">{message.body}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           ))}
           <div ref={this.messagesIndex}></div>
         </div>

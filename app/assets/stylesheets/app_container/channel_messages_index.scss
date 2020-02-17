@@ -40,3 +40,33 @@
     outline: none;
   }
 }
+
+.message-width-container {
+  display: flex;
+  width: 100%;
+  margin: 1.5rem 1rem;
+}
+
+.message-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.message-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.message-profile-picture {
+  background-color: blue;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 2rem;
+}
