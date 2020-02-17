@@ -32,7 +32,6 @@ class ChannelMessagesIndex extends React.Component {
 
   render() {
     const { messages = [] } = this.props;
-    console.log(messages);
     return (
       <div className="channel-messages-index">
         <div className="channel-messages-index-header">
