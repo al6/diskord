@@ -5,32 +5,48 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 16rem;
-  max-width: 16rem;
-  min-width: 16rem;
+  max-width: 15rem;
+  min-width: 15rem;
   min-height: 100%;
+  width: 15rem;
 }
 
 .channels-list {
   align-items: flex-start;
+  border-top: 1px solid #2c2c32;
   display: flex;
   flex-direction: column;
   height: 100%;
   width: 100%;
-  border-top: 1px solid #2c2c32;
 }
 
 .text-channel-type {
   align-items: center;
   display: flex;
-  justify-content: space-between;
-  color: white;
   font-family: Whitney, Helvetica Neue, Helvetica;
-  font-weight: 400;
-  font-size: 12px;
-  width: 100%;
   height: 1rem;
+  justify-content: space-between;
+  padding: 1rem 1rem 0 1rem;
+  width: 14rem;
 }
+
+.text-channel-type-text {
+  font-size: 0.7rem;
+  font-weight: 500;
+  &:hover {
+    color: #fbfbfb;
+    cursor: default;
+  }
+}
+
+.create-channel-button-text {
+  font-size: 1.4rem;
+  font-weight: 400;
+  &:hover {
+    color: #fbfbfb;
+  }
+}
+
 .text-channel-type > div {
   height: 0.6rem;
 }
@@ -55,7 +71,6 @@
 .create-channel-container {
   align-items: center;
   display: flex;
-  justify-content: center;
   min-height: 3rem;
   max-height: 3rem;
   width: 100%;
@@ -64,7 +79,8 @@
 }
 
 .channel-index-title {
-  color: #8e9297;
+  color: white;
+  margin: 0 1rem;
 }
 
 .channels-index-footer {
