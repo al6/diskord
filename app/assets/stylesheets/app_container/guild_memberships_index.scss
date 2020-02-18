@@ -33,7 +33,7 @@
   width: 3.2rem;
   min-width: 3.2rem;
   max-width: 3.2rem;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.5rem;
   transition: 1s;
   &:hover {
     background-color: #7189da;
@@ -44,8 +44,8 @@
 }
 
 .guild-index-name {
-  letter-spacing: 0.1rem;
   font-size: 1rem;
+  letter-spacing: 0.1rem;
 }
 
 .hover-green-transition {
