@@ -31,9 +31,15 @@ class CreateGuildForm extends React.Component {
     return e => this.setState({ [field]: e.currentTarget.value });
   }
 
+  componentDidUpdate(previousProps) {
+    if (previousProps.guilds !== this.props.guilds) {
+      this.props.closeModal();
+    }
+  }
+
   render() {
     let { clicked, formType } = this.state;
-
+    const { errors } = this.props;
     if (!clicked) {
       return (
         <div className="guild-membership-form">
@@ -94,10 +100,13 @@ class CreateGuildForm extends React.Component {
             </div>
             <div className="create-join-form-input-container">
               <div className="create-guild-input-container">
-                <div className="create-guild-input-label">GUILD NAME</div>
+                <div>
+                  <div className="create-guild-input-label">GUILD NAME</div>
+                  <div className="validation-error-text">{errors}</div>
+                </div>
                 <input
                   spelllcheck="false"
-                  placeholder={`${this.props.currentMember}'s server`}
+                  placeholder={`${this.props.currentMember}'s guild`}
                   className="create-guild-name-input"
                   type="text"
                   value={this.state.guildName}
@@ -126,7 +135,6 @@ class CreateGuildForm extends React.Component {
                 color="blue"
                 onClick={e => {
                   this.handleCreateGuild(e);
-                  this.props.closeModal();
                 }}
               >
                 Create

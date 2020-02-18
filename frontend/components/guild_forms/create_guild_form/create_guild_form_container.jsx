@@ -5,6 +5,7 @@ import CreateGuildForm from "./create_guild_form";
 const mapStateToProps = state => {
   const currentMemberId = state.session.id;
   return {
+    errors: state.errors.session,
     currentMember: state.entities.members[currentMemberId].username,
     currentMemberId,
     guilds: state.entities.guilds
