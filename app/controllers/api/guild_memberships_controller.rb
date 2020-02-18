@@ -24,6 +24,16 @@ class Api::GuildMembershipsController < ApplicationController
     end
   end
 
+  def guild_members
+    @guild = Guild.find_by(id: params[:id])
+    if @guild
+      @guild_members_array = @guild.guild_members.to_a
+      render 'api/guilds/member'
+    else
+      render json: ["Guild not found!"]
+    end
+  end
+
   private
   def guild_membership_params
     require(:guild_membership).permit(:member_id, :name)

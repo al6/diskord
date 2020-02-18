@@ -6,7 +6,9 @@ Rails.application.routes.draw do
       get :channels, on: :member
       get :members, on: :member
     end
-    resources :guild_memberships, only: [:show, :create, :destroy]
+    resources :guild_memberships, only: [:show, :create, :destroy] do
+      get :guild_members, on: :member
+    end
     resources :channels, only: [:create, :index, :destroy] do
       get :messages, on: :member
     end
