@@ -38,7 +38,7 @@ class CreateGuildForm extends React.Component {
       return (
         <div className="guild-membership-form">
           <div className="diskord-blue guild-member-form-header">
-            OH, ANOTHER SERVER HUH?
+            OH, ANOTHER GUILD HUH?
           </div>
           <div className="create-join-guild-buttons">
             <div className="create-guild-form">
