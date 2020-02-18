@@ -25,9 +25,10 @@
   box-sizing: border-box;
   display: flex;
   font-family: Whitney, Helvetica Neue, Helvetica;
-  height: 1rem;
+  max-height: 35px;
+  min-height: 35px;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1rem 0 0 1rem;
   width: 14rem;
 }
 
