@@ -31,7 +31,11 @@ class GuildMembershipsIndex extends React.Component {
             key={`guild-${guild.id}`}
             to={`/channels/${guild.id}/`}
           >
-            {guild.name}
+            {guild.name
+              .toUpperCase()
+              .split(" ")
+              .map(word => word[0])
+              .join("")}
           </Link>
         ))}
         <Modal>
