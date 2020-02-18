@@ -113,8 +113,8 @@
 
 .create-join-form {
   box-sizing: border-box;
-  min-height: 385px;
-  max-height: 385px;
+  min-height: 27rem;
+  max-height: 27rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -146,6 +146,7 @@
 .guild-icon-upload {
   height: 128px;
   width: 128px;
+  border: 5px solid #ebebeb;
   border-radius: 128px;
   background: #7289da;
 }
@@ -190,7 +191,7 @@
   border-left: none;
   color: #2f3036;
   font-size: 1rem;
-  &:active {
+  &:focus {
     outline: none;
   }
 }
