@@ -27,7 +27,7 @@ class GuildMembershipsIndex extends React.Component {
         </Link>
         {guilds.map(guild => (
           <Link
-            className="guild-membership"
+            className="guild-membership guild-index-name"
             key={`guild-${guild.id}`}
             to={`/channels/${guild.id}/`}
           >
