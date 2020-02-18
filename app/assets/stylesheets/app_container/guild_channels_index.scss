@@ -64,7 +64,6 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 90%;
   &:hover {
     color: white;
   }
@@ -83,6 +82,23 @@
 .channel-index-title {
   color: white;
   margin: 0 1rem;
+}
+
+.channel-index-link {
+  align-items: center;
+  border-radius: 0.25rem;
+  display: flex;
+  font-size: 0.9rem;
+  height: 2rem;
+  width: 90%;
+  margin: 0 auto;
+  &:hover {
+    background-color: #393b43;
+  }
+}
+
+.channels-index-hashtag {
+  margin: 0.5rem;
 }
 
 .channels-index-footer {
