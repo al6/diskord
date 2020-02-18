@@ -103,6 +103,12 @@
   }
 }
 
+.message-index-width {
+  &:hover {
+    background-color: #2f3036;
+  }
+}
+
 .message-width-container {
   display: flex;
   margin: 1.5rem 1rem;

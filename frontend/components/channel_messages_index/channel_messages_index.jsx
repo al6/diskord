@@ -69,7 +69,7 @@ class ChannelMessagesIndex extends React.Component {
         <div className="channel-messages-index-main">
           {messages.map(message => {
             return (
-              <div key={message.id}>
+              <div className="message-index-width" key={message.id}>
                 <div className="message-width-container">
                   <div className="message-container">
                     <div className="message-profile-picture"></div>
