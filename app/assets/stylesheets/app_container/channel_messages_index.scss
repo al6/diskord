@@ -47,7 +47,7 @@
 
 .channel-messages-index-header-left-channel-name {
   color: white;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 600;
   &:hover {
     cursor: default;
@@ -57,10 +57,10 @@
 .channel-messages-index-main {
   border-top: 1px solid #2c2c32;
   max-width: 100%;
-  overflow-x: wrap;
   overflow-y: scroll;
   width: 100%;
   height: 100%;
+  padding-bottom: 1rem;
 }
 
 .channel-messages-index-footer {
@@ -96,7 +96,8 @@
   max-height: 2.5rem;
   padding: 0 1rem;
   position: relative;
-  width: 94.5%;
+  width: 100%;
+  margin: 0 1rem;
   &:focus {
     outline: none;
   }

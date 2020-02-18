@@ -22,11 +22,12 @@
 
 .text-channel-type {
   align-items: center;
+  box-sizing: border-box;
   display: flex;
   font-family: Whitney, Helvetica Neue, Helvetica;
   height: 1rem;
   justify-content: space-between;
-  padding: 1rem 1rem 0 1rem;
+  padding: 1rem;
   width: 14rem;
 }
 
@@ -87,7 +88,8 @@
   align-items: center;
   background-color: #292b2f;
   display: flex;
-  height: 3rem;
+  min-height: 3rem;
+  max-height: 3rem;
   justify-content: center;
   width: 100%;
 }
