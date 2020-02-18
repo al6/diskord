@@ -1,5 +1,5 @@
 .landing-hero {
-  padding: px 50px;
+  padding: 0 50px;
 }
 
 .splash-background {
@@ -14,9 +14,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 1350px;
+  max-width: 100rem;
   min-height: 100vh;
   padding: 0 30px;
+  margin: 0 auto;
 }
 
 .splash-nav {
@@ -24,9 +25,11 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font-size: 11px;
-  height: 56px;
+  font-size: 1rem;
+  height: 3rem;
   padding: 8px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .splash-nav-item {
@@ -47,8 +50,8 @@
 }
 
 .network-buttons > a > img {
-  height: 16px;
-  filter: brightness(50%);
+  height: 1.1rem;
+  filter: brightness(80%);
   &:hover {
     cursor: pointer;
     filter: none;
@@ -60,21 +63,22 @@
 }
 
 .splash-nav-button {
-  border-radius: 20px;
-  border: 2px solid #bdbdbe;
-  color: #bdbdbe;
+  border-radius: 1.8rem;
+  border: 2px solid white;
+  color: white;
+  filter: brightness(80%);
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  min-width: 60px;
-  height: 32px;
-  font-size: 10px;
-  padding: 10px;
+  min-width: 4.1rem;
+  max-width: 4.1rem;
+  height: 2.1rem;
+  font-size: 0.8rem;
+  padding: 0.5rem;
   box-sizing: border-box;
   &:hover {
-    color: white;
-    border-color: white;
+    filter: none;
   }
 }
 
@@ -93,20 +97,20 @@
 
 .splash-main-github-demo-buttons {
   display: flex;
-  justify-content: space-evenly;
-  max-width: 400px;
-  width: 100%;
+  justify-content: space-between;
+  max-width: 32.4rem;
   margin: 0 auto;
+  width: 100%;
 }
 
 .splash-main-github-demo-buttons > a {
   border-radius: 3px;
   border: none;
   display: flex;
+  font-size: 0.9rem;
   justify-content: center;
-  padding: 15px;
-  width: 150px;
-  font-size: 11px;
+  padding: 0.9rem;
+  width: 13rem;
 }
 
 .splash-main-left-button {
@@ -125,7 +129,6 @@
 
 .splash-main {
   text-align: center;
-  zoom: 115%;
 }
 
 .splash-header {
@@ -134,16 +137,10 @@
   flex-direction: column;
   justify-content: space-evenly;
   max-width: 710px;
-  min-height: 250px;
-  height: 250px;
+  max-height: 15rem;
   margin: 0 auto;
-  padding-top: 50px;
-}
-
-@media (min-width: 320px) and (max-width: 480px) {
-  .splash-header {
-    min-height: 350px;
-  }
+  min-height: 15rem;
+  padding-top: 3rem;
 }
 
 .splash-header-main-container {
@@ -153,18 +150,17 @@
 }
 
 .splash-header-main {
-  font-size: 1.8rem;
-  height: 44px;
+  font-size: 2rem;
+  height: 100%;
   font-weight: 600;
 }
 
 .splash-header-sub {
-  font-size: 0.78rem;
+  font-size: 0.9rem;
   color: #a8a9ab;
-  line-height: 24px;
-  height: 48px;
-  max-width: 630px;
-  margin: 12px auto 30px auto;
+  line-height: 1.8rem;
+  max-width: 43rem;
+  margin: 0rem auto 0.5rem auto;
 }
 
 .footer-links {
@@ -186,11 +182,34 @@
 }
 
 .splash-footer {
+  align-items: center;
   display: flex;
   justify-content: space-between;
   &:hover {
     cursor: default;
   }
+}
+
+.footer-main {
+  margin: 0 auto 3rem auto;
+  max-width: 100rem;
+  min-width: 25rem;
+  width: 100%;
+}
+
+.left-splash-footer {
+  font-family: "Helvetica Neue";
+}
+
+.splash-footer-header-main {
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+.splash-footer-header-sub {
+  color: #a8a8ab;
+  font-size: 0.8rem;
+  padding-top: 0.2rem;
 }
 
 .splash-footer-button {
@@ -207,26 +226,13 @@
   color: white;
 }
 
-.left-splash-footer {
-  font-family: "Helvetica Neue";
-}
+@media (min-width: 320px) and (max-width: 480px) {
+  .splash-header {
+    min-height: 350px;
+  }
 
-.splash-footer-header-main {
-  color: #ffffff;
-}
-
-.splash-footer-header-sub {
-  color: #a8a8ab;
-  font-size: 11px;
-  padding-top: 5px;
-}
-
-.footer-main {
-  padding: 30px 160px;
-}
-
-.dot,
-.triangle,
-.x {
-  position: absolute;
+  .splash-footer {
+    padding: 0 1rem;
+    width: 20rem;
+  }
 }
