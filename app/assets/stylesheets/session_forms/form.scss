@@ -188,6 +188,11 @@
   border-top: none;
   border-right: none;
   border-left: none;
+  color: #2f3036;
+  font-size: 1rem;
+  &:active {
+    outline: none;
+  }
 }
 
 .create-guild-input-label {
