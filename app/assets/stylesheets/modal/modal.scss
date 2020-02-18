@@ -1,15 +1,13 @@
 .modal-content-container {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  position: fixed;
-  left: 0;
-  top: 0;
-  opacity: 85%;
-  background-color: black;
-  width: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
   height: 100%;
-  z-index: 5;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .modal-content {
