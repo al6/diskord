@@ -7,11 +7,18 @@
   max-height: 1400px;
   height: 638px;
   width: 100%;
+  min-width: 82rem;
+  max-width: 82rem;
+  overflow: hidden;
 }
 
 .splash-margin-container {
+  display: flex;
+  justify-content: center;
   margin: 0 auto;
   padding-bottom: 8rem;
+  position: relative;
+  width: 100%;
 }
 
 .flask {
@@ -158,7 +165,7 @@
 
 .triangle-left {
   bottom: 19rem;
-  right: 80.6rem;
+  right: 74.6rem;
 }
 
 .dot,
@@ -196,10 +203,6 @@
   .footer-main {
     padding: 0;
     min-width: 13rem;
-  }
-
-  .splash-margin-container {
-    margin-bottom: 0;
   }
 
   .splash-header {
