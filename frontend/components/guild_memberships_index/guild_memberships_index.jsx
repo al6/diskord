@@ -42,8 +42,8 @@ class GuildMembershipsIndex extends React.Component {
               )}
             </ModalContext.Consumer>
           </Modal.Content>
-          <Modal.OpenButton className="guild-membership">
-            <div>+</div>
+          <Modal.OpenButton className="guild-membership hover-green-transition">
+            <span className="open-guild-form-modal-text">+</span>
           </Modal.OpenButton>
         </Modal>
       </div>

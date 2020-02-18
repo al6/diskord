@@ -8,6 +8,13 @@
   padding-top: 10px;
 }
 
+.open-guild-form-modal-text {
+  font-size: 2rem;
+  font-weight: 300;
+  position: relative;
+  bottom: 2px;
+}
+
 .guild-membership {
   align-items: center;
   background-color: #37383f;
@@ -19,7 +26,6 @@
   font-weight: 400;
   font-size: 9px;
   justify-content: center;
-  // background: image-url("logo.png");
   height: 3.2rem;
   min-height: 3.2rem;
   max-height: 3.2rem;
@@ -28,8 +34,23 @@
   min-width: 3.2rem;
   max-width: 3.2rem;
   margin-bottom: 0.2rem;
+  transition: 1s;
   &:hover {
+    background-color: #7189da;
     border-radius: 1rem;
+    transition: 0.3s;
   }
   overflow: hidden;
+}
+
+.hover-green-transition {
+  background-color: #37383f;
+  color: #43b581;
+  transition: 1s;
+}
+
+.hover-green-transition:hover {
+  background-color: #43b581;
+  color: white;
+  transition: 0.5s;
 }
