@@ -92,10 +92,11 @@
   bottom: 1.5rem;
   color: white;
   font-size: 0.9rem;
-  height: 2rem;
+  min-height: 2.5rem;
+  max-height: 2.5rem;
   padding: 0 1rem;
   position: relative;
-  width: 89%;
+  width: 94.5%;
   &:focus {
     outline: none;
   }
