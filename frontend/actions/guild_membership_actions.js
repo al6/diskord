@@ -1,5 +1,6 @@
 import * as GuildMembershipAPIUtil from "../util/guild_membership_api_util";
 import * as GuildAPIUtil from "../util/guild_api_util";
+import { receiveErrors } from "./session_actions";
 
 export const RECEIVE_GUILD_MEMBERSHIP = "RECEIVE_GUILD_MEMBERSHIP";
 export const RECEIVE_GUILD = "RECEIVE_GUILD";
@@ -21,8 +22,9 @@ const receiveGuildMembership = guild_membership => ({
 });
 
 export const createGuild = guild => dispatch => {
-  return GuildAPIUtil.create(guild).then(guild =>
-    dispatch(receiveGuild(guild))
+  return GuildAPIUtil.create(guild).then(
+    guild => dispatch(receiveGuild(guild)),
+    errors => dispatch(receiveErrors(errors.responseJSON))
   );
 };
 
