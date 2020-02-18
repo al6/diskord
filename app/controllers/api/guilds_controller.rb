@@ -9,7 +9,11 @@ class Api::GuildsController < ApplicationController
     if @guild.save
       render :show
     else
-      render json: ["Sorry, that guild name is taken!"], status: 409
+      if guild_params["name"] == ""
+        render json: ["This field is required"], status: 400
+      else
+        render json: ["Sorry, that guild name is taken!"], status: 409
+      end
     end
   end
 
