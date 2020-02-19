@@ -44,6 +44,7 @@
 .create-channel-button-text {
   font-size: 1.4rem;
   font-weight: 400;
+  padding-bottom: 0.5rem;
   &:hover {
     color: #fbfbfb;
   }
@@ -77,6 +78,9 @@
   width: 100%;
   border-bottom: 1px solid #232329;
   overflow: hidden;
+  &:hover {
+    background-color: #34373c;
+  }
 }
 
 .channel-index-title {
@@ -99,6 +103,7 @@
 
 .channels-index-hashtag {
   margin: 0.5rem;
+  height: 1rem;
 }
 
 .channels-index-footer {
