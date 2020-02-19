@@ -177,6 +177,10 @@ class Splash extends React.Component {
                   src="https://diskord-pro.s3.amazonaws.com/x.svg"
                 />
                 <img
+                  className="triangle-hidden-behind-top-left-monitor"
+                  src="https://diskord-pro.s3.amazonaws.com/triangle.svg"
+                />
+                <img
                   className="x-right-of-laptop"
                   src="https://diskord-pro.s3.amazonaws.com/x.svg"
                 />
@@ -193,6 +197,20 @@ class Splash extends React.Component {
                 <img
                   className="empty-circle-right-of-monitor"
                   src="https://diskord-pro.s3.amazonaws.com/circle.svg"
+                />
+
+                {/* empty white squares */}
+                <img
+                  className="square-behind-monitor-stand"
+                  src="https://diskord-pro.s3.amazonaws.com/square.svg"
+                />
+                <img
+                  className="square-above-laptop-upper"
+                  src="https://diskord-pro.s3.amazonaws.com/square.svg"
+                />
+                <img
+                  className="square-above-laptop-lower"
+                  src="https://diskord-pro.s3.amazonaws.com/square.svg"
                 />
               </div>
             </div>

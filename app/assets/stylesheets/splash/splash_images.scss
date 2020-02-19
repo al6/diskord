@@ -41,7 +41,7 @@
 }
 
 .flask {
-  left: 19rem;
+  left: 18.5rem;
   height: 12rem;
 }
 
@@ -49,7 +49,7 @@
 .iphone {
   max-height: 250px;
   max-width: 135px;
-  z-index: 2;
+  z-index: 3;
 }
 
 .android {
@@ -57,7 +57,7 @@
 }
 
 .iphone {
-  left: 16.4rem;
+  left: 16rem;
 }
 
 @keyframes bombfloat {
@@ -85,7 +85,7 @@
   animation-direction: alternate;
   animation-timing-function: ease-in-out;
 
-  max-height: 5rem;
+  max-height: 6rem;
   bottom: 21rem;
   right: 6.5rem;
   z-index: 0;
@@ -103,8 +103,8 @@
 
 .coin-left,
 .coin-top-middle {
-  max-height: 5rem;
-  max-width: 4.5rem;
+  max-height: 6rem;
+  max-width: 6rem;
   z-index: 2;
 }
 
@@ -122,17 +122,18 @@
   max-height: 7rem;
   max-width: 10rem;
   left: 17rem;
-  z-index: 2;
+  z-index: 3;
 }
 
 .monitor {
   height: auto;
   max-height: 30rem;
   max-width: 36rem;
-  z-index: 1;
+  z-index: 2;
 }
 
 .laptop {
+  left: 2rem;
   z-index: 3;
 }
 
@@ -160,13 +161,17 @@
 .filled-dot-above-monitor-and-laptop,
 .triangle-left,
 .triangle-top-middle,
+.triangle-hidden-behind-top-left-monitor,
 .x-above-flask,
 .x-right-of-laptop,
 .empty-circle-above-iphone,
 .empty-circle-behind-controller,
-.empty-circle-right-of-monitor {
+.empty-circle-right-of-monitor,
+.square-behind-monitor-stand,
+.square-above-laptop-upper,
+.square-above-laptop-lower {
   position: absolute;
-  filter: brightness(50%);
+  filter: brightness(40%);
 }
 
 .filled-dot-left-of-android {
@@ -179,9 +184,56 @@
   left: 21rem;
 }
 
+.filled-dot-above-monitor-and-laptop {
+  bottom: 31rem;
+  right: 27rem;
+}
+
+.filled-dot-top-right {
+  top: 1rem;
+  right: 5rem;
+}
+
 .triangle-left {
   bottom: 19rem;
   right: 74.6rem;
+}
+
+.triangle-top-middle {
+  bottom: 34rem;
+  left: 43rem;
+}
+
+.empty-circle-above-iphone {
+  bottom: 33rem;
+  left: 18.7rem;
+}
+
+.empty-circle-behind-controller {
+  bottom: 4.9rem;
+  left: 29.5rem;
+}
+
+.question-block {
+  bottom: 28rem;
+  left: 26rem;
+  z-index: 1;
+}
+
+.square-behind-monitor-stand {
+  bottom: 5.5rem;
+  left: 42.2rem;
+}
+
+.x-above-flask {
+  left: 4.8rem;
+  bottom: 30.8rem;
+}
+
+.triangle-hidden-behind-top-left-monitor {
+  top: 10.2rem;
+  left: 23rem;
+  z-index: 0;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
