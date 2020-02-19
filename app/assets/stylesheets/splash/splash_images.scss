@@ -13,7 +13,9 @@
 }
 
 .splash-margin-container {
+  align-items: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin: 0 auto;
   padding-bottom: 8rem;
@@ -43,6 +45,7 @@
 .flask {
   left: 18.5rem;
   height: 12rem;
+  z-index: 1;
 }
 
 .android,
@@ -114,8 +117,8 @@
 }
 
 .coin-top-middle {
-  bottom: 33.7rem;
-  left: 18.5rem;
+  bottom: 33rem;
+  left: 17rem;
 }
 
 .game-controller {
@@ -133,13 +136,13 @@
 }
 
 .laptop {
-  left: 2rem;
+  left: 1.3rem;
   z-index: 3;
 }
 
 .game-cartridge {
-  bottom: 385px;
-  left: 350px;
+  bottom: 24rem;
+  left: 23rem;
 }
 
 .headphones {
@@ -151,7 +154,8 @@
 
 .shield {
   position: relative;
-  right: 280px;
+  right: 16.5rem;
+  z-index: 1;
 }
 
 .filled-dot-left-of-android,
@@ -194,6 +198,11 @@
   right: 5rem;
 }
 
+.filled-dot-bottom-right {
+  right: 0rem;
+  bottom: 8rem;
+}
+
 .triangle-left {
   bottom: 19rem;
   right: 74.6rem;
@@ -211,7 +220,12 @@
 
 .empty-circle-behind-controller {
   bottom: 4.9rem;
-  left: 29.5rem;
+  left: 29rem;
+}
+
+.empty-circle-right-of-monitor {
+  right: 3rem;
+  top: 20rem;
 }
 
 .question-block {
@@ -225,14 +239,40 @@
   left: 42.2rem;
 }
 
+.square-above-laptop-upper {
+  top: 1rem;
+  right: 18rem;
+}
+
+.square-above-laptop-lower {
+  top: 13rem;
+  right: 12rem;
+}
+
 .x-above-flask {
   left: 4.8rem;
   bottom: 30.8rem;
 }
 
+.x-right-of-laptop {
+  top: 24rem;
+  right: 4.7rem;
+}
+
 .triangle-hidden-behind-top-left-monitor {
   top: 10.2rem;
   left: 23rem;
+  z-index: 0;
+}
+
+.images-footer-thingy {
+  background-color: #212226;
+  border-radius: 2rem;
+  bottom: 2rem;
+  width: 93%;
+  height: 1rem;
+  padding: 1rem;
+  position: relative;
   z-index: 0;
 }
 
@@ -251,7 +291,7 @@
     display: none;
   }
   .laptop {
-    left: 15rem;
+    left: 12rem;
   }
 
   .android {

@@ -213,6 +213,7 @@ class Splash extends React.Component {
                   src="https://diskord-pro.s3.amazonaws.com/square.svg"
                 />
               </div>
+              <div className="images-footer-thingy"></div>
             </div>
           </div>
           <div className="footer-main">
