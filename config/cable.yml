@@ -6,5 +6,4 @@ test:
 
 production:
   adapter: redis
-  url: <%= ENV['REDIS_URL'] %>
-  channel_prefix: diskord_production
+  url: redis://redistogo:1be2bb9f5cf40d1b31cc0a7d709adcae@pike.redistogo.com:10110/
