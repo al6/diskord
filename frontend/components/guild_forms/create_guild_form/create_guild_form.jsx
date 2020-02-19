@@ -11,6 +11,7 @@ class CreateGuildForm extends React.Component {
     };
     this.toggleForm = this.toggleForm.bind(this);
     this.handleCreateGuild = this.handleCreateGuild.bind(this);
+    this.handleJoinGuild = this.handleJoinGuild.bind(this);
     this.update = this.update.bind(this);
   }
 
@@ -25,6 +26,11 @@ class CreateGuildForm extends React.Component {
       owner_id: this.props.currentMemberId
     };
     this.props.createGuild(guild);
+  }
+
+  handleJoinGuild(e) {
+    e.preventDefault();
+    this.props.joinGuild(this.state.guildName);
   }
 
   update(field) {
@@ -156,6 +162,7 @@ class CreateGuildForm extends React.Component {
             <div className="create-join-form-input-container">
               <div className="join-guild-input-container">
                 <div className="create-guild-input-label">GUILD NAME</div>
+                <div className="validation-error-text">{errors}</div>
                 <input
                   placeholder={`App Academy`}
                   className="create-guild-name-input"
@@ -165,7 +172,7 @@ class CreateGuildForm extends React.Component {
                 />
                 <div className="create-guild-community-guidelines">
                   Looking for other servers to join? Try 'Hidden Ruby Gem',
-                  'BleatsFan', or 'SleepAndCode'!
+                  'Bleats Fan', or 'Sleep And Code'!
                 </div>
               </div>
             </div>
@@ -176,7 +183,9 @@ class CreateGuildForm extends React.Component {
               >
                 BACK
               </Button>
-              <Button color="green">Join</Button>
+              <Button onClick={e => this.handleJoinGuild(e)} color="green">
+                Join
+              </Button>
             </div>
           </div>
         );

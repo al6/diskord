@@ -14,3 +14,9 @@ export const fetchGuildMembers = guild_id =>
   $.ajax({
     url: `/api/guild_memberships/${guild_id}/guild_members`
   });
+
+export const joinGuild = name =>
+  $.ajax({
+    method: "POST",
+    url: `/api/guild_memberships/${name}`
+  });

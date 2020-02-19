@@ -1,5 +1,8 @@
 import { connect } from "react-redux";
-import { createGuild } from "../../../actions/guild_membership_actions";
+import {
+  createGuild,
+  joinGuild
+} from "../../../actions/guild_membership_actions";
 import CreateGuildForm from "./create_guild_form";
 
 const mapStateToProps = state => {
@@ -13,7 +16,8 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  createGuild: guild => dispatch(createGuild(guild))
+  createGuild: guild => dispatch(createGuild(guild)),
+  joinGuild: name => dispatch(joinGuild(name))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CreateGuildForm);
