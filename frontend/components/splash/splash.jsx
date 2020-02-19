@@ -32,7 +32,7 @@ class Splash extends React.Component {
                 <a href="http://github.com/al6">
                   <img
                     className="github-button"
-                    src="https://diskord-pro.s3.amazonaws.com/angellist.png"
+                    src="https://diskord-pro.s3.amazonaws.com/github-logo.png"
                   />
                 </a>
                 <a href="https://www.linkedin.com/in/albertlee3/">
@@ -94,16 +94,28 @@ class Splash extends React.Component {
                 <img className="triangle" src={triangle} />
                 <img className="dot" src={dot} />
                 <img className="flask" src={flask} />
-                <img className="android" src={android} />
+                <img
+                  className="android"
+                  src="https://diskord-pro.s3.amazonaws.com/android.svg"
+                />
                 <img className="iphone" src={iphone} />
                 <img className="game-controller" src={controller} />
-                <img className="bomb" src={bomb} />
-                <img className="coin-left" src={coin} />
+                <img
+                  className="bomb"
+                  src="https://diskord-pro.s3.amazonaws.com/bomb.svg"
+                />
+                <img
+                  className="coin-left"
+                  src="https://diskord-pro.s3.amazonaws.com/coin.svg"
+                />
 
                 <img className="monitor" src={monitor} />
 
                 {/* right of monitor */}
-                <img className="coin-top-middle" src={coin} />
+                <img
+                  className="coin-top-middle"
+                  src="https://diskord-pro.s3.amazonaws.com/coin.svg"
+                />
                 <img
                   className="filled-dot-above-monitor-and-laptop"
                   src={dot}
