@@ -107,8 +107,14 @@ class Splash extends React.Component {
                 <img className="filled-dot-directly-above-iphone" src={dot} />
                 <img className="filled-dot-bottom-right" src={dot} />
                 <img className="filled-dot-top-right" src={dot} />
-                <img className="triangle-left" src={triangle} />
-                <img className="triangle-top-middle" src={triangle} />
+                <img
+                  className="triangle-left"
+                  src="https://discordapp.com/assets/0a2fd7b3bab977b4619f466b81b426d4.svg"
+                />
+                <img
+                  className="triangle-top-middle"
+                  src="https://discordapp.com/assets/0a2fd7b3bab977b4619f466b81b426d4.svg"
+                />
               </div>
             </div>
           </div>
