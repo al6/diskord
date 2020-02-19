@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  max-height: 1400px;
+  max-height: 638px;
   height: 638px;
   width: 100%;
   min-width: 82rem;
@@ -21,15 +21,32 @@
   width: 100%;
 }
 
-.flask {
+.flask,
+.android,
+.iphone,
+.bomb,
+.coin-left,
+.coin-top-middle,
+.game-controller,
+.laptop,
+.game-cartridge,
+.headphones,
+.shield {
   position: relative;
+}
+
+.monitor,
+.question-block {
+  position: absolute;
+}
+
+.flask {
   left: 19rem;
   height: 12rem;
 }
 
 .android,
 .iphone {
-  position: relative;
   max-height: 250px;
   max-width: 135px;
   z-index: 2;
@@ -68,7 +85,6 @@
   animation-direction: alternate;
   animation-timing-function: ease-in-out;
 
-  position: relative;
   max-height: 5rem;
   bottom: 21rem;
   right: 6.5rem;
@@ -87,7 +103,6 @@
 
 .coin-left,
 .coin-top-middle {
-  position: relative;
   max-height: 5rem;
   max-width: 4.5rem;
   z-index: 2;
@@ -104,7 +119,6 @@
 }
 
 .game-controller {
-  position: relative;
   max-height: 7rem;
   max-width: 10rem;
   left: 17rem;
@@ -112,7 +126,6 @@
 }
 
 .monitor {
-  position: absolute;
   height: auto;
   max-height: 30rem;
   max-width: 36rem;
@@ -120,18 +133,15 @@
 }
 
 .laptop {
-  position: relative;
   z-index: 3;
 }
 
 .game-cartridge {
-  position: relative;
   bottom: 385px;
   left: 350px;
 }
 
 .headphones {
-  position: relative;
   right: 300px;
   bottom: 170px;
   max-height: 200px;
@@ -143,39 +153,35 @@
   right: 280px;
 }
 
-.question-block {
-  position: relative;
-}
-
 .filled-dot-left-of-android,
 .filled-dot-directly-above-iphone,
 .filled-dot-bottom-right,
 .filled-dot-top-right,
-.filled-dot-above-monitor-and-laptop {
+.filled-dot-above-monitor-and-laptop,
+.triangle-left,
+.triangle-top-middle,
+.x-above-flask,
+.x-right-of-laptop,
+.empty-circle-above-iphone,
+.empty-circle-behind-controller,
+.empty-circle-right-of-monitor {
   position: absolute;
   filter: brightness(50%);
 }
 
 .filled-dot-left-of-android {
-  right: 73rem;
-  bottom: 11rem;
+  right: 76rem;
+  bottom: 12.4rem;
 }
 
-.triangle-left,
-.triangle-top-middle {
-  position: absolute;
-  filter: brightness(50%);
+.filled-dot-directly-above-iphone {
+  bottom: 37rem;
+  left: 21rem;
 }
 
 .triangle-left {
   bottom: 19rem;
   right: 74.6rem;
-}
-
-.dot,
-.triangle,
-.x {
-  position: absolute;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {

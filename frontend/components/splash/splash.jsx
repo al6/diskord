@@ -90,12 +90,6 @@ class Splash extends React.Component {
             <div className="splash-margin-container">
               <div className="splash-image-container">
                 {/* left of monitor */}
-                <img className="x" src={x} />
-                <img className="triangle" src={triangle} />
-                <img
-                  className="dot"
-                  src="https://diskord-pro.s3.amazonaws.com/filled-dot.svg"
-                />
                 <img
                   className="flask"
                   src="https://diskord-pro.s3.amazonaws.com/spawner-potion.svg"
@@ -106,8 +100,7 @@ class Splash extends React.Component {
                 />
                 <img
                   className="iphone"
-                  src="https://diskord-pro.s3.amazonaws.com/iphone.svg
-"
+                  src="https://diskord-pro.s3.amazonaws.com/iphone.svg"
                 />
                 <img
                   className="game-controller"
@@ -121,20 +114,14 @@ class Splash extends React.Component {
                   className="coin-left"
                   src="https://diskord-pro.s3.amazonaws.com/coin.svg"
                 />
-
                 <img
                   className="monitor"
                   src="https://diskord-pro.s3.amazonaws.com/monitor.svg"
                 />
-
                 {/* right of monitor */}
                 <img
                   className="coin-top-middle"
                   src="https://diskord-pro.s3.amazonaws.com/coin.svg"
-                />
-                <img
-                  className="filled-dot-above-monitor-and-laptop"
-                  src="https://diskord-pro.s3.amazonaws.com/filled-dot.svg"
                 />
                 <img
                   className="game-cartridge"
@@ -146,10 +133,11 @@ class Splash extends React.Component {
                 />
                 <img
                   className="headphones"
-                  src="https://diskord-pro.s3.amazonaws.com/headphones.svg
-"
+                  src="https://diskord-pro.s3.amazonaws.com/headphones.svg"
                 />
                 <img className="shield" src={shield} />
+
+                {/* filled dots */}
                 <img
                   className="filled-dot-left-of-android"
                   src="https://diskord-pro.s3.amazonaws.com/filled-dot.svg"
@@ -159,7 +147,7 @@ class Splash extends React.Component {
                   src="https://diskord-pro.s3.amazonaws.com/filled-dot.svg"
                 />
                 <img
-                  className="filled-dot-bottom-right"
+                  className="filled-dot-above-monitor-and-laptop"
                   src="https://diskord-pro.s3.amazonaws.com/filled-dot.svg"
                 />
                 <img
@@ -167,16 +155,44 @@ class Splash extends React.Component {
                   src="https://diskord-pro.s3.amazonaws.com/filled-dot.svg"
                 />
                 <img
+                  className="filled-dot-bottom-right"
+                  src="https://diskord-pro.s3.amazonaws.com/filled-dot.svg"
+                />
+                {/* triangles */}
+                <img
                   className="triangle-left"
-                  src="https://discordapp.com/assets/0a2fd7b3bab977b4619f466b81b426d4.svg"
+                  src="https://diskord-pro.s3.amazonaws.com/triangle.svg"
                 />
                 <img
                   className="triangle-top-middle"
-                  src="https://discordapp.com/assets/0a2fd7b3bab977b4619f466b81b426d4.svg"
+                  src="https://diskord-pro.s3.amazonaws.com/triangle.svg"
                 />
                 <img
                   className="question-block"
                   src="https://diskord-pro.s3.amazonaws.com/question-block.svg"
+                />
+                {/* X svgs */}
+                <img
+                  className="x-above-flask"
+                  src="https://diskord-pro.s3.amazonaws.com/x.svg"
+                />
+                <img
+                  className="x-right-of-laptop"
+                  src="https://diskord-pro.s3.amazonaws.com/x.svg"
+                />
+
+                {/* empty white circles */}
+                <img
+                  className="empty-circle-above-iphone"
+                  src="https://diskord-pro.s3.amazonaws.com/circle.svg"
+                />
+                <img
+                  className="empty-circle-behind-controller"
+                  src="https://diskord-pro.s3.amazonaws.com/circle.svg"
+                />
+                <img
+                  className="empty-circle-right-of-monitor"
+                  src="https://diskord-pro.s3.amazonaws.com/circle.svg"
                 />
               </div>
             </div>
