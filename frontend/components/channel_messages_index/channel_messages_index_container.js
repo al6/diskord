@@ -33,6 +33,7 @@ const mapStateToProps = (state, ownProps) => {
     channelId: Number.parseInt(channelId),
     channel,
     currentMemberId: state.session.id,
+    currentMember: state.entities.members[state.session.id].username,
     messages: state.entities.messages
   };
 };

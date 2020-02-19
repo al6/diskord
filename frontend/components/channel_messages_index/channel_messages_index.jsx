@@ -43,7 +43,7 @@ class ChannelMessagesIndex extends React.Component {
   }
 
   render() {
-    const { messages = [], channel = [] } = this.props;
+    const { messages = [], channel = [], currentMember } = this.props;
     return (
       <div className="channel-messages-index">
         <div className="channel-messages-index-header">
@@ -75,7 +75,7 @@ class ChannelMessagesIndex extends React.Component {
                     <div className="message-profile-picture"></div>
                     <div className="message-data">
                       <div className="message-header">
-                        <span className="message-author">{message.author}</span>
+                        <span className="message-author">{currentMember}</span>
                         <span className="recent-date">
                           {new Date(Date.parse(message.created_at))
                             .toString()
