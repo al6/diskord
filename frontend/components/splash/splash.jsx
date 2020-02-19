@@ -92,14 +92,20 @@ class Splash extends React.Component {
                 {/* left of monitor */}
                 <img className="x" src={x} />
                 <img className="triangle" src={triangle} />
-                <img className="dot" src={dot} />
+                <img
+                  className="dot"
+                  src="https://diskord-pro.s3.amazonaws.com/filled-dot.svg"
+                />
                 <img className="flask" src={flask} />
                 <img
                   className="android"
                   src="https://diskord-pro.s3.amazonaws.com/android.svg"
                 />
                 <img className="iphone" src={iphone} />
-                <img className="game-controller" src={controller} />
+                <img
+                  className="game-controller"
+                  src="https://diskord-pro.s3.amazonaws.com/game-controller.svg"
+                />
                 <img
                   className="bomb"
                   src="https://diskord-pro.s3.amazonaws.com/bomb.svg"
@@ -118,16 +124,28 @@ class Splash extends React.Component {
                 />
                 <img
                   className="filled-dot-above-monitor-and-laptop"
-                  src={dot}
+                  src="https://diskord-pro.s3.amazonaws.com/filled-dot.svg"
                 />
                 <img className="game-cartridge" src={cartridge} />
                 <img className="laptop" src={laptop} />
                 <img className="headphones" src={headphones} />
                 <img className="shield" src={shield} />
-                <img className="filled-dot-left-of-android" src={dot} />
-                <img className="filled-dot-directly-above-iphone" src={dot} />
-                <img className="filled-dot-bottom-right" src={dot} />
-                <img className="filled-dot-top-right" src={dot} />
+                <img
+                  className="filled-dot-left-of-android"
+                  src="https://diskord-pro.s3.amazonaws.com/filled-dot.svg"
+                />
+                <img
+                  className="filled-dot-directly-above-iphone"
+                  src="https://diskord-pro.s3.amazonaws.com/filled-dot.svg"
+                />
+                <img
+                  className="filled-dot-bottom-right"
+                  src="https://diskord-pro.s3.amazonaws.com/filled-dot.svg"
+                />
+                <img
+                  className="filled-dot-top-right"
+                  src="https://diskord-pro.s3.amazonaws.com/filled-dot.svg"
+                />
                 <img
                   className="triangle-left"
                   src="https://discordapp.com/assets/0a2fd7b3bab977b4619f466b81b426d4.svg"
@@ -139,6 +157,7 @@ class Splash extends React.Component {
               </div>
             </div>
           </div>
+          <img src="https://diskord-pro.s3.amazonaws.com/footer.svg" />
           <div className="footer-main">
             {/* <div className="footer-links">
                 <div className="splash-footer-links-container">footer-links</div>
