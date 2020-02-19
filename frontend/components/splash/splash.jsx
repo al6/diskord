@@ -135,7 +135,10 @@ class Splash extends React.Component {
                   className="headphones"
                   src="https://diskord-pro.s3.amazonaws.com/headphones.svg"
                 />
-                <img className="shield" src={shield} />
+                <img
+                  className="shield"
+                  src="https://diskord-pro.s3.amazonaws.com/shield.svg"
+                />
 
                 {/* filled dots */}
                 <img
