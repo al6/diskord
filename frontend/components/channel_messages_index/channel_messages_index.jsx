@@ -5,7 +5,7 @@ class ChannelMessagesIndex extends React.Component {
     super(props);
     this.state = {
       body: "",
-      author_id: props.ownerId
+      author_id: props.currentMemberId
     };
     this.messagesIndex = React.createRef();
     this.handleSubmit = this.handleSubmit.bind(this);
