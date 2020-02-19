@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   namespace :api, defaults: {format: :json} do
     resources :members, only: [:create]
     resource :session, only: [:create, :destroy]
+    post '/guild_memberships/:name', to: 'guild_memberships#join_guild', as: 'guild_membership'
     resources :guilds, only: [:index, :create, :destroy] do
       get :channels, on: :member
       get :members, on: :member
