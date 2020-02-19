@@ -30,13 +30,22 @@ class Splash extends React.Component {
             <div className="right-splash-nav">
               <div className="network-buttons">
                 <a href="http://github.com/al6">
-                  <img className="github-button" src={githubLogo} />
+                  <img
+                    className="github-button"
+                    src="https://diskord-pro.s3.amazonaws.com/angellist.png"
+                  />
                 </a>
                 <a href="https://www.linkedin.com/in/albertlee3/">
-                  <img className="linkedin-button" src={linkedinLogo} />
+                  <img
+                    className="linkedin-button"
+                    src="https://diskord-pro.s3.amazonaws.com/linkedin.svg"
+                  />
                 </a>
                 <a href="https://angel.co/">
-                  <img className="angellist-button" src={angellistLogo} />
+                  <img
+                    className="angellist-button"
+                    src="https://diskord-pro.s3.amazonaws.com/angellist.png"
+                  />
                 </a>
               </div>
               <Link
