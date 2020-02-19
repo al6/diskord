@@ -5,15 +5,15 @@ class Api::GuildsController < ApplicationController
   end
   
   def create
-    @guild = Guild.new(guild_params)
-    if @guild.save
-      render :show
+    if guild_params["name"] == "" 
+      render json: ["This field is required"], status: 400 
     else
-      if guild_params["name"] == ""
-        render json: ["This field is required"], status: 400
-      else
-        render json: ["Sorry, that guild name is taken!"], status: 409
-      end
+      @guild = Guild.new(guild_params)
+        if @guild.save
+          render :show
+        else
+          render json: ["Sorry, that guild name is taken!"], status: 409
+        end
     end
   end
 
