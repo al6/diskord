@@ -10,6 +10,7 @@ class RegisterForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    this.props.removeErrors();
     this.props.register(this.state);
   }
 
@@ -21,10 +22,26 @@ class RegisterForm extends React.Component {
     const { removeErrors } = this.props;
     let responseJSON = Object.values(this.props.errors);
     let emailErr, usernameErr, passwordErr;
-    if (responseJSON) {
-      emailErr = responseJSON.shift();
-      usernameErr = responseJSON.shift();
-      passwordErr = responseJSON.shift();
+    if (
+      responseJSON[0] == "This field is required" &&
+      responseJSON[1] == "This field is required" &&
+      responseJSON[2] == "This field is required"
+    ) {
+      emailErr = responseJSON[0];
+      usernameErr = responseJSON[1];
+      passwordErr = responseJSON[2];
+    }
+    if (responseJSON && responseJSON[0] !== "This field is required") {
+      responseJSON.forEach(error => {
+        let words = error.split(" ");
+        if (words.includes("Email")) {
+          emailErr = error;
+        } else if (words.includes("Username")) {
+          usernameErr = error;
+        } else if (words.includes("Password")) {
+          passwordErr = error;
+        }
+      });
     }
     return (
       <div className="session-page">
