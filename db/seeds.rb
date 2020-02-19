@@ -10,4 +10,4 @@ aA_instructors = Guild.create!(name: "App Academy Instructors", owner_id: dommy.
 trader_joes = Guild.create!(name: "Trader Joes", owner_id: trader_joes_fanatic.id)
 hidden_ruby_gem = Guild.create!(name: "Hidden Ruby Gem", owner_id: zalvin.id)
 bleats_fan = Guild.create!(name: "Bleats Fans", owner_id: dommy.id)
-sleep_and_code = Guild.create(name: "Sleep and Code", owner_id: albert.id)
+sleep_and_code = Guild.create(name: "Sleep And Code", owner_id: albert.id)
