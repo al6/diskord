@@ -1,0 +1,2 @@
+class DmMembershipsController < ApplicationController
+end
