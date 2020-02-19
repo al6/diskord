@@ -29,7 +29,6 @@ export const createGuild = guild => dispatch => {
 };
 
 export const joinGuild = name => dispatch => {
-  debugger;
   return GuildMembershipAPIUtil.joinGuild(name).then(
     guild => dispatch(receiveGuild(guild)),
     errors => dispatch(receiveErrors(errors.responseJSON))
