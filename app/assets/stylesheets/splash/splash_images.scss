@@ -3,7 +3,6 @@
   align-items: flex-end;
   display: flex;
   justify-content: center;
-  margin: 0 auto;
   max-height: 638px;
   height: 638px;
   width: 100%;
@@ -277,29 +276,13 @@
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  .monitor,
-  .game-controller,
-  .coin-top-middle,
-  .coin-left,
-  .game-cartridge,
-  .headphones,
-  .iphone,
-  .flask,
-  .x,
-  .triangle-left,
-  .triangle-top-middle {
+  .splash-image-container,
+  .images-footer-thingy {
     display: none;
   }
-  .laptop {
-    left: 12rem;
-  }
 
-  .android {
-    position: relative;
-    left: 22rem;
-  }
-  .splash-image-container {
-    height: 100%;
+  .splash-nav {
+    width: 90%;
   }
 
   .footer-main {
@@ -308,7 +291,9 @@
   }
 
   .splash-header {
+    height: 100%;
     padding: 0;
+    min-height: 0px;
   }
 
   .splash-container {
