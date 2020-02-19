@@ -1,17 +1,38 @@
 class Api::GuildMembershipsController < ApplicationController
   def create
-    @guild = Guild.find_by(name: guild_membership_params[:name])
-    @guild_membership = GuildMembership.new(member_id: guild_membership_params[:id], guild_id: @guild.id)
-    if @guild_membership.save
-      render :show
+    if params[:name] == ""
+      render json: ["This field is required"]
     else
-      render json: ["Guild membership failed to save"], status: 400
+      @guild = Guild.find_by(name: guild_membership_params[:name])
+      if @guild
+        @guild_membership = GuildMembership.new(member_id: guild_membership_params[:id], guild_id: @guild.id)
+        if @guild_membership.save
+          render :show
+        else
+          render json: ["Guild membership failed to save"], status: 400
+        end
+      else
+        render json: ["Guild not found. Try a different guild name."]
+      end
     end
   end
 
-  def destroy
-    # @guild_memberships = GuildMembership.find_by(member_id: :member_id)
-    # if @guild_memberships
+  def join_guild
+    if params[:name] == ""
+      render json: ["This field is required"]
+    else
+      @guild = Guild.find_by(name: params[:name])
+      if @guild
+        @guild_membership = GuildMembership.new(member_id: current_member.id, guild_id: @guild.id)
+        if @guild_membership.save
+          render 'api/guilds/show'
+        else
+          render json: ["Guild membership failed to save"], status: 400
+        end
+      else
+        render json: ["Guild not found. Try a different guild name."]
+      end
+    end
   end
 
   def show
