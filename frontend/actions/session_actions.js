@@ -40,4 +40,4 @@ export const logout = () => dispatch => {
 };
 
 export const demologin = () => dispatch =>
-  dispatch(login({ email: "tommy@fakemail.com", password: "hunter2" }));
+  dispatch(login({ email: "dommy@a.com", password: "hunter2" }));
