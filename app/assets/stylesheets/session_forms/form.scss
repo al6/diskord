@@ -217,11 +217,27 @@
 }
 
 .create-channel-form {
-  align-items: center;
+  background-color: #36393f;
+  border-radius: 4px;
+  color: white;
+  padding: 0 4rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   height: 100%;
+}
+
+.channel-form-buttons-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.channel-form-buttons-container > button {
+  border: none;
+  height: 2.5rem;
+  outline: none;
+  width: 11rem;
 }
 
 .validation-error-text {

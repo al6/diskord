@@ -32,19 +32,19 @@ class CreateChannelForm extends React.Component {
           <div className="create-channel-form-header-sub">in Text Channels</div>
         </div>
         <div className="channel-form-input-container">
-          <div className="channel-name">CHANNEL NAME</div>
+          <div className="form-input-label">CHANNEL NAME</div>
           <input
             value={this.state.name}
             onChange={this.update()}
             type="text"
-            className="channel-form-input"
+            className="form-input"
           />
         </div>
         <div className="channel-privacy">
           Channels are public for now so be careful!
         </div>
         <div className="channel-form-footer">
-          <div>
+          <div className="channel-form-buttons-container">
             <Button onClick={() => closeModal()} color="green">
               Cancel
             </Button>
