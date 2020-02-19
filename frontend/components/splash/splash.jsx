@@ -96,12 +96,19 @@ class Splash extends React.Component {
                   className="dot"
                   src="https://diskord-pro.s3.amazonaws.com/filled-dot.svg"
                 />
-                <img className="flask" src={flask} />
+                <img
+                  className="flask"
+                  src="https://diskord-pro.s3.amazonaws.com/spawner-potion.svg"
+                />
                 <img
                   className="android"
                   src="https://diskord-pro.s3.amazonaws.com/android.svg"
                 />
-                <img className="iphone" src={iphone} />
+                <img
+                  className="iphone"
+                  src="https://diskord-pro.s3.amazonaws.com/iphone.svg
+"
+                />
                 <img
                   className="game-controller"
                   src="https://diskord-pro.s3.amazonaws.com/game-controller.svg"
@@ -115,7 +122,10 @@ class Splash extends React.Component {
                   src="https://diskord-pro.s3.amazonaws.com/coin.svg"
                 />
 
-                <img className="monitor" src={monitor} />
+                <img
+                  className="monitor"
+                  src="https://diskord-pro.s3.amazonaws.com/monitor.svg"
+                />
 
                 {/* right of monitor */}
                 <img
@@ -126,9 +136,19 @@ class Splash extends React.Component {
                   className="filled-dot-above-monitor-and-laptop"
                   src="https://diskord-pro.s3.amazonaws.com/filled-dot.svg"
                 />
-                <img className="game-cartridge" src={cartridge} />
-                <img className="laptop" src={laptop} />
-                <img className="headphones" src={headphones} />
+                <img
+                  className="game-cartridge"
+                  src="https://diskord-pro.s3.amazonaws.com/game-cartridge.svg"
+                />
+                <img
+                  className="laptop"
+                  src="https://diskord-pro.s3.amazonaws.com/laptop.svg"
+                />
+                <img
+                  className="headphones"
+                  src="https://diskord-pro.s3.amazonaws.com/headphones.svg
+"
+                />
                 <img className="shield" src={shield} />
                 <img
                   className="filled-dot-left-of-android"
@@ -154,61 +174,14 @@ class Splash extends React.Component {
                   className="triangle-top-middle"
                   src="https://discordapp.com/assets/0a2fd7b3bab977b4619f466b81b426d4.svg"
                 />
+                <img
+                  className="question-block"
+                  src="https://diskord-pro.s3.amazonaws.com/question-block.svg"
+                />
               </div>
             </div>
           </div>
-          <img src="https://diskord-pro.s3.amazonaws.com/footer.svg" />
           <div className="footer-main">
-            {/* <div className="footer-links">
-                <div className="splash-footer-links-container">footer-links</div>
-                <div className="splash-footer-links-container">
-                  <div className="footer-links-category">
-                    Product
-                  </div>
-                  <div>Download</div>
-                  <div>Branding</div>
-                  <div>Nitro</div>
-                </div>
-                <div className="splash-footer-links-container">
-                  <div className="footer-links-category">
-                    Developers
-                    </div> 
-                  <div>Sell Your Game</div> 
-                  <div>Rich Presence</div> 
-                  <div>Verification</div> 
-                  <div>Applications</div> 
-                  <div>Documentation</div> 
-                </div>
-                <div className="splash-footer-links-container">
-                  <div className="footer-links-category">
-                    Resources
-                  </div>
-                  <div>Help & Support</div>
-                  <div>Guidelines</div>
-                  <div>Feedback</div>
-                  <div>Terms</div>
-                  <div>Privacy</div>
-                  <div>Status</div>
-                </div>
-                <div className="splash-footer-links-container">
-                  <div className="footer-links-category">
-                    Company
-                  </div>
-                  <div>About</div>
-                  <div>Blog</div>
-                  <div>Jobs</div>
-                </div>
-                <div className="splash-footer-links-container">
-                  <div className="footer-links-category">
-                    More
-                  </div>
-                  <div>Partners</div>
-                  <div>HypeSquad</div>
-                  <div>Merch Store</div>
-                  <div>Press Inquiries</div>
-                  <div>Open Source</div>
-                </div>
-              </div> */}
             <footer className="splash-footer">
               <div className="left-splash-footer">
                 <div className="splash-footer-header-main">
