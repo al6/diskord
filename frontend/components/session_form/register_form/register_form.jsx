@@ -20,10 +20,12 @@ class RegisterForm extends React.Component {
   render() {
     const { removeErrors } = this.props;
     let responseJSON = Object.values(this.props.errors);
-    let errors;
-    responseJSON.length > 0
-      ? (errors = responseJSON.join(", "))
-      : (responseJSON = undefined);
+    let emailErr, usernameErr, passwordErr;
+    if (responseJSON) {
+      emailErr = responseJSON.shift();
+      usernameErr = responseJSON.shift();
+      passwordErr = responseJSON.shift();
+    }
     return (
       <div className="session-page">
         <div className="register-container">
@@ -33,47 +35,51 @@ class RegisterForm extends React.Component {
               <div className="input-label-and-errors">
                 <div
                   className={
-                    responseJSON
-                      ? "errors-form-input-label"
-                      : "form-input-label"
+                    emailErr ? "errors-form-input-label" : "form-input-label"
                   }
                 >
                   EMAIL
                 </div>
-                <div className="login-error">{errors}</div>
+                <div className="login-error">{emailErr}</div>
               </div>
               <input
-                className={responseJSON ? "error-form-input" : "form-input"}
+                className={emailErr ? "error-form-input" : "form-input"}
                 type="email"
                 onChange={this.update("email")}
                 value={this.state.email}
               />
             </div>
             <div className="username-input-container">
-              <div
-                className={
-                  responseJSON ? "errors-form-input-label" : "form-input-label"
-                }
-              >
-                USERNAME
+              <div className="input-label-and-errors">
+                <div
+                  className={
+                    usernameErr ? "errors-form-input-label" : "form-input-label"
+                  }
+                >
+                  USERNAME
+                </div>
+                <div className="login-error">{usernameErr}</div>
               </div>
               <input
-                className={responseJSON ? "error-form-input" : "form-input"}
+                className={usernameErr ? "error-form-input" : "form-input"}
                 type="text"
                 onChange={this.update("username")}
                 value={this.state.username}
               />
             </div>
             <div className="password-container">
-              <div
-                className={
-                  responseJSON ? "errors-form-input-label" : "form-input-label"
-                }
-              >
-                PASSWORD
+              <div className="input-label-and-errors">
+                <div
+                  className={
+                    passwordErr ? "errors-form-input-label" : "form-input-label"
+                  }
+                >
+                  PASSWORD
+                </div>
+                <div className="login-error">{passwordErr}</div>
               </div>
               <input
-                className={responseJSON ? "error-form-input" : "form-input"}
+                className={passwordErr ? "error-form-input" : "form-input"}
                 type="password"
                 onChange={this.update("password")}
                 value={this.state.password}
