@@ -32,11 +32,14 @@
   width: 14rem;
 }
 
+.text-channel-type:hover > .text-channel-type-text {
+  color: white;
+}
+
 .text-channel-type-text {
   font-size: 0.7rem;
   font-weight: 500;
   &:hover {
-    color: #fbfbfb;
     cursor: default;
   }
 }
@@ -104,6 +107,10 @@
 
 .channel-index-link-active {
   background-color: #393b43;
+}
+
+.channel-name {
+  color: white;
 }
 
 .channels-index-hashtag {
