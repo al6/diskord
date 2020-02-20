@@ -253,3 +253,9 @@
   font-style: italic;
   font-size: 0.5rem;
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .create-join-form-input-container {
+    width: 80%;
+  }
+}
