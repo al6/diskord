@@ -28,7 +28,10 @@ class GuildMembershipsIndex extends React.Component {
           }`}
           to={`/channels/@me`}
         >
-          Home
+          <img
+            className="home-button"
+            src="https://diskord-pro.s3.amazonaws.com/white-logo-no-words.png"
+          />
         </Link>
         {guilds.map(guild => (
           <Link

@@ -8,6 +8,8 @@ import GuildMembershipsIndexContainer from "../components/guild_memberships_inde
 import GuildChannelsIndexContainer from "./guild_channels_index/guild_channels_index_container";
 import ChannelMessagesIndexContainer from "./channel_messages_index/channel_messages_index_container";
 import GuildMembersIndexContainer from "./guild_members_index/guild_members_index_container";
+import DmMembershipsIndexContainer from "./dm_memberships_index/dm_memberships_index_container";
+import DmChannelMessagesIndexContainer from "./dm_channel_messages_index/dm_channel_messages_index_container";
 const App = () => (
   <div className="app-container">
     <ProtectedRoute
@@ -17,41 +19,21 @@ const App = () => (
     <ProtectedRoute
       exact
       path="/channels/@me/"
-      component={props => {
-        return (
-          <div>
-            <div className="guild-channels-index">
-              <div>top</div>
-              <div>dm memberships index container</div>
-              <div>footer</div>
-            </div>
-            <div className="">
-              <div>top</div>
-              <div>dm messages index container</div>
-              <div>footer</div>
-            </div>
-          </div>
-        );
-      }}
+      component={DmMembershipsIndexContainer}
     />
     <ProtectedRoute
       path="/channels/:guildId/:channelId"
       component={props => {
         if (props.match.params.guildId === "@me") {
-          return (
-            <div>
-              <div className="guild-channels-index">
-                <div>top</div>
-                <div>dm memberships index container</div>
-                <div>footer</div>
-              </div>
-            </div>
-          );
+          return <DmMembershipsIndexContainer />;
         }
         return <GuildChannelsIndexContainer {...props} />;
       }}
     />
-
+    <ProtectedRoute
+      path="/channels/@me/"
+      component={DmChannelMessagesIndexContainer}
+    />
     <ProtectedRoute
       path="/channels/:guildId/:channelId"
       component={ChannelMessagesIndexContainer}

@@ -10,6 +10,13 @@
   min-width: 20rem;
 }
 
+.no-friends {
+  background-attachment: fixed;
+  background-image: url("https://diskord-pro.s3.amazonaws.com/nofriends.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .channel-messages-index-header {
   align-items: center;
   border-bottom: 1px solid #232329;

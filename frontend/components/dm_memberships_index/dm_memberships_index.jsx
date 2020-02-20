@@ -4,71 +4,48 @@ import Modal, { ModalContext } from "../modal/modal";
 import CreateChannelFormContainer from "../../components/create_channel_form/create_channel_form_container";
 import get from "lodash/get";
 
-class GuildChannelsIndex extends React.Component {
+class DmMembershipsIndex extends React.Component {
   constructor(props) {
     super(props);
   }
 
   componentDidUpdate(previousProps) {
-    const { guildId, fetchGuildMembers, subscribe } = this.props;
-    if (previousProps.guildId !== guildId) {
-      this.props.fetchChannels(guildId);
-      fetchGuildMembers(guildId);
-      subscribe(guildId);
-    }
-    if (
-      get(previousProps, "channels", []).length === 0 &&
-      this.props.channels.length > 0
-    ) {
-      this.props.history.push(`${this.props.channels[0].id}`);
-    }
+    // const { guildId, fetchGuildMembers, subscribe } = this.props;
+    // if (previousProps.guildId !== guildId) {
+    //   this.props.fetchChannels(guildId);
+    //   fetchGuildMembers(guildId);
+    //   subscribe(guildId);
+    // }
+    // if (
+    //   get(previousProps, "channels", []).length === 0 &&
+    //   this.props.channels.length > 0
+    // ) {
+    //   this.props.history.push(`${this.props.channels[0].id}`);
+    // }
   }
 
   componentDidMount() {
-    const { fetchChannels, fetchGuildMembers, guildId, subscribe } = this.props;
-    if (Number.parseInt(guildId)) {
-      fetchChannels(guildId);
-      fetchGuildMembers(guildId);
-      subscribe(guildId);
-    }
+    // const { fetchChannels, fetchGuildMembers, guildId, subscribe } = this.props;
+    // if (Number.parseInt(guildId)) {
+    //   fetchChannels(guildId);
+    //   fetchGuildMembers(guildId);
+    //   subscribe(guildId);
+    // }
   }
 
   render() {
-    const {
-      channels = [],
-      logout,
-      guildId,
-      guild = {},
-      currentUsername,
-      currentMemberId
-    } = this.props;
+    const { logout, currentUsername, currentMemberId } = this.props;
     return (
       <div className="guild-channels-index">
         <div className="create-channel-container">
-          <div className="channel-index-title">{guild.name}</div>
+          <div className="channel-index-title"></div>
         </div>
         <div className="channels-list">
           <div className="text-channel-type">
-            <span className="text-channel-type-text">TEXT CHANNELS</span>
-            <span className="create-channel-modal">
-              <Modal>
-                <Modal.Content>
-                  <ModalContext.Consumer>
-                    {({ closeModal }) => (
-                      <CreateChannelFormContainer
-                        guildId={guildId}
-                        closeModal={closeModal}
-                      />
-                    )}
-                  </ModalContext.Consumer>
-                </Modal.Content>
-                <Modal.OpenButton className="create-channel-button">
-                  <p className="create-channel-button-text">+</p>
-                </Modal.OpenButton>
-              </Modal>
-            </span>
+            <span className="text-channel-type-text">DIRECT MESSAGES</span>
+            <p className="create-channel-button-text">+</p>
           </div>
-          {channels.map(channel => (
+          {/* {channels.map(channel => (
             <Link
               className={`channel-index-link ${
                 `${channel.id}` === this.props.match.params.channelId
@@ -102,7 +79,7 @@ class GuildChannelsIndex extends React.Component {
                 {channel.name}
               </span>
             </Link>
-          ))}
+          ))} */}
         </div>
         <div className="channels-index-footer">
           <div className="channels-index-footer-member-info">
@@ -125,4 +102,4 @@ class GuildChannelsIndex extends React.Component {
   }
 }
 
-export default GuildChannelsIndex;
+export default DmMembershipsIndex;
