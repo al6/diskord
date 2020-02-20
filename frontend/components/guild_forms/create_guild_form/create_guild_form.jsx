@@ -182,7 +182,7 @@ class CreateGuildForm extends React.Component {
                 />
                 <div className="create-guild-community-guidelines">
                   Looking for other servers to join? Try 'Hidden Ruby Gem',
-                  'Bleats Fan', or 'Sleep and Code'!
+                  'Bleats Fan', or 'Sleep And Code'!
                 </div>
               </div>
             </div>
