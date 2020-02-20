@@ -115,7 +115,10 @@
 
 .channels-index-hashtag {
   margin: 0.5rem;
-  height: 1rem;
+  min-height: 1rem;
+  max-height: 1rem;
+  min-width: 1rem;
+  max-width: 1rem;
 }
 
 .channels-index-footer {
@@ -145,6 +148,8 @@
 .channels-index-footer-member-username {
   color: white;
   font-size: 0.8rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
   &:hover {
     cursor: default;
   }
@@ -173,4 +178,9 @@
 .channels-index-footer-member-info
   > .guild-members-index-member-profile-picture:hover {
   filter: brightness(80%);
+}
+
+.ellpisis {
+  text-overflow: ellipsis;
+  overflow: hidden;
 }

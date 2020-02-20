@@ -1,6 +1,7 @@
 class Member < ApplicationRecord
   validates :email, :username, :password_digest, :session_token, presence: true
   validates :email, uniqueness: true, 'valid_email_2/email': true
+  validates :email, :username, length: {maximum: 20}
   validates :password, length: { minimum: 6, allow_nil: true }
   
   has_many :guild_memberships

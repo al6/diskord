@@ -21,25 +21,29 @@ class Api::GuildMembershipsController < ApplicationController
     if params[:name] == "" || params[:name] == nil
       render json: ["This field is required"], status: 400
     else
-      @guild = Guild.find_by(name: params[:name])
-      if @guild
-        @guild_membership = GuildMembership.new(member_id: current_member.id, guild_id: @guild.id)
-        if @guild_membership.save
-          redux_action = {
-            type: "RECEIVE_GUILD_MEMBER",
-            member: {
-              id: current_member.id,
-              username: current_member.username
-            }
-          }
-          GuildChannel.send_data("guild_#{@guild_membership.guild_id}", redux_action.as_json)
-
-          render 'api/guilds/show'
-        else
-          render json: ["Guild already joined!"], status: 400
-        end
+      if current_member.nil?
+        render json: ["Something is wrong with your session. Refresh and try again"], status: 400
       else
-        render json: ["Guild not found. Try a different guild name."], status: 404
+        @guild = Guild.find_by(name: params[:name])
+        if @guild
+          @guild_membership = GuildMembership.new(member_id: current_member.id, guild_id: @guild.id)
+          if @guild_membership.save
+            redux_action = {
+              type: "RECEIVE_GUILD_MEMBER",
+              member: {
+                id: current_member.id,
+                username: current_member.username
+              }
+            }
+            GuildChannel.send_data("guild_#{@guild_membership.guild_id}", redux_action.as_json)
+
+            render 'api/guilds/show'
+          else
+            render json: ["Guild already joined!"], status: 400
+          end
+        else
+          render json: ["Guild not found. Try a different guild name."], status: 404
+        end
       end
     end
   end

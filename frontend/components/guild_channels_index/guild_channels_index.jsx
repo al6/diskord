@@ -95,8 +95,8 @@ class GuildChannelsIndex extends React.Component {
               <span
                 className={
                   `${channel.id}` === this.props.match.params.channelId
-                    ? `channel-name`
-                    : ""
+                    ? `channel-name ellpisis`
+                    : "ellpisis"
                 }
               >
                 {channel.name}
