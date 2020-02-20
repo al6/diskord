@@ -171,8 +171,6 @@ class CreateGuildForm extends React.Component {
                   <div className="create-guild-input-label">GUILD NAME</div>
                   <div className="validation-error-text">{errors}</div>
                 </div>
-                {/* <div className="create-guild-input-label">GUILD NAME</div> */}
-                {/* <div className="validation-error-text">{errors}</div> */}
                 <input
                   placeholder={`App Academy`}
                   className="create-guild-name-input"

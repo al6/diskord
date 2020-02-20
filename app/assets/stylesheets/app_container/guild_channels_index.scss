@@ -96,9 +96,14 @@
   height: 2rem;
   width: 90%;
   margin: 0 auto;
+  margin-top: 3px;
   &:hover {
     background-color: #393b43;
   }
+}
+
+.channel-index-link-active {
+  background-color: #393b43;
 }
 
 .channels-index-hashtag {

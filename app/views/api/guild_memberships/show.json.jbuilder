@@ -3,6 +3,7 @@ if @guild_membership.nil?
     json.array! @guild_memberships do |guild|
       json.id guild.id
       json.name guild.name
+      json.initial_channel guild.channels.where(name: "general").first.id
     end
   else
     json.extract! @guild_memberships, :guild

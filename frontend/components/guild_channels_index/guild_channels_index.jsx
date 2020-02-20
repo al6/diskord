@@ -33,6 +33,7 @@ class GuildChannelsIndex extends React.Component {
 
   render() {
     const { channels = [], logout, guildId, guild = {} } = this.props;
+    this.props;
     return (
       <div className="guild-channels-index">
         <div className="create-channel-container">
@@ -61,7 +62,11 @@ class GuildChannelsIndex extends React.Component {
           </div>
           {channels.map(channel => (
             <Link
-              className="channel-index-link"
+              className={`channel-index-link ${
+                `${channel.id}` === this.props.match.params.channelId
+                  ? "channel-index-link-active"
+                  : ""
+              }`}
               key={guildId}
               to={`/channels/${guildId}/${channel.id}`}
               key={`channel-${channel.id}`}

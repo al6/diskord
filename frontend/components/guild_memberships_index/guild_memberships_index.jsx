@@ -22,14 +22,23 @@ class GuildMembershipsIndex extends React.Component {
     const { guilds } = this.props;
     return (
       <div className="guild_memberships_index">
-        <Link className="guild-membership" to={`/channels/@me`}>
+        <Link
+          className={`guild-membership ${
+            this.props.match.params.guildId === `@me` ? "guild-link-active" : ""
+          }`}
+          to={`/channels/@me`}
+        >
           Home
         </Link>
         {guilds.map(guild => (
           <Link
-            className="guild-membership guild-index-name"
+            className={`guild-membership guild-index-name ${
+              this.props.match.params.guildId === `${guild.id}`
+                ? "guild-link-active"
+                : ""
+            }`}
             key={`guild-${guild.id}`}
-            to={`/channels/${guild.id}/`}
+            to={`/channels/${guild.id}/${guild.initial_channel}`}
           >
             {get(guild, "name", "")
               .toUpperCase()

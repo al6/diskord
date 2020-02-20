@@ -7,25 +7,36 @@ import { AuthRoute, ProtectedRoute } from "../util/route_util";
 import GuildMembershipsIndexContainer from "../components/guild_memberships_index/guild_memberships_index_container";
 import GuildChannelsIndexContainer from "./guild_channels_index/guild_channels_index_container";
 import ChannelMessagesIndexContainer from "./channel_messages_index/channel_messages_index_container";
+import GuildMembersIndexContainer from "./guild_members_index/guild_members_index_container";
 const App = () => (
   <div className="app-container">
     <ProtectedRoute
-      path="/channels/"
+      path="/channels/:guildId/"
       component={GuildMembershipsIndexContainer}
     />
     <ProtectedRoute
-      path="/channels/:guildId/"
+      path="/channels/:guildId/:channelId"
       component={props => {
         if (props.match.params.guildId === "@me") {
-          return <div>dm membershipsindex </div>;
+          return (
+            <div className="guild-channels-index">
+              <div>top</div>
+              <div>dm memberships index</div>
+              <div>footer</div>
+            </div>
+          );
         }
-
         return <GuildChannelsIndexContainer {...props} />;
       }}
     />
+
     <ProtectedRoute
       path="/channels/:guildId/:channelId"
       component={ChannelMessagesIndexContainer}
+    />
+    <ProtectedRoute
+      path="/channels/:guildId/:channelId"
+      component={GuildMembersIndexContainer}
     />
     <Switch>
       <AuthRoute exact path="/login" component={LoginFormContainer} />

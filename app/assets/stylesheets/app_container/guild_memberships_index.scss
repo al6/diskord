@@ -48,6 +48,12 @@
   letter-spacing: 0.1rem;
 }
 
+.guild-link-active {
+  background-color: #7189da;
+  border-radius: 1rem;
+  transition: 0.5s;
+}
+
 .hover-green-transition {
   background-color: #37383f;
   color: #43b581;
