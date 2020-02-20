@@ -15,7 +15,13 @@ const App = () => (
     />
     <ProtectedRoute
       path="/channels/:guildId/"
-      component={GuildChannelsIndexContainer}
+      component={props => {
+        if (props.match.params.guildId === "@me") {
+          return <div>dm membershipsindex </div>;
+        }
+
+        return <GuildChannelsIndexContainer {...props} />;
+      }}
     />
     <ProtectedRoute
       path="/channels/:guildId/:channelId"
