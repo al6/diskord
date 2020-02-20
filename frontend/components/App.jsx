@@ -15,14 +15,36 @@ const App = () => (
       component={GuildMembershipsIndexContainer}
     />
     <ProtectedRoute
+      exact
+      path="/channels/@me/"
+      component={props => {
+        return (
+          <div>
+            <div className="guild-channels-index">
+              <div>top</div>
+              <div>dm memberships index container</div>
+              <div>footer</div>
+            </div>
+            <div className="">
+              <div>top</div>
+              <div>dm messages index container</div>
+              <div>footer</div>
+            </div>
+          </div>
+        );
+      }}
+    />
+    <ProtectedRoute
       path="/channels/:guildId/:channelId"
       component={props => {
         if (props.match.params.guildId === "@me") {
           return (
-            <div className="guild-channels-index">
-              <div>top</div>
-              <div>dm memberships index</div>
-              <div>footer</div>
+            <div>
+              <div className="guild-channels-index">
+                <div>top</div>
+                <div>dm memberships index container</div>
+                <div>footer</div>
+              </div>
             </div>
           );
         }
@@ -36,7 +58,13 @@ const App = () => (
     />
     <ProtectedRoute
       path="/channels/:guildId/:channelId"
-      component={GuildMembersIndexContainer}
+      // component={GuildMembersIndexContainer}
+      component={props => {
+        if (props.match.params.guildId === "@me") {
+          return <div></div>;
+        }
+        return <GuildMembersIndexContainer {...props} />;
+      }}
     />
     <Switch>
       <AuthRoute exact path="/login" component={LoginFormContainer} />
