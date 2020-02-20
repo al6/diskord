@@ -25,6 +25,15 @@ class Api::GuildMembershipsController < ApplicationController
       if @guild
         @guild_membership = GuildMembership.new(member_id: current_member.id, guild_id: @guild.id)
         if @guild_membership.save
+          redux_action = {
+            type: "RECEIVE_GUILD_MEMBER",
+            member: {
+              id: current_member.id,
+              username: current_member.username
+            }
+          }
+          GuildChannel.send_data("guild_#{@guild_membership.guild_id}", redux_action.as_json)
+
           render 'api/guilds/show'
         else
           render json: ["Guild already joined!"], status: 400

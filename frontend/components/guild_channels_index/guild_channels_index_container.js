@@ -14,7 +14,7 @@ function subscribeToGuild(guildId, dispatch) {
     { channel: "GuildChannel", guildId: guildId },
     {
       received: data => {
-        dispatch(receiveChannel(data));
+        dispatch(data);
       }
     }
   );

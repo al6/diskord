@@ -3,6 +3,7 @@ import * as GuildAPIUtil from "../util/guild_api_util";
 import { receiveErrors } from "./session_actions";
 
 export const RECEIVE_GUILD_MEMBERS = "RECEIVE_GUILD_MEMBERS";
+export const RECEIVE_GUILD_MEMBER = "RECEIVE_GUILD_MEMBER";
 export const RECEIVE_GUILD_MEMBERSHIP = "RECEIVE_GUILD_MEMBERSHIP";
 export const RECEIVE_GUILD = "RECEIVE_GUILD";
 export const RECEIVE_GUILDS = "RECEIVE_GUILDS";
