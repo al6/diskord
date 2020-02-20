@@ -34,8 +34,14 @@ class GuildChannelsIndex extends React.Component {
   }
 
   render() {
-    const { channels = [], logout, guildId, guild = {} } = this.props;
-    this.props;
+    const {
+      channels = [],
+      logout,
+      guildId,
+      guild = {},
+      currentUsername,
+      currentMemberId
+    } = this.props;
     return (
       <div className="guild-channels-index">
         <div className="create-channel-container">
@@ -99,8 +105,17 @@ class GuildChannelsIndex extends React.Component {
           ))}
         </div>
         <div className="channels-index-footer">
+          <div className="channels-index-footer-member-info">
+            <div className="guild-members-index-member-profile-picture"></div>
+            <div className="channels-index-footer-name-id-container">
+              <div className="channels-index-footer-member-username">{currentUsername}</div>
+              <div className="channels-index-footer-member-id">
+                #{currentMemberId}
+              </div>
+            </div>
+          </div>
           <a onClick={() => logout()} className="logout-button">
-            Logout!
+            Logout
           </a>
         </div>
       </div>

@@ -122,17 +122,55 @@
   align-items: center;
   background-color: #292b2f;
   display: flex;
-  min-height: 3rem;
   max-height: 3rem;
-  justify-content: center;
+  min-height: 3rem;
+  justify-content: space-between;
   width: 100%;
 }
 
+.channels-index-footer-name-id-container {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.channels-index-footer-member-info {
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+
+.channels-index-footer-member-username {
+  color: white;
+  font-size: 0.8rem;
+  &:hover {
+    cursor: default;
+  }
+}
+
+.channels-index-footer-member-id {
+  color: #b9babe;
+  font-size: 0.7rem;
+  &:hover {
+    cursor: default;
+  }
+}
+
 .logout-button {
+  transition: 1s;
   color: #8e9297;
+  margin-right: 10px;
 }
 
 .logout-button:hover {
+  transition: 0.5s;
   cursor: pointer;
   color: white;
+}
+
+.channels-index-footer-member-info
+  > .guild-members-index-member-profile-picture:hover {
+  filter: brightness(80%);
 }

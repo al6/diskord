@@ -26,6 +26,7 @@ const mapStateToProps = (state, ownProps) => {
     guild => guild.id === Number.parseInt(guildId)
   );
   return {
+    currentUsername: state.entities.members[state.session.id].username,
     currentMemberId: state.session.id,
     guildId,
     guild,
