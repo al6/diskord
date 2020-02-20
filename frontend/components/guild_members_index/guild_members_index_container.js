@@ -1,10 +1,7 @@
 import { connect } from "react-redux";
 import GuildMembersIndex from "./guild_members_index";
-import {
-  createMessage,
-  fetchMessages,
-  receiveMessage
-} from "../../actions/message_actions";
+import { createMessage, fetchMessages } from "../../actions/message_actions";
+import orderBy from "lodash/orderBy";
 
 const mapStateToProps = (state, ownProps) => {
   const { guildId, channelId } = ownProps.match.params;
@@ -13,12 +10,17 @@ const mapStateToProps = (state, ownProps) => {
   const channel = state.entities.channels.find(
     channel => channel.id === Number.parseInt(channelId)
   );
+  const orderedMembers = orderBy(
+    members,
+    [member => member.username.toLowerCase()],
+    ["asc"]
+  );
   return {
     guildId: Number.parseInt(guildId),
     channelId: Number.parseInt(channelId),
     channel,
     currentMemberId,
-    currentMember: members[currentMemberId].username,
+    orderedMembers,
     messages
   };
 };

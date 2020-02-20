@@ -11,3 +11,4 @@ trader_joes = Guild.create!(name: "Trader Joes", owner_id: trader_joes_fanatic.i
 hidden_ruby_gem = Guild.create!(name: "Hidden Ruby Gem", owner_id: zalvin.id)
 bleats_fan = Guild.create!(name: "Bleats Fans", owner_id: dommy.id)
 sleep_and_code = Guild.create(name: "Sleep And Code", owner_id: albert.id)
+zalvin = GuildMembership.create(member_id: zalvin.id, guild_id: aA.id)

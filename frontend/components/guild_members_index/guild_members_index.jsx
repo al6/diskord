@@ -10,8 +10,15 @@ class GuildMembersIndex extends React.Component {
   }
 
   render() {
+    const { orderedMembers } = this.props;
     return (
-      <div className="guild-members-index">GuildMembersIndexComponent</div>
+      <div className="guild-members-index">
+        {orderedMembers.map(member => (
+          <div key={member.id} className="current-guild-member">
+            {member.username}
+          </div>
+        ))}
+      </div>
     );
   }
 }

@@ -1,5 +1,5 @@
 import React from "react";
-
+import get from "lodash/get";
 class ChannelMessagesIndex extends React.Component {
   constructor(props) {
     super(props);
@@ -43,8 +43,7 @@ class ChannelMessagesIndex extends React.Component {
   }
 
   render() {
-    const { messages = [], channel = [], currentMember } = this.props;
-    
+    const { messages = [], channel = [] } = this.props;
     return (
       <div className="channel-messages-index">
         <div className="channel-messages-index-header">
@@ -68,15 +67,17 @@ class ChannelMessagesIndex extends React.Component {
           <span></span>
         </div>
         <div className="channel-messages-index-main">
-          {messages.map(message => {
+          {messages.map((message, idx) => {
             return (
-              <div className="message-index-width" key={message.id}>
+              <div className="message-index-width" key={idx}>
                 <div className="message-width-container">
                   <div className="message-container">
                     <div className="message-profile-picture"></div>
                     <div className="message-data">
                       <div className="message-header">
-                        <span className="message-author">{currentMember}</span>
+                        <span className="message-author">
+                          {get(message, "author.username", "")}
+                        </span>
                         <span className="recent-date">
                           {new Date(Date.parse(message.created_at))
                             .toString()

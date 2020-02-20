@@ -10,9 +10,10 @@ class GuildChannelsIndex extends React.Component {
   }
 
   componentDidUpdate(previousProps) {
-    const { guildId, subscribe } = this.props;
+    const { guildId, fetchGuildMembers, subscribe } = this.props;
     if (previousProps.guildId !== guildId) {
       this.props.fetchChannels(guildId);
+      fetchGuildMembers(guildId);
       subscribe(guildId);
     }
     if (
@@ -24,9 +25,10 @@ class GuildChannelsIndex extends React.Component {
   }
 
   componentDidMount() {
-    const { fetchChannels, guildId, subscribe } = this.props;
+    const { fetchChannels, fetchGuildMembers, guildId, subscribe } = this.props;
     if (Number.parseInt(guildId)) {
       fetchChannels(guildId);
+      fetchGuildMembers(guildId);
       subscribe(guildId);
     }
   }

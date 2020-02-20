@@ -8,10 +8,6 @@ const receiveCurrentMember = member => ({
   member
 });
 
-const logoutCurrentMember = () => ({
-  type: LOGOUT_CURRENT_MEMBER
-});
-
 export const receiveErrors = errors => ({
   type: RECEIVE_SESSION_ERRORS,
   errors

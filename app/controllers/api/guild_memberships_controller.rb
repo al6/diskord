@@ -48,8 +48,18 @@ class Api::GuildMembershipsController < ApplicationController
   def guild_members
     @guild = Guild.find_by(id: params[:id])
     if @guild
-      @guild_members_array = @guild.guild_members.to_a
-      render 'api/guilds/member'
+      @guild_members = @guild.guild_members.to_a.reduce({}) {|acc, el|
+        acc[el.id] =  {
+          id: el.id,
+          username: el.username
+        }
+        acc
+      }
+      render json: @guild_members.as_json
+
+      # render json: 'api/guilds/members'
+      # @guild_members_array = @guild.guild_members.to_a
+      # render 'api/guilds/member'
     else
       render json: ["Guild not found!"]
     end
