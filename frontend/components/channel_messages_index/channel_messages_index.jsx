@@ -67,6 +67,9 @@ class ChannelMessagesIndex extends React.Component {
           <span></span>
         </div>
         <div className="channel-messages-index-main">
+          <div className="welcome-to-channel">
+            Welcome to the beginning of the #{channel.name} channel.
+          </div>
           {messages.map((message, idx) => {
             return (
               <div className="message-index-width" key={idx}>

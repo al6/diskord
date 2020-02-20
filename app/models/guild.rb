@@ -1,5 +1,5 @@
 class Guild < ApplicationRecord
-  validates :name, uniqueness: true
+  validates :name, :uniqueness => {:case_sensitive => false}
   validates :name, :owner_id, presence: true
 
   after_create :create_default_channel, :create_default_guild_membership

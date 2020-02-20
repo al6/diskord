@@ -161,7 +161,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 55px;
 }
 
 .create-join-form-main-header {
@@ -210,15 +209,19 @@
 
 .create-guild-community-guidelines {
   color: #99aab5;
-  font-size: 10px;
+  font-size: 0.7rem;
 }
 
 .join-guild-input-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   height: 160px;
   width: 100%;
+}
+
+.join-guild-input-container > * {
+  zoom: 110%;
 }
 
 .create-channel-form {

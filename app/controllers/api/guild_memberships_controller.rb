@@ -25,6 +25,7 @@ class Api::GuildMembershipsController < ApplicationController
         render json: ["Something is wrong with your session. Refresh and try again"], status: 400
       else
         @guild = Guild.find_by(name: params[:name])
+        # // case insensitive search @guild = Guild.find('lower(name) = ?', params[:name].downcase).first_or_create
         if @guild
           @guild_membership = GuildMembership.new(member_id: current_member.id, guild_id: @guild.id)
           if @guild_membership.save

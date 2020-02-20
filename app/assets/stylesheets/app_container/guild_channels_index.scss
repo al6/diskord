@@ -146,10 +146,10 @@
 }
 
 .channels-index-footer-member-username {
-  color: white;
   font-size: 0.8rem;
-  text-overflow: ellipsis;
+  max-width: 8rem;
   overflow: hidden;
+  text-overflow: ellipsis;
   &:hover {
     cursor: default;
   }
@@ -180,7 +180,8 @@
   filter: brightness(80%);
 }
 
-.ellpisis {
+.ellipsis {
   text-overflow: ellipsis;
   overflow: hidden;
+  height: 1rem;
 }
