@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Modal, { ModalContext } from "../modal/modal";
 import CreateGuildFormContainer from "../guild_forms/create_guild_form/create_guild_form_container";
-
+import get from "lodash/get";
 class GuildMembershipsIndex extends React.Component {
   constructor(props) {
     super(props);
@@ -31,7 +31,7 @@ class GuildMembershipsIndex extends React.Component {
             key={`guild-${guild.id}`}
             to={`/channels/${guild.id}/`}
           >
-            {guild.name
+            {get(guild, "name", "")
               .toUpperCase()
               .split(" ")
               .map(word => word[0])

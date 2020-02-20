@@ -10,8 +10,7 @@ class RegisterForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.removeErrors();
-    this.props.register(this.state);
+    this.props.register(this.state).then(() => this.props.removeErrors());
   }
 
   update(field) {

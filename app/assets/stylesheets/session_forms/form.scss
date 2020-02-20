@@ -135,6 +135,10 @@
   width: 100%;
 }
 
+.create-join-input-label-container {
+  display: flex;
+}
+
 .guild-icon-upload-container {
   display: flex;
   flex-direction: column;
@@ -198,9 +202,10 @@
 }
 
 .create-guild-input-label {
+  color: #87909c;
   font-size: 10px;
   font-weight: 600;
-  color: #87909c;
+  padding-right: 10px;
 }
 
 .create-guild-community-guidelines {

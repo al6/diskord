@@ -36,8 +36,9 @@ export const joinGuild = name => dispatch => {
 };
 
 export const createGuildMembership = guild_membership => dispatch =>
-  GuildMembershipAPIUtil.create(guild_membership).then(guild_membership =>
-    dispatch(receiveGuildMembership(guild_membership))
+  GuildMembershipAPIUtil.create(guild_membership).then(
+    guild_membership => dispatch(receiveGuildMembership(guild_membership)),
+    errors => dispatch(receiveErrors(errors.responseJSON))
   );
 
 export const fetchGuildMemberships = id => dispatch => {

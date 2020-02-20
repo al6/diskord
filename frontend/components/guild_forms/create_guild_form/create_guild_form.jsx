@@ -21,6 +21,7 @@ class CreateGuildForm extends React.Component {
 
   handleCreateGuild(e) {
     e.preventDefault();
+    this.props.removeErrors();
     const guild = {
       name: this.state.guildName,
       owner_id: this.props.currentMemberId
@@ -30,6 +31,7 @@ class CreateGuildForm extends React.Component {
 
   handleJoinGuild(e) {
     e.preventDefault();
+    this.props.removeErrors();
     this.props.joinGuild(this.state.guildName);
   }
 
@@ -65,7 +67,10 @@ class CreateGuildForm extends React.Component {
               />
               <Button
                 color="blue"
-                onClick={() => this.toggleForm("createGuild")}
+                onClick={e => {
+                  this.toggleForm("createGuild");
+                  this.props.removeErrors();
+                }}
               >
                 Create a guild
               </Button>
@@ -82,7 +87,10 @@ class CreateGuildForm extends React.Component {
               />
               <Button
                 color="green"
-                onClick={() => this.toggleForm("joinGuild")}
+                onClick={e => {
+                  this.toggleForm("joinGuild");
+                  this.props.removeErrors();
+                }}
               >
                 Join a guild
               </Button>
@@ -106,7 +114,7 @@ class CreateGuildForm extends React.Component {
             </div>
             <div className="create-join-form-input-container">
               <div className="create-guild-input-container">
-                <div>
+                <div className="create-join-input-label-container">
                   <div className="create-guild-input-label">GUILD NAME</div>
                   <div className="validation-error-text">{errors}</div>
                 </div>
@@ -141,6 +149,7 @@ class CreateGuildForm extends React.Component {
                 color="blue"
                 onClick={e => {
                   this.handleCreateGuild(e);
+                  this.props.removeErrors();
                 }}
               >
                 Create
@@ -152,17 +161,18 @@ class CreateGuildForm extends React.Component {
         return (
           <div className="create-join-form">
             <div className="create-join-form-headers">
-              <div className="diskord-green create-join-form-main-header">
-                JOIN A GUILD (WORK IN PROGRESS)
-              </div>
               <div className="create-join-form-sub-header">
                 Enter a guild name below to join an existing guild.
               </div>
             </div>
             <div className="create-join-form-input-container">
               <div className="join-guild-input-container">
-                <div className="create-guild-input-label">GUILD NAME</div>
-                <div className="validation-error-text">{errors}</div>
+                <div className="create-join-input-label-container">
+                  <div className="create-guild-input-label">GUILD NAME</div>
+                  <div className="validation-error-text">{errors}</div>
+                </div>
+                {/* <div className="create-guild-input-label">GUILD NAME</div> */}
+                {/* <div className="validation-error-text">{errors}</div> */}
                 <input
                   placeholder={`App Academy`}
                   className="create-guild-name-input"
@@ -172,7 +182,7 @@ class CreateGuildForm extends React.Component {
                 />
                 <div className="create-guild-community-guidelines">
                   Looking for other servers to join? Try 'Hidden Ruby Gem',
-                  'Bleats Fan', or 'Sleep And Code'!
+                  'Bleats Fan', or 'Sleep and Code'!
                 </div>
               </div>
             </div>
@@ -183,7 +193,13 @@ class CreateGuildForm extends React.Component {
               >
                 BACK
               </Button>
-              <Button onClick={e => this.handleJoinGuild(e)} color="green">
+              <Button
+                onClick={e => {
+                  this.props.removeErrors();
+                  this.handleJoinGuild(e);
+                }}
+                color="green"
+              >
                 Join
               </Button>
             </div>

@@ -1,7 +1,7 @@
 class Api::GuildMembershipsController < ApplicationController
   def create
-    if params[:name] == ""
-      render json: ["This field is required"]
+    if params[:name] == "" || params[:name] == nil
+      render json: ["This field is required"], status: 400
     else
       @guild = Guild.find_by(name: guild_membership_params[:name])
       if @guild
@@ -18,8 +18,8 @@ class Api::GuildMembershipsController < ApplicationController
   end
 
   def join_guild
-    if params[:name] == ""
-      render json: ["This field is required"]
+    if params[:name] == "" || params[:name] == nil
+      render json: ["This field is required"], status: 400
     else
       @guild = Guild.find_by(name: params[:name])
       if @guild
@@ -27,10 +27,10 @@ class Api::GuildMembershipsController < ApplicationController
         if @guild_membership.save
           render 'api/guilds/show'
         else
-          render json: ["Guild membership failed to save"], status: 400
+          render json: ["Guild already joined!"], status: 400
         end
       else
-        render json: ["Guild not found. Try a different guild name."]
+        render json: ["Guild not found. Try a different guild name."], status: 404
       end
     end
   end

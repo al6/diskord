@@ -9,7 +9,11 @@ const guildsReducer = (state = [], action) => {
   switch (action.type) {
     case RECEIVE_GUILD:
       newState = JSON.parse(JSON.stringify(state));
-      return newState.concat(action.guild);
+      if (newState.includes(action.guild)) {
+        return newState;
+      } else {
+        return newState.concat(action.guild);
+      }
     case RECEIVE_GUILDS:
       return action.guilds;
     default:
