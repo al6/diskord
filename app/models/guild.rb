@@ -3,7 +3,7 @@ class Guild < ApplicationRecord
   validates :name, :owner_id, presence: true
 
   after_create :create_default_channel, :create_default_guild_membership
-
+  has_one_attached :emblem
   has_many :channels
   has_many :guild_memberships
   has_many :guild_members,
