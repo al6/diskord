@@ -1,6 +1,8 @@
-export const create = guild =>
+export const create = formData =>
   $.ajax({
     method: "POST",
     url: "/api/guilds",
-    data: { guild }
+    data: formData,
+    contentType: false,
+    processData: false
   });

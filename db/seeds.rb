@@ -1,6 +1,9 @@
 Member.delete_all
 Guild.delete_all
 GuildMembership.delete_all
+
+require 'open-uri'
+
 dommy  = Member.create!(email: "dt@a.com", username: "dommy tuek", password: "hunter2")
 zalvin = Member.create!(email: "zalvin@a.com", username: "zalvin ablan", password: "hunter2")
 albert = Member.create!(email: "albert@a.com", username: "albert", password: "hunter2")
