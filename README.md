@@ -48,7 +48,7 @@ end
 ### messages_controller.rb (abridged from original)
 * After creating a message, broadcast to the right subscribers
 * Create message_payload to account for @message.image.attached?
-```
+```ruby
 class Api::MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
@@ -65,7 +65,7 @@ end
 * Unsubscribe if subscription exists
 * Close over dispatch for use in subscribe function passed into presentational component
 
-```
+```javascript
 import { connect } from "react-redux";
 import ChannelMessagesIndex from "./channel_messages_index";
 import { receiveMessage } from "../../actions/message_actions";
