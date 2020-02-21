@@ -129,12 +129,12 @@
 
 .message-width-container {
   display: flex;
-  height: 3rem;
+  min-height: 3rem;
   margin: 1rem;
 }
 
 .message-container {
-  align-items: center;
+  // align-items: center;
   display: flex;
   justify-content: space-evenly;
 }
@@ -154,6 +154,7 @@
 }
 
 .message-profile-picture {
+  margin-top: 0.5rem;
   background-color: #73767d;
   height: 2.5rem;
   min-height: 2.5rem;
@@ -191,6 +192,10 @@
 }
 
 .message-image {
+  margin-left: 1rem;
+  max-width: 15rem;
+  width: 100%;
+  height: auto;
 }
 
 .message-image-upload {

@@ -17,11 +17,12 @@ class ChannelMessagesIndex extends React.Component {
     const formData = new FormData();
     formData.append("message[body]", this.state.body);
     formData.append("message[author_id]", this.props.currentMemberId);
-    formData.append("message[channel_id]", this.props.session.id);
+    formData.append("message[channel_id]", this.props.channelId);
     if (this.state.photoFile) {
       formData.append("message[image]", this.state.photoFile);
     }
     this.props.createMessage(formData);
+    this.setState({ imageUrl: "", photoFile: null });
   }
 
   handleUpload(e) {
@@ -121,10 +122,8 @@ class ChannelMessagesIndex extends React.Component {
                             .join(" ")}
                         </span>
                       </div>
-                      <div className="message-body">
-                        {message.body}{" "}
-                        <img className="message-image" src={message.image} />
-                      </div>
+                      <div className="message-body">{message.body} </div>
+                      <img className="message-image" src={message.image} />
                     </div>
                   </div>
                 </div>
