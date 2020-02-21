@@ -3,7 +3,7 @@ This README is a work in progress
 
 # Diskord
 
-I'm a huge fan of the popular [Discord App](https://discordapp.com). [Diskord](http://diskord.io) is my take on cloning the real deal. Gamers (or anyone realy) can sign up, login, upload images, create guilds, create guild channels, and chat with guild members all in real time.
+I'm a huge fan of the popular [Discord App](https://discordapp.com). [Diskord](http://diskord.io) is my take on cloning the real deal. Gamers (or anyone really) can sign up, login, upload images, create guilds, create guild channels, and chat with guild members all in real time.
 
 ![Screenshot of Diskord](https://diskord-dev.s3.amazonaws.com/Screen+Shot+2020-02-21+at+9.56.49+AM.png)
 ![Gif of websockets working](https://media.giphy.com/media/U4pAxmJLqbNqCB1vCP/source.gif)
@@ -45,7 +45,7 @@ end
 
 ### messages_controller.rb (abridged from original)
 * After creating a message, broadcast to the right subscribers
-* Create message_payload to account for @message.image.attached?
+* Create message_payload to account for @message.image.attached? from Active Storage
 ```ruby
 class Api::MessagesController < ApplicationController
   def create
