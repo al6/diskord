@@ -6,7 +6,7 @@ This README is a work in progress
 I'm a huge fan of the popular [Discord App](https://discordapp.com). [Diskord](http://diskord.io) is my take on cloning the real deal. Gamers (or anyone realy) can sign up, login, upload images, create guilds, create guild channels, and chat with guild members all in real time.
 
 ![Screenshot of Diskord](https://diskord-dev.s3.amazonaws.com/Screen+Shot+2020-02-21+at+9.56.49+AM.png)
-![gif](https://media.giphy.com/media/U4pAxmJLqbNqCB1vCP/source.gif)
+![Gif of websockets working](https://media.giphy.com/media/U4pAxmJLqbNqCB1vCP/source.gif)
 
 ## Technologies used
 Diskord was built using React, Redux, Ruby on Rails, ActionCable, Active Storage, PostgreSQL, and AWS S3
@@ -99,9 +99,9 @@ export default connect(
 ### channel_messages_index.jsx (abridged from original)
 * Once messages index is mounted, start initial subscription for new messages
 * When messages index is updated (by clicking on a different channel)
-  ** get new messages
-  ** destroy the old subscription
-  ** create a new subscription to the currently selected messages index
+  - get new messages
+  - destroy the old subscription
+  - create a new subscription to the currently selected messages index
 ```javascript
 componentDidMount() {
     this.props.fetchMessages(this.props.channelId);
