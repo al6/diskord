@@ -67,17 +67,19 @@ class ChannelMessagesIndex extends React.Component {
           <span></span>
         </div>
         <div className="channel-messages-index-main">
-          {/* <img
-            className="welcome-to-channel-img-left"
-            src="https://diskord-pro.s3.amazonaws.com/channel-welcome-left.png"
-          /> */}
-          <div className="welcome-to-channel">
-            Welcome to the beginning of the #{channel.name} channel.
+          <div className="welcome-to-channel-container">
+            <img
+              className="welcome-to-channel-img-left"
+              src="https://diskord-pro.s3.amazonaws.com/channel-welcome-left.png"
+            />
+            <div className="welcome-to-channel">
+              Welcome to the beginning of the #{channel.name} channel.
+            </div>
+            <img
+              className="welcome-to-channel-img-right"
+              src="https://diskord-pro.s3.amazonaws.com/channel-welcome-right.png"
+            />
           </div>
-          {/* <img
-            className="welcome-to-channel-img-right"
-            src="https://diskord-pro.s3.amazonaws.com/channel-welcome-right.png"
-          /> */}
           {messages.map((message, idx) => {
             return (
               <div className="message-index-width" key={idx}>

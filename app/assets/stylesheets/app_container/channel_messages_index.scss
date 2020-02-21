@@ -69,6 +69,14 @@
   padding-bottom: 1rem;
 }
 
+.welcome-to-channel-container {
+  align-items: center;
+  border-bottom: 1px solid #3b3e43;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .channel-messages-index-footer {
   align-items: center;
   display: flex;
@@ -168,16 +176,14 @@
 
 .welcome-to-channel {
   color: #b9bbbe;
+  min-width: 23rem;
   padding-top: 3rem;
   padding-left: 1rem;
+  position: relative;
+  right: 13.5rem;
 }
 
-.welcome-to-channel-img-left {
-  height: 10rem;
-  width: 10rem;
-}
-
+.welcome-to-channel-img-left,
 .welcome-to-channel-img-right {
-  height: 10rem;
-  width: 10rem;
+  max-height: 5rem;
 }
