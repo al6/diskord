@@ -16,8 +16,14 @@ aai    = Guild.create!(name: "App Academy Instructors", owner_id: dommy.id)
 bf     = Guild.create!(name: "Bleats Fans", owner_id: dommy.id)
 hrg    = Guild.create!(name: "Hidden Ruby Gem", owner_id: zalvin.id)
 sac    = Guild.create(name: "Sleep And Code", owner_id: albert.id)
-# tjs    = Guild.create!(name: "Trader Joes", owner_id: tjfan.id)
+# tjs  = Guild.create!(name: "Trader Joes", owner_id: tjfan.id)
 
-zalvin_aa = GuildMembership.create(member_id: zalvin.id, guild_id: aA.id)
+aA_emblem = File.open('app/assets/images/aalogo.png')
+aA.emblem.attach(io: aA_emblem, filename: 'aalogo.png')
+
+aA_emblem2 = File.open('app/assets/images/aalogo.png')
+aai.emblem.attach(io: aA_emblem2, filename: 'aalogo.png')
+
+zalvin_aa  = GuildMembership.create(member_id: zalvin.id, guild_id: aA.id)
 zalvin_aai = GuildMembership.create(member_id: zalvin.id, guild_id: aai.id)
-zalvin_bf = GuildMembership.create(member_id: zalvin.id, guild_id: bf.id)
+zalvin_bf  = GuildMembership.create(member_id: zalvin.id, guild_id: bf.id)

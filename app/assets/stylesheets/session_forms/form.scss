@@ -155,7 +155,6 @@
 .guild-icon-upload {
   height: 128px;
   width: 128px;
-  border: 5px solid #ebebeb;
   border-radius: 128px;
   background: #7289da;
   &:focus {
@@ -265,6 +264,9 @@
   position: relative;
   overflow: hidden;
   display: inline-block;
+  &:focus {
+    outline: none;
+  }
 }
 
 .ugly-file-input {
@@ -273,6 +275,17 @@
   left: 0;
   top: 0;
   opacity: 0;
+}
+
+.image-preview {
+  max-height: 128px;
+  max-width: 128px;
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    outline: none;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {

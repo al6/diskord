@@ -3,6 +3,9 @@ if @guild_membership.nil?
     json.array! @guild_memberships do |guild|
       json.id guild.id
       json.name guild.name
+      if guild.emblem.attached?
+        json.emblem url_for(guild.emblem)
+      end
       json.initial_channel guild.channels.where(name: "general").first.id
     end
   else

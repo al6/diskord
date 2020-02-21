@@ -14,10 +14,6 @@ class GuildMembershipsIndex extends React.Component {
     fetchGuildMemberships(currentMemberId);
   }
 
-  handleGuildCreation(e) {
-    e.preventDefault();
-  }
-
   render() {
     const { guilds } = this.props;
     return (
@@ -43,11 +39,15 @@ class GuildMembershipsIndex extends React.Component {
             key={`guild-${guild.id}`}
             to={`/channels/${guild.id}/${guild.initial_channel}`}
           >
-            {get(guild, "name", "")
-              .toUpperCase()
-              .split(" ")
-              .map(word => word[0])
-              .join("")}
+            {guild.emblem ? (
+              <img className="guild-emblem" src={guild.emblem} />
+            ) : (
+              get(guild, "name", "")
+                .toUpperCase()
+                .split(" ")
+                .map(word => word[0])
+                .join("")
+            )}
           </Link>
         ))}
         <Modal>

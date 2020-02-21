@@ -33,7 +33,7 @@ class CreateGuildForm extends React.Component {
     if (this.state.photoFile) {
       formData.append("guild[emblem]", this.state.photoFile);
     }
-    this.props.createGuild(guild);
+    this.props.createGuild(formData);
   }
 
   handleJoinGuild(e) {
@@ -68,7 +68,10 @@ class CreateGuildForm extends React.Component {
   }
 
   render() {
-    let { clicked, formType } = this.state;
+    let { clicked, formType, imageUrl } = this.state;
+    const preview = imageUrl ? (
+      <img className="image-preview" src={imageUrl} />
+    ) : null;
     const { errors } = this.props;
     if (!clicked) {
       return (
@@ -155,7 +158,7 @@ class CreateGuildForm extends React.Component {
               </div>
               <div className="guild-icon-upload-container">
                 <div className="hide-ugly-input-button">
-                  <div className="guild-icon-upload"></div>
+                  <div className="guild-icon-upload">{preview}</div>
                   <input
                     type="file"
                     className="ugly-file-input"
