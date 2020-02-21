@@ -261,47 +261,6 @@
   font-size: 0.5rem;
 }
 
-.hide-ugly-input-button {
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
-  &:focus {
-    outline: none;
-  }
-}
-
-.hide-ugly-input-button-messages {
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
-  bottom: 20px;
-  left: -3px;
-  &:focus {
-    outline: none;
-    cursor: pointer;
-  }
-}
-
-.ugly-file-input {
-  font-size: 100px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
-}
-
-.ugly-file-input-messages {
-  position: relative;
-  left: -3px;
-  top: -20px;
-  opacity: 0;
-  width: 1.5rem;
-  height: 1.5rem;
-  &:hover {
-    cursor: pointer;
-  }
-}
-
 .image-preview {
   max-height: 128px;
   &:focus {

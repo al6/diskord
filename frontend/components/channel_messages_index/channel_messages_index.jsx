@@ -140,16 +140,10 @@ class ChannelMessagesIndex extends React.Component {
               this.clearInput();
             }}
           >
-            <div className="message-image-upload">
+            <label class="message-image-upload">
               +
-              <div className="hide-ugly-input-button">
-                <input
-                  type="file"
-                  className="ugly-file-input-messages"
-                  onChange={this.handleUpload}
-                />
-              </div>
-            </div>
+              <input type="file" onChange={this.handleUpload} />
+            </label>
 
             <input
               className="channel-message-input"
