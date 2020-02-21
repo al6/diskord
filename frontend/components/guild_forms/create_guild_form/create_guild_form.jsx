@@ -152,14 +152,18 @@ class CreateGuildForm extends React.Component {
                   Guidelines
                 </div>
               </div>
+
+              {/* <label class="message-image-upload">
+                +
+                <input type="file" onChange={this.handleUpload} />
+              </label> */}
+
               <div className="guild-icon-upload-container">
-                <div className="hide-ugly-input-button">
-                  <div className="guild-icon-upload">{preview}</div>
-                  <input
-                    type="file"
-                    className="ugly-file-input"
-                    onChange={this.handleUpload}
-                  />
+                <div className="guild-icon-upload-circle-container">
+                  <label className="guild-icon-upload">
+                    {preview}
+                    <input type="file" onChange={this.handleUpload} />
+                  </label>
                 </div>
                 <div className="guild-icon-size-instructions">
                   Minimum size: <b>128x128</b>
