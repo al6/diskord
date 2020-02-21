@@ -70,7 +70,21 @@
   transition: 0.5s;
 }
 
-.home-button {
+.placeholder-logo-home {
   max-height: 5rem;
   min-height: 5rem;
+}
+
+.placeholder-logo-messages {
+  max-height: 3rem;
+  position: relative;
+  bottom: 3px;
+  right: 4px;
+}
+
+.small-logo-placeholder {
+  max-height: 3rem;
+  position: relative;
+  bottom: 10px;
+  right: 9.5px;
 }

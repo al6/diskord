@@ -106,7 +106,12 @@ class GuildChannelsIndex extends React.Component {
         </div>
         <div className="channels-index-footer">
           <div className="channels-index-footer-member-info">
-            <div className="guild-members-index-member-profile-picture"></div>
+            <div className="guild-members-index-member-profile-picture">
+              <img
+                className="small-logo-placeholder"
+                src="https://diskord-pro.s3.amazonaws.com/white-logo-no-words.png"
+              />
+            </div>
             <div className="channels-index-footer-name-id-container">
               <div className="channels-index-footer-member-username">
                 {currentUsername}

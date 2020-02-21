@@ -108,7 +108,12 @@ class ChannelMessagesIndex extends React.Component {
               <div className="message-index-width" key={idx}>
                 <div className="message-width-container">
                   <div className="message-container">
-                    <div className="message-profile-picture"></div>
+                    <div className="message-profile-picture">
+                      <img
+                        className="placeholder-logo-messages"
+                        src="https://diskord-pro.s3.amazonaws.com/white-logo-no-words.png"
+                      />
+                    </div>
                     <div className="message-data">
                       <div className="message-header">
                         <span className="message-author">

@@ -21,7 +21,13 @@ class GuildMembersIndex extends React.Component {
         </div>
         {orderedMembers.map(member => (
           <div key={member.id} className="current-guild-member">
-            <div className="guild-members-index-member-profile-picture"></div>
+            <div className="guild-members-index-member-profile-picture">
+              {" "}
+              <img
+                className="small-logo-placeholder"
+                src="https://diskord-pro.s3.amazonaws.com/white-logo-no-words.png"
+              />
+            </div>
             <div className="guild-members-index-member-username">
               {member.username}
             </div>
