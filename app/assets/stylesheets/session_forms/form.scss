@@ -148,12 +148,19 @@
   width: 200px;
 }
 
+.guild-icon-upload-container:hover > * {
+  filter: brightness(80%);
+}
+
 .guild-icon-upload {
   height: 128px;
   width: 128px;
   border: 5px solid #ebebeb;
   border-radius: 128px;
   background: #7289da;
+  &:focus {
+    outline: none;
+  }
 }
 
 .create-join-form-headers {
@@ -252,6 +259,20 @@
   color: red;
   font-style: italic;
   font-size: 0.5rem;
+}
+
+.hide-ugly-input-button {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.ugly-file-input {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {

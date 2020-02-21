@@ -12,6 +12,7 @@ class CreateGuildForm extends React.Component {
     this.toggleForm = this.toggleForm.bind(this);
     this.handleCreateGuild = this.handleCreateGuild.bind(this);
     this.handleJoinGuild = this.handleJoinGuild.bind(this);
+    this.handleUpload = this.handleUpload.bind(this);
     this.update = this.update.bind(this);
   }
 
@@ -26,6 +27,12 @@ class CreateGuildForm extends React.Component {
       name: this.state.guildName,
       owner_id: this.props.currentMemberId
     };
+    const formData = new FormData();
+    formData.append("guild[name]", this.state.guildName);
+    formData.append("guild[owner_id]", this.props.currentMemberId);
+    if (this.state.photoFile) {
+      formData.append("guild[emblem]", this.state.photoFile);
+    }
     this.props.createGuild(guild);
   }
 
@@ -33,6 +40,21 @@ class CreateGuildForm extends React.Component {
     e.preventDefault();
     this.props.removeErrors();
     this.props.joinGuild(this.state.guildName);
+  }
+
+  handleUpload(e) {
+    const reader = new FileReader();
+    const file = e.currentTarget.files[0];
+    reader.onloadend = () =>
+      this.setState({
+        imageUrl: reader.result,
+        photoFile: file
+      });
+    if (file) {
+      reader.readAsDataURL(file);
+    } else {
+      this.setState({ imageUrl: "", photoFile: null });
+    }
   }
 
   update(field) {
@@ -132,7 +154,14 @@ class CreateGuildForm extends React.Component {
                 </div>
               </div>
               <div className="guild-icon-upload-container">
-                <div className="guild-icon-upload"></div>
+                <div className="hide-ugly-input-button">
+                  <div className="guild-icon-upload"></div>
+                  <input
+                    type="file"
+                    className="ugly-file-input"
+                    onChange={this.handleUpload}
+                  />
+                </div>
                 <div className="guild-icon-size-instructions">
                   Minimum size: <b>128x128</b>
                 </div>
