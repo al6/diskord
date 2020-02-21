@@ -116,6 +116,7 @@ class ChannelMessagesIndex extends React.Component {
               this.clearInput();
             }}
           >
+            <div className="message-image-upload">+</div>
             <input
               className="channel-message-input"
               value={this.state.body}
