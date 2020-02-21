@@ -157,6 +157,7 @@
   width: 128px;
   border-radius: 128px;
   background: #7289da;
+  overflow: hidden;
   &:focus {
     outline: none;
   }
@@ -279,7 +280,6 @@
 
 .image-preview {
   max-height: 128px;
-  max-width: 128px;
   &:focus {
     outline: none;
   }
