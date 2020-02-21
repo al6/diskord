@@ -9,12 +9,34 @@ class ChannelMessagesIndex extends React.Component {
     };
     this.messagesIndex = React.createRef();
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleUpload = this.handleUpload.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    const payload = { ...this.state, channel_id: this.props.channelId };
-    this.props.createMessage(payload);
+    const formData = new FormData();
+    formData.append("message[body]", this.state.body);
+    formData.append("message[author_id]", this.props.currentMemberId);
+    formData.append("message[channel_id]", this.props.session.id);
+    if (this.state.photoFile) {
+      formData.append("message[image]", this.state.photoFile);
+    }
+    this.props.createMessage(formData);
+  }
+
+  handleUpload(e) {
+    const reader = new FileReader();
+    const file = e.currentTarget.files[0];
+    reader.onloadend = () =>
+      this.setState({
+        imageUrl: reader.result,
+        photoFile: file
+      });
+    if (file) {
+      reader.readAsDataURL(file);
+    } else {
+      this.setState({ imageUrl: "", photoFile: null });
+    }
   }
 
   update() {
@@ -99,7 +121,10 @@ class ChannelMessagesIndex extends React.Component {
                             .join(" ")}
                         </span>
                       </div>
-                      <div className="message-body">{message.body}</div>
+                      <div className="message-body">
+                        {message.body}{" "}
+                        <img className="message-image" src={message.image} />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -116,7 +141,17 @@ class ChannelMessagesIndex extends React.Component {
               this.clearInput();
             }}
           >
-            <div className="message-image-upload">+</div>
+            <div className="message-image-upload">
+              +
+              <div className="hide-ugly-input-button">
+                <input
+                  type="file"
+                  className="ugly-file-input-messages"
+                  onChange={this.handleUpload}
+                />
+              </div>
+            </div>
+
             <input
               className="channel-message-input"
               value={this.state.body}

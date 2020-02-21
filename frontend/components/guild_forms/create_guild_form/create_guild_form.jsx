@@ -23,10 +23,6 @@ class CreateGuildForm extends React.Component {
   handleCreateGuild(e) {
     e.preventDefault();
     this.props.removeErrors();
-    const guild = {
-      name: this.state.guildName,
-      owner_id: this.props.currentMemberId
-    };
     const formData = new FormData();
     formData.append("guild[name]", this.state.guildName);
     formData.append("guild[owner_id]", this.props.currentMemberId);

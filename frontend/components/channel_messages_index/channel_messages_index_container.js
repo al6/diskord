@@ -39,7 +39,8 @@ const mapStateToProps = (state, ownProps) => {
     channel,
     currentMemberId,
     currentMembers: members,
-    messages: messages_with_author
+    messages: messages_with_author,
+    session: state.session
   };
 };
 
