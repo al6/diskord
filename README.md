@@ -6,7 +6,9 @@ This README is a work in progress
 I'm a huge fan of the popular [Discord App](https://discordapp.com). [Diskord](http://diskord.io) is my take on cloning the real deal. Gamers (or anyone realy) can sign up, login, upload images, create guilds, create guild channels, and chat with guild members all in real time.
 
 ![Screenshot of Diskord](https://diskord-dev.s3.amazonaws.com/Screen+Shot+2020-02-21+at+9.56.49+AM.png)
-![GIF of chat updating in real time for two separate users](https://diskord-pro.s3.amazonaws.com/websocket.gif)```
+<p align="center">
+  <img width="960" height="460" src="https://diskord-pro.s3.amazonaws.com/websocket.gif">
+</p>
 
 ## Technologies used
 Diskord was built using React, Redux, Ruby on Rails, ActionCable, Active Storage, PostgreSQL, and AWS S3
