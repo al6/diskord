@@ -23,7 +23,9 @@ Diskord was built using React, Redux, Ruby on Rails, ActionCable, Active Storage
 * Can navigate around guilds and channels by clicking corresponding links
 * Can see new channels and messages in real time that another member creates (assuming the member's internet connection does not block port 80 required for this implementation of WebSockets)
 
-# Action Cable Implementation (presentational component dependency injection approach)
+# Action Cable Implementation 
+I wanted to keep my React presentational component as readable and simple as possible, so I chose to compose a function and pass it down with dispatch to that same presentational component. Relevant code is shown below.
+
 ### chat_channel.rb
 * Helper methods to send data, and subscribe to a specific channel from messages controller
 ```ruby
@@ -95,6 +97,7 @@ const mapDispatchToProps = dispatch => {
   - get new messages
   - destroy the old subscription
   - create a new subscription to the currently selected messages index
+  
 ```javascript
 componentDidMount() {
     this.props.fetchMessages(this.props.channelId);
@@ -112,5 +115,5 @@ componentDidUpdate(previousProps) {
     this.messagesIndex.current.scrollIntoView();
   }
 }
-  ```
+```
 
