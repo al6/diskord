@@ -4,10 +4,7 @@ class Member < ApplicationRecord
   validates :password, length: { minimum: 6, allow_nil: true }
   
   has_many :guild_memberships
-<<<<<<< Updated upstream
-=======
   has_many :dmmemberships
->>>>>>> Stashed changes
   has_many :guilds,
     through: :guild_memberships,
     source: :guild
