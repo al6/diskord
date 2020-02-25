@@ -1,4 +1,3 @@
-This README is a work in progress
 [Live Site](http://www.diskord.io "Diskord Homepage")
 
 # Diskord
