@@ -4,7 +4,7 @@ class Member < ApplicationRecord
   validates :password, length: { minimum: 6, allow_nil: true }
   
   has_many :guild_memberships
-  has_many :dmmemberships
+  has_many :dm_memberships
   has_many :guilds,
     through: :guild_memberships,
     source: :guild
