@@ -1,4 +1,4 @@
-[Live Site](http://www.diskord.herokuapp.com "Diskord Homepage")
+[Live Site](http://diskord.herokuapp.com "Diskord Homepage")
 
 # Diskord
 
