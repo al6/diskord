@@ -2,7 +2,20 @@ class Api::MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
     if @message.save
-      ChatChannel.send_data("chat_#{@message.channel_id}", @message.as_json)
+      message_payload = {
+        id: @message.id,
+        body: @message.body,
+        author_id: @message.author_id,
+        channel_id: @message.channel_id,
+        created_at: @message.created_at,
+        updated_at: @message.updated_at
+      }
+      
+      if @message.image.attached?
+        message_payload[:image] = url_for(@message.image)
+      end
+
+      ChatChannel.send_data("chat_#{@message.channel_id}", message_payload.as_json)
       render :show
     else
       render json: ["Sorry, max of 100 characters long!"], status: 400
@@ -11,6 +24,6 @@ class Api::MessagesController < ApplicationController
 
   private
   def message_params
-    params.require(:message).permit(:body, :author_id, :channel_id)
+    params.require(:message).permit(:body, :author_id, :channel_id, :image)
   end
 end

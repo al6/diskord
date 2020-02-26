@@ -8,10 +8,6 @@ const receiveCurrentMember = member => ({
   member
 });
 
-const logoutCurrentMember = () => ({
-  type: LOGOUT_CURRENT_MEMBER
-});
-
 export const receiveErrors = errors => ({
   type: RECEIVE_SESSION_ERRORS,
   errors
@@ -40,4 +36,4 @@ export const logout = () => dispatch => {
 };
 
 export const demologin = () => dispatch =>
-  dispatch(login({ email: "dommy@a.com", password: "hunter2" }));
+  dispatch(login({ email: "dt@a.com", password: "hunter2" }));

@@ -2,6 +2,7 @@ import { connect } from "react-redux";
 import GuildChannelsIndex from "./guild_channels_index";
 import { logout } from "../../actions/session_actions";
 import { fetchChannels, receiveChannel } from "../../actions/channel_actions";
+import { fetchGuildMembers } from "../../actions/guild_membership_actions";
 
 let subscription;
 
@@ -13,7 +14,7 @@ function subscribeToGuild(guildId, dispatch) {
     { channel: "GuildChannel", guildId: guildId },
     {
       received: data => {
-        dispatch(receiveChannel(data));
+        dispatch(data);
       }
     }
   );
@@ -25,6 +26,7 @@ const mapStateToProps = (state, ownProps) => {
     guild => guild.id === Number.parseInt(guildId)
   );
   return {
+    currentUsername: state.entities.members[state.session.id].username,
     currentMemberId: state.session.id,
     guildId,
     guild,
@@ -37,7 +39,8 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => ({
   subscribe: guildId => subscribeToGuild(guildId, dispatch),
   logout: () => dispatch(logout()),
-  fetchChannels: guildId => dispatch(fetchChannels(guildId))
+  fetchChannels: guildId => dispatch(fetchChannels(guildId)),
+  fetchGuildMembers: guildId => dispatch(fetchGuildMembers(guildId))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(GuildChannelsIndex);

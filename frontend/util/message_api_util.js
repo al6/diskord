@@ -1,8 +1,10 @@
-export const createMessage = message =>
+export const createMessage = formData =>
   $.ajax({
     method: "POST",
     url: "/api/messages",
-    data: { message }
+    data: formData,
+    contentType: false,
+    processData: false
   });
 
 export const fetchMessages = channel_id =>

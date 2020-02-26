@@ -18,6 +18,10 @@
   flex-direction: column;
   height: 100%;
   width: 100%;
+  overflow-x: hidden;
+  &:hover {
+    overflow-y: auto;
+  }
 }
 
 .text-channel-type {
@@ -32,11 +36,14 @@
   width: 14rem;
 }
 
+.text-channel-type:hover > .text-channel-type-text {
+  color: white;
+}
+
 .text-channel-type-text {
   font-size: 0.7rem;
   font-weight: 500;
   &:hover {
-    color: #fbfbfb;
     cursor: default;
   }
 }
@@ -44,6 +51,7 @@
 .create-channel-button-text {
   font-size: 1.4rem;
   font-weight: 400;
+  padding-bottom: 0.5rem;
   &:hover {
     color: #fbfbfb;
   }
@@ -62,7 +70,6 @@
 .channels-list > a {
   color: #8e9297;
   white-space: nowrap;
-  overflow: hidden;
   text-overflow: ellipsis;
   &:hover {
     color: white;
@@ -77,6 +84,9 @@
   width: 100%;
   border-bottom: 1px solid #232329;
   overflow: hidden;
+  &:hover {
+    background-color: #34373c;
+  }
 }
 
 .channel-index-title {
@@ -92,30 +102,89 @@
   height: 2rem;
   width: 90%;
   margin: 0 auto;
+  margin-top: 3px;
   &:hover {
     background-color: #393b43;
   }
 }
 
+.channel-index-link-active {
+  background-color: #393b43;
+}
+
+.channel-name {
+  color: white;
+}
+
 .channels-index-hashtag {
   margin: 0.5rem;
+  min-height: 1rem;
+  max-height: 1rem;
+  min-width: 1rem;
+  max-width: 1rem;
 }
 
 .channels-index-footer {
   align-items: center;
   background-color: #292b2f;
   display: flex;
-  min-height: 3rem;
   max-height: 3rem;
-  justify-content: center;
+  min-height: 3rem;
+  justify-content: space-between;
   width: 100%;
 }
 
+.channels-index-footer-name-id-container {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.channels-index-footer-member-info {
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+
+.channels-index-footer-member-username {
+  font-size: 0.8rem;
+  max-width: 8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  &:hover {
+    cursor: default;
+  }
+}
+
+.channels-index-footer-member-id {
+  color: #b9babe;
+  font-size: 0.7rem;
+  &:hover {
+    cursor: default;
+  }
+}
+
 .logout-button {
+  transition: 1s;
   color: #8e9297;
+  margin-right: 10px;
 }
 
 .logout-button:hover {
+  transition: 0.5s;
   cursor: pointer;
   color: white;
+}
+
+.channels-index-footer-member-info
+  > .guild-members-index-member-profile-picture:hover {
+  filter: brightness(80%);
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 1rem;
 }

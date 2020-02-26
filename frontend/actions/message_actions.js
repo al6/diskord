@@ -12,10 +12,11 @@ const receiveMessages = messages => ({
   messages
 });
 
-export const createMessage = message => dispatch =>
-  MessageAPIUtil.createMessage(message).then(message =>
+export const createMessage = message => dispatch => {
+  return MessageAPIUtil.createMessage(message).then(message =>
     dispatch(receiveMessage(message))
   );
+};
 
 export const fetchMessages = channel_id => dispatch =>
   MessageAPIUtil.fetchMessages(channel_id).then(messages =>

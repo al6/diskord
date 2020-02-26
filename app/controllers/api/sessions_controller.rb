@@ -4,6 +4,7 @@ class Api::SessionsController < ApplicationController
       params[:member][:email],
       params[:member][:password]
     )
+    
     if @member
       login(@member)
       render "api/members/show"

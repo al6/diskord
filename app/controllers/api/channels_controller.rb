@@ -1,11 +1,19 @@
 class Api::ChannelsController < ApplicationController
   def create
-    @channel = Channel.new(channel_params)
-    if @channel.save
-      GuildChannel.send_data("guild_#{@channel.guild_id}", @channel.as_json)
-      render :show
-    else
-      render json: ["Channel creation failed! Try a different name"], status: 400
+    if channel_params[:name] == ""
+      render json: ["This field is required"]
+    else 
+      @channel = Channel.new(channel_params)
+      if @channel.save
+        redux_action = {
+          type: "RECEIVE_CHANNEL",
+          channel: @channel.as_json
+        }
+        GuildChannel.send_data("guild_#{@channel.guild_id}", redux_action.as_json)
+        render :show
+      else
+        render json: ["Channel creation failed! Try a different name"], status: 400
+      end
     end
   end
 

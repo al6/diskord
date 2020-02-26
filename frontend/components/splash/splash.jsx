@@ -30,13 +30,22 @@ class Splash extends React.Component {
             <div className="right-splash-nav">
               <div className="network-buttons">
                 <a href="http://github.com/al6">
-                  <img className="github-button" src={githubLogo} />
+                  <img
+                    className="github-button"
+                    src="https://diskord-pro.s3.amazonaws.com/github-logo.png"
+                  />
                 </a>
                 <a href="https://www.linkedin.com/in/albertlee3/">
-                  <img className="linkedin-button" src={linkedinLogo} />
+                  <img
+                    className="linkedin-button"
+                    src="https://diskord-pro.s3.amazonaws.com/linkedin.svg"
+                  />
                 </a>
                 <a href="https://angel.co/">
-                  <img className="angellist-button" src={angellistLogo} />
+                  <img
+                    className="angellist-button"
+                    src="https://diskord-pro.s3.amazonaws.com/angellist.png"
+                  />
                 </a>
               </div>
               <Link
@@ -81,94 +90,136 @@ class Splash extends React.Component {
             <div className="splash-margin-container">
               <div className="splash-image-container">
                 {/* left of monitor */}
-                <img className="x" src={x} />
-                <img className="triangle" src={triangle} />
-                <img className="dot" src={dot} />
-                <img className="flask" src={flask} />
-                <img className="android" src={android} />
-                <img className="iphone" src={iphone} />
-                <img className="game-controller" src={controller} />
-                <img className="bomb" src={bomb} />
-                <img className="coin-left" src={coin} />
-
-                <img className="monitor" src={monitor} />
-
+                <img
+                  className="flask"
+                  src="https://diskord-pro.s3.amazonaws.com/spawner-potion.svg"
+                />
+                <img
+                  className="android"
+                  src="https://diskord-pro.s3.amazonaws.com/android.svg"
+                />
+                <img
+                  className="iphone"
+                  src="https://diskord-pro.s3.amazonaws.com/iphone.svg"
+                />
+                <img
+                  className="game-controller"
+                  src="https://diskord-pro.s3.amazonaws.com/game-controller.svg"
+                />
+                <img
+                  className="bomb"
+                  src="https://diskord-pro.s3.amazonaws.com/bomb.svg"
+                />
+                <img
+                  className="coin-left"
+                  src="https://diskord-pro.s3.amazonaws.com/coin.svg"
+                />
+                <img
+                  className="monitor"
+                  src="https://diskord-pro.s3.amazonaws.com/monitor.svg"
+                />
                 {/* right of monitor */}
-                <img className="coin-top-middle" src={coin} />
+                <img
+                  className="coin-top-middle"
+                  src="https://diskord-pro.s3.amazonaws.com/coin.svg"
+                />
+                <img
+                  className="game-cartridge"
+                  src="https://diskord-pro.s3.amazonaws.com/game-cartridge.svg"
+                />
+                <img
+                  className="laptop"
+                  src="https://diskord-pro.s3.amazonaws.com/laptop.svg"
+                />
+                <img
+                  className="headphones"
+                  src="https://diskord-pro.s3.amazonaws.com/headphones.svg"
+                />
+                <img
+                  className="shield"
+                  src="https://diskord-pro.s3.amazonaws.com/shield.svg"
+                />
+
+                {/* filled dots */}
+                <img
+                  className="filled-dot-left-of-android"
+                  src="https://diskord-pro.s3.amazonaws.com/filled-dot.svg"
+                />
+                <img
+                  className="filled-dot-directly-above-iphone"
+                  src="https://diskord-pro.s3.amazonaws.com/filled-dot.svg"
+                />
                 <img
                   className="filled-dot-above-monitor-and-laptop"
-                  src={dot}
+                  src="https://diskord-pro.s3.amazonaws.com/filled-dot.svg"
                 />
-                <img className="game-cartridge" src={cartridge} />
-                <img className="laptop" src={laptop} />
-                <img className="headphones" src={headphones} />
-                <img className="shield" src={shield} />
-                <img className="filled-dot-left-of-android" src={dot} />
-                <img className="filled-dot-directly-above-iphone" src={dot} />
-                <img className="filled-dot-bottom-right" src={dot} />
-                <img className="filled-dot-top-right" src={dot} />
+                <img
+                  className="filled-dot-top-right"
+                  src="https://diskord-pro.s3.amazonaws.com/filled-dot.svg"
+                />
+                <img
+                  className="filled-dot-bottom-right"
+                  src="https://diskord-pro.s3.amazonaws.com/filled-dot.svg"
+                />
+                {/* triangles */}
                 <img
                   className="triangle-left"
-                  src="https://discordapp.com/assets/0a2fd7b3bab977b4619f466b81b426d4.svg"
+                  src="https://diskord-pro.s3.amazonaws.com/triangle.svg"
                 />
                 <img
                   className="triangle-top-middle"
-                  src="https://discordapp.com/assets/0a2fd7b3bab977b4619f466b81b426d4.svg"
+                  src="https://diskord-pro.s3.amazonaws.com/triangle.svg"
+                />
+                <img
+                  className="question-block"
+                  src="https://diskord-pro.s3.amazonaws.com/question-block.svg"
+                />
+                {/* X svgs */}
+                <img
+                  className="x-above-flask"
+                  src="https://diskord-pro.s3.amazonaws.com/x.svg"
+                />
+                <img
+                  className="triangle-hidden-behind-top-left-monitor"
+                  src="https://diskord-pro.s3.amazonaws.com/triangle.svg"
+                />
+                <img
+                  className="x-right-of-laptop"
+                  src="https://diskord-pro.s3.amazonaws.com/x.svg"
+                />
+
+                {/* empty white circles */}
+                <img
+                  className="empty-circle-above-iphone"
+                  src="https://diskord-pro.s3.amazonaws.com/circle.svg"
+                />
+                <img
+                  className="empty-circle-behind-controller"
+                  src="https://diskord-pro.s3.amazonaws.com/circle.svg"
+                />
+                <img
+                  className="empty-circle-right-of-monitor"
+                  src="https://diskord-pro.s3.amazonaws.com/circle.svg"
+                />
+
+                {/* empty white squares */}
+                <img
+                  className="square-behind-monitor-stand"
+                  src="https://diskord-pro.s3.amazonaws.com/square.svg"
+                />
+                <img
+                  className="square-above-laptop-upper"
+                  src="https://diskord-pro.s3.amazonaws.com/square.svg"
+                />
+                <img
+                  className="square-above-laptop-lower"
+                  src="https://diskord-pro.s3.amazonaws.com/square.svg"
                 />
               </div>
+              <div className="images-footer-thingy"></div>
             </div>
           </div>
           <div className="footer-main">
-            {/* <div className="footer-links">
-                <div className="splash-footer-links-container">footer-links</div>
-                <div className="splash-footer-links-container">
-                  <div className="footer-links-category">
-                    Product
-                  </div>
-                  <div>Download</div>
-                  <div>Branding</div>
-                  <div>Nitro</div>
-                </div>
-                <div className="splash-footer-links-container">
-                  <div className="footer-links-category">
-                    Developers
-                    </div> 
-                  <div>Sell Your Game</div> 
-                  <div>Rich Presence</div> 
-                  <div>Verification</div> 
-                  <div>Applications</div> 
-                  <div>Documentation</div> 
-                </div>
-                <div className="splash-footer-links-container">
-                  <div className="footer-links-category">
-                    Resources
-                  </div>
-                  <div>Help & Support</div>
-                  <div>Guidelines</div>
-                  <div>Feedback</div>
-                  <div>Terms</div>
-                  <div>Privacy</div>
-                  <div>Status</div>
-                </div>
-                <div className="splash-footer-links-container">
-                  <div className="footer-links-category">
-                    Company
-                  </div>
-                  <div>About</div>
-                  <div>Blog</div>
-                  <div>Jobs</div>
-                </div>
-                <div className="splash-footer-links-container">
-                  <div className="footer-links-category">
-                    More
-                  </div>
-                  <div>Partners</div>
-                  <div>HypeSquad</div>
-                  <div>Merch Store</div>
-                  <div>Press Inquiries</div>
-                  <div>Open Source</div>
-                </div>
-              </div> */}
             <footer className="splash-footer">
               <div className="left-splash-footer">
                 <div className="splash-footer-header-main">

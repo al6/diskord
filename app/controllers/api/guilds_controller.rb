@@ -43,7 +43,7 @@ class Api::GuildsController < ApplicationController
 
   private
   def guild_params
-    params.require(:guild).permit(:name, :owner_id)
+    params.require(:guild).permit(:name, :owner_id, :emblem)
   end
 end
 

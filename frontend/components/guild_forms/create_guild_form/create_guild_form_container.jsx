@@ -4,6 +4,7 @@ import {
   joinGuild
 } from "../../../actions/guild_membership_actions";
 import CreateGuildForm from "./create_guild_form";
+import { removeErrors } from "../../../actions/session_actions";
 
 const mapStateToProps = state => {
   const currentMemberId = state.session.id;
@@ -17,7 +18,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => ({
   createGuild: guild => dispatch(createGuild(guild)),
-  joinGuild: name => dispatch(joinGuild(name))
+  joinGuild: name => dispatch(joinGuild(name)),
+  removeErrors: () => dispatch(removeErrors())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CreateGuildForm);

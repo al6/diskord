@@ -3,8 +3,7 @@
   align-items: flex-end;
   display: flex;
   justify-content: center;
-  margin: 0 auto;
-  max-height: 1400px;
+  max-height: 638px;
   height: 638px;
   width: 100%;
   min-width: 82rem;
@@ -13,7 +12,9 @@
 }
 
 .splash-margin-container {
+  align-items: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin: 0 auto;
   padding-bottom: 8rem;
@@ -21,18 +22,36 @@
   width: 100%;
 }
 
-.flask {
+.flask,
+.android,
+.iphone,
+.bomb,
+.coin-left,
+.coin-top-middle,
+.game-controller,
+.laptop,
+.game-cartridge,
+.headphones,
+.shield {
   position: relative;
-  left: 19rem;
+}
+
+.monitor,
+.question-block {
+  position: absolute;
+}
+
+.flask {
+  left: 18.5rem;
   height: 12rem;
+  z-index: 1;
 }
 
 .android,
 .iphone {
-  position: relative;
   max-height: 250px;
   max-width: 135px;
-  z-index: 2;
+  z-index: 3;
 }
 
 .android {
@@ -40,7 +59,7 @@
 }
 
 .iphone {
-  left: 16.4rem;
+  left: 16rem;
 }
 
 @keyframes bombfloat {
@@ -68,8 +87,7 @@
   animation-direction: alternate;
   animation-timing-function: ease-in-out;
 
-  position: relative;
-  max-height: 5rem;
+  max-height: 6rem;
   bottom: 21rem;
   right: 6.5rem;
   z-index: 0;
@@ -87,9 +105,8 @@
 
 .coin-left,
 .coin-top-middle {
-  position: relative;
-  max-height: 5rem;
-  max-width: 4.5rem;
+  max-height: 6rem;
+  max-width: 6rem;
   z-index: 2;
 }
 
@@ -99,39 +116,35 @@
 }
 
 .coin-top-middle {
-  bottom: 33.7rem;
-  left: 18.5rem;
+  bottom: 33rem;
+  left: 17rem;
 }
 
 .game-controller {
-  position: relative;
   max-height: 7rem;
   max-width: 10rem;
   left: 17rem;
-  z-index: 2;
+  z-index: 3;
 }
 
 .monitor {
-  position: absolute;
   height: auto;
   max-height: 30rem;
   max-width: 36rem;
-  z-index: 1;
+  z-index: 2;
 }
 
 .laptop {
-  position: relative;
+  left: 1.3rem;
   z-index: 3;
 }
 
 .game-cartridge {
-  position: relative;
-  bottom: 385px;
-  left: 350px;
+  bottom: 24rem;
+  left: 23rem;
 }
 
 .headphones {
-  position: relative;
   right: 300px;
   bottom: 170px;
   max-height: 200px;
@@ -140,27 +153,53 @@
 
 .shield {
   position: relative;
-  right: 280px;
+  right: 16.5rem;
+  z-index: 1;
 }
 
 .filled-dot-left-of-android,
 .filled-dot-directly-above-iphone,
 .filled-dot-bottom-right,
 .filled-dot-top-right,
-.filled-dot-above-monitor-and-laptop {
+.filled-dot-above-monitor-and-laptop,
+.triangle-left,
+.triangle-top-middle,
+.triangle-hidden-behind-top-left-monitor,
+.x-above-flask,
+.x-right-of-laptop,
+.empty-circle-above-iphone,
+.empty-circle-behind-controller,
+.empty-circle-right-of-monitor,
+.square-behind-monitor-stand,
+.square-above-laptop-upper,
+.square-above-laptop-lower {
   position: absolute;
-  filter: brightness(50%);
+  filter: brightness(40%);
 }
 
 .filled-dot-left-of-android {
-  right: 73rem;
-  bottom: 11rem;
+  right: 76rem;
+  bottom: 12.4rem;
 }
 
-.triangle-left,
-.triangle-top-middle {
-  position: absolute;
-  filter: brightness(50%);
+.filled-dot-directly-above-iphone {
+  bottom: 37rem;
+  left: 21rem;
+}
+
+.filled-dot-above-monitor-and-laptop {
+  bottom: 31rem;
+  right: 27rem;
+}
+
+.filled-dot-top-right {
+  top: 1rem;
+  right: 5rem;
+}
+
+.filled-dot-bottom-right {
+  right: 0rem;
+  bottom: 8rem;
 }
 
 .triangle-left {
@@ -168,36 +207,86 @@
   right: 74.6rem;
 }
 
-.dot,
-.triangle,
-.x {
-  position: absolute;
+.triangle-top-middle {
+  bottom: 34rem;
+  left: 43rem;
+}
+
+.empty-circle-above-iphone {
+  bottom: 33rem;
+  left: 18.7rem;
+}
+
+.empty-circle-behind-controller {
+  bottom: 4.9rem;
+  left: 29rem;
+}
+
+.empty-circle-right-of-monitor {
+  right: 3rem;
+  top: 20rem;
+}
+
+.question-block {
+  bottom: 28rem;
+  left: 26rem;
+  z-index: 1;
+}
+
+.square-behind-monitor-stand {
+  bottom: 5.5rem;
+  left: 42.2rem;
+}
+
+.square-above-laptop-upper {
+  top: 1rem;
+  right: 18rem;
+}
+
+.square-above-laptop-lower {
+  top: 13rem;
+  right: 12rem;
+}
+
+.x-above-flask {
+  left: 4.8rem;
+  bottom: 30.8rem;
+}
+
+.x-right-of-laptop {
+  top: 24rem;
+  right: 4.7rem;
+}
+
+.triangle-hidden-behind-top-left-monitor {
+  top: 10.2rem;
+  left: 23rem;
+  z-index: 0;
+}
+
+.images-footer-thingy {
+  background-color: #212226;
+  border-radius: 2rem;
+  bottom: 2rem;
+  width: 93%;
+  height: 1rem;
+  padding: 1rem;
+  position: relative;
+  z-index: 0;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  .monitor,
-  .game-controller,
-  .coin-top-middle,
-  .coin-left,
-  .game-cartridge,
-  .headphones,
-  .iphone,
-  .flask,
-  .x,
-  .triangle-left,
-  .triangle-top-middle {
+  .splash-image-container,
+  .images-footer-thingy,
+  .no-friends,
+  .welcome-to-channel,
+  .welcome-to-channel-img-left,
+  .welcome-to-channel-img-right {
     display: none;
   }
-  .laptop {
-    left: 15rem;
-  }
 
-  .android {
-    position: relative;
-    left: 22rem;
-  }
-  .splash-image-container {
-    height: 100%;
+  .splash-nav {
+    width: 90%;
   }
 
   .footer-main {
@@ -206,7 +295,9 @@
   }
 
   .splash-header {
+    height: 100%;
     padding: 0;
+    min-height: 0px;
   }
 
   .splash-container {

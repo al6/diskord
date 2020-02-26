@@ -6,6 +6,10 @@
   max-width: 4.5rem;
   min-width: 4.5rem;
   padding-top: 10px;
+  overflow-x: hidden;
+  &:hover {
+    overflow-y: auto;
+  }
 }
 
 .open-guild-form-modal-text {
@@ -26,13 +30,13 @@
   font-weight: 400;
   font-size: 9px;
   justify-content: center;
-  height: 3.2rem;
-  min-height: 3.2rem;
-  max-height: 3.2rem;
+  height: 3rem;
+  min-height: 3rem;
+  max-height: 3rem;
   text-align: center;
-  width: 3.2rem;
-  min-width: 3.2rem;
-  max-width: 3.2rem;
+  width: 3rem;
+  min-width: 3rem;
+  max-width: 3rem;
   margin-bottom: 0.5rem;
   transition: 1s;
   &:hover {
@@ -48,6 +52,12 @@
   letter-spacing: 0.1rem;
 }
 
+.guild-link-active {
+  background-color: #7189da;
+  border-radius: 1rem;
+  transition: 0.5s;
+}
+
 .hover-green-transition {
   background-color: #37383f;
   color: #43b581;
@@ -58,4 +68,23 @@
   background-color: #43b581;
   color: white;
   transition: 0.5s;
+}
+
+.placeholder-logo-home {
+  max-height: 5rem;
+  min-height: 5rem;
+}
+
+.placeholder-logo-messages {
+  max-height: 4.6rem;
+  position: relative;
+  bottom: 16px;
+  right: 17px;
+}
+
+.small-logo-placeholder {
+  max-height: 3rem;
+  position: relative;
+  bottom: 10px;
+  right: 9.5px;
 }

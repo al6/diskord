@@ -1,0 +1,69 @@
+.guild-members-index {
+  background: #2f3135;
+  box-sizing: border-box;
+  color: #8e9197;
+  min-width: 15rem;
+  max-width: 15rem;
+  padding-top: 0;
+}
+
+.guild-members-index > .channel-messages-index-header {
+  background: #37383f;
+}
+
+.guild-members-index-header {
+  align-items: center;
+  color: #8e9197;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0.5rem 1rem;
+  margin-bottom: 0;
+}
+
+.guild-members-index-header-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.guild-members-index-header-count-divider {
+  bottom: 3px;
+  font-size: 2rem;
+  font-weight: 200;
+  position: relative;
+}
+
+.guild-members-count {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.current-guild-member {
+  align-items: center;
+  border-radius: 5px;
+  display: flex;
+  margin-bottom: 10px;
+  width: 93%;
+  height: 2.2rem;
+  margin: 1rem 0.5rem;
+  margin-top: 0;
+  &:hover {
+    color: white;
+    background-color: #383c43;
+  }
+}
+
+.guild-members-index-member-profile-picture {
+  background-color: #73767d;
+  border-radius: 1.8rem;
+  max-height: 1.8rem;
+  min-height: 1.8rem;
+  max-width: 1.8rem;
+  min-width: 1.8rem;
+  margin-left: 8px;
+}
+
+.guild-members-index-member-username {
+  text-overflow: ellipsis;
+  padding-left: 10px;
+  overflow: hidden;
+}

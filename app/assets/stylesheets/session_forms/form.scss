@@ -1,7 +1,7 @@
 .session-page {
   height: 100vh;
   width: 100vw;
-  background: image-url("diskord_background.jpeg");
+  background-image: url("https://diskord-pro.s3.amazonaws.com/diskord_background.jpeg");
   display: flex;
   align-items: center;
 }
@@ -101,8 +101,9 @@
   color: #f04747;
   font-family: "Helvetica Neue";
   font-size: 10px;
-  padding-left: 5px;
   font-style: italic;
+  padding-bottom: 5px;
+  padding-left: 5px;
 }
 
 .input-label-and-errors {
@@ -134,21 +135,48 @@
   width: 100%;
 }
 
+.create-join-input-label-container {
+  display: flex;
+}
+
 .guild-icon-upload-container {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
   height: 160px;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
   width: 200px;
+}
+
+.guild-icon-upload-container:hover > * {
+  filter: brightness(80%);
 }
 
 .guild-icon-upload {
   height: 128px;
   width: 128px;
-  border: 5px solid #ebebeb;
   border-radius: 128px;
   background: #7289da;
+  overflow: hidden;
+  position: relative;
+  &:focus {
+    outline: none;
+  }
+}
+
+.guild-icon-upload [type="file"] {
+  cursor: inherit;
+  display: block;
+  filter: alpha(opacity=0);
+  min-height: 100%;
+  min-width: 100%;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: 0;
 }
 
 .create-join-form-headers {
@@ -156,7 +184,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 55px;
 }
 
 .create-join-form-main-header {
@@ -197,34 +224,76 @@
 }
 
 .create-guild-input-label {
+  color: #87909c;
   font-size: 10px;
   font-weight: 600;
-  color: #87909c;
+  padding-right: 10px;
 }
 
 .create-guild-community-guidelines {
   color: #99aab5;
-  font-size: 10px;
+  font-size: 0.7rem;
 }
 
 .join-guild-input-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   height: 160px;
   width: 100%;
 }
 
+.join-guild-input-container > * {
+  zoom: 110%;
+}
+
 .create-channel-form {
-  align-items: center;
+  background-color: #36393f;
+  border-radius: 4px;
+  color: white;
+  padding: 0 4rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   height: 100%;
 }
 
+.channel-form-buttons-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.channel-form-buttons-container > button {
+  border: none;
+  height: 2.5rem;
+  outline: none;
+  width: 11rem;
+}
+
 .validation-error-text {
   color: red;
   font-style: italic;
   font-size: 0.5rem;
+}
+
+.image-preview {
+  max-height: 128px;
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    outline: none;
+  }
+}
+
+.guild-icon-upload-circle-container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .create-join-form-input-container {
+    width: 80%;
+  }
 }
