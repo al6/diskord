@@ -7,6 +7,11 @@ class Member < ApplicationRecord
   
   has_many :guild_memberships
   has_many :dm_memberships
+  
+  has_many :dm_channels,
+    through: :dm_memberships,
+    source: :channel
+
   has_many :guilds,
     through: :guild_memberships,
     source: :guild

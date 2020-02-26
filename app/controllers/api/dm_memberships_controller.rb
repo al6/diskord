@@ -1,14 +1,4 @@
 class Api::DmMembershipsController < ApplicationController
-  def index
-    @guild_member = Member.find_by(id: params[:id])
-    if @guild_member
-      @dm_memberships = @guild_member.dm_memberships.to_a
-      render :index
-    else
-      render json: ["No dms found!"]
-    end
-  end
-
   def create
     @dm_membership = DmMembership.new(dm_membership_params)
     if @dm_membership.save
