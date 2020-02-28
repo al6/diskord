@@ -1,16 +1,11 @@
-import * as DMMembershipAPIUtil from "../util/dm_membership_api_util";
+import * as APIUtil from "../util/dm_membership_api_util";
 import { receiveErrors } from "./session_actions";
 
-export const RECEIVE_DM_MEMBERSHIP = "RECEIVE_DM_MEMBERSHIP";
+export const RECEIVE_DM = "RECEIVE_DM";
 
-const receiveGuild = guild => ({
-  type: RECEIVE_GUILD,
-  guild
-});
-
-const receiveGuilds = guilds => ({
-  type: RECEIVE_GUILDS,
-  guilds
+const receiveDm = dm => ({
+  type: RECEIVE_DM,
+  dm
 });
 
 const receiveGuildMembership = guild_membership => ({
@@ -24,7 +19,7 @@ const receiveGuildMembers = guild_members => ({
 });
 
 export const createGuild = guild => dispatch => {
-  return GuildAPIUtil.create(guild).then(
+  return APIUtil.create(guild).then(
     guild => dispatch(receiveGuild(guild)),
     errors => dispatch(receiveErrors(errors.responseJSON))
   );

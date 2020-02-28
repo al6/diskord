@@ -1,21 +1,16 @@
-import {
-  RECEIVE_GUILD,
-  RECEIVE_GUILDS
-} from "../actions/guild_membership_actions";
+import { RECEIVE_DM } from "../actions/dm_membership_actions";
 
 const dmsReducer = (state = [], action) => {
   Object.freeze(state);
   let newState;
   switch (action.type) {
-    case RECEIVE_GUILD:
+    case RECEIVE_DM:
       newState = JSON.parse(JSON.stringify(state));
-      if (newState.includes(action.guild)) {
+      if (newState.includes(action.dm)) {
         return newState;
       } else {
-        return newState.concat(action.guild);
+        return newState.concat(action.dm);
       }
-    case RECEIVE_GUILDS:
-      return action.guilds;
     default:
       return state;
   }
