@@ -5,5 +5,5 @@ class Channel < ApplicationRecord
   has_many :members,
     through: :dm_memberships,
     source: :member
-  belongs_to :guild
+  belongs_to :guild, optional: true
 end

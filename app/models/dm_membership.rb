@@ -5,15 +5,15 @@ class DmMembership < ApplicationRecord
 
   after_create :create_dm_channel
 
-  belongs_to :channel
+  belongs_to :channel, optional: true
 
   belongs_to :first_member,
     class_name: :Member,
-    foreign_key: :member_id
+    foreign_key: :first_member_id
   
   belongs_to :second_member,
     class_name: :Member,
-    foreign_key: :member_id
+    foreign_key: :second_member_id
 
   def create_dm_channel
     new_channel = Channel.create(name: self.second_member.username)
