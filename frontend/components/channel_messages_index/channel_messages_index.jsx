@@ -145,7 +145,7 @@ class ChannelMessagesIndex extends React.Component {
               this.clearInput();
             }}
           >
-            <label class="message-image-upload">
+            <label className="message-image-upload">
               +
               <input type="file" onChange={this.handleUpload} />
             </label>
