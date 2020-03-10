@@ -6,7 +6,6 @@ class Api::DmMembershipsController < ApplicationController
     else
       render json: ["DM Membership did not save!!"], status: 400
     end
-    render json: ["This does not work yet"], status: 400
   end
 
   private
