@@ -20,11 +20,7 @@ class GuildMembersIndex extends React.Component {
           <div className="guild-members-count">{orderedMembers.length}</div>
         </div>
         {orderedMembers.map(member => (
-          <div
-            onClick={() => console.log("working")}
-            key={member.id}
-            className="current-guild-member"
-          >
+          <div key={member.id} className="current-guild-member">
             <div className="guild-members-index-member-profile-picture">
               {" "}
               <img

@@ -43,7 +43,29 @@ class DmMembershipsIndex extends React.Component {
         <div className="channels-list">
           <div className="text-channel-type">
             <span className="text-channel-type-text">DIRECT MESSAGES</span>
-            <p className="create-channel-button-text">+</p>
+            {/* <p
+              onClick={() => console.log("test42")}
+              className="create-channel-button-text click-on-hover"
+            >
+              +
+            </p> */}
+            <span className="create-channel-modal">
+              <Modal>
+                <Modal.Content>
+                  <ModalContext.Consumer>
+                    {({ closeModal }) => (
+                      <CreateChannelFormContainer
+                        // memberId={memberId}
+                        closeModal={closeModal}
+                      />
+                    )}
+                  </ModalContext.Consumer>
+                </Modal.Content>
+                <Modal.OpenButton className="create-channel-button">
+                  <p className="create-channel-button-text">+</p>
+                </Modal.OpenButton>
+              </Modal>
+            </span>
           </div>
           {/* {channels.map(channel => (
             <Link
