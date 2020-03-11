@@ -10,23 +10,21 @@ class DmMembershipsIndex extends React.Component {
   }
 
   componentDidUpdate(previousProps) {
-    // const { guildId, fetchGuildMembers, subscribe } = this.props;
-    // if (previousProps.guildId !== guildId) {
-    //   this.props.fetchChannels(guildId);
-    //   fetchGuildMembers(guildId);
-    //   subscribe(guildId);
-    // }
-    // if (
-    //   get(previousProps, "channels", []).length === 0 &&
-    //   this.props.channels.length > 0
-    // ) {
-    //   this.props.history.push(`${this.props.channels[0].id}`);
-    // }
+    const { channels, fetchDmMemberships, subscribe } = this.props;
+    if (previousProps.channels.length !== channels.length) {
+      fetchDmMemberships();
+      //   subscribe(guildId);
+    }
+    if (
+      get(previousProps, "channels", []).length === 0 &&
+      this.props.channels.length > 0
+    ) {
+      this.props.history.push(`/channels/@me/${this.props.channels[0].id}`);
+    }
   }
 
   componentDidMount() {
     const { fetchDmMemberships, guildId, subscribe } = this.props;
-    // debugger;
     fetchDmMemberships();
     //   subscribe(guildId);
   }
@@ -71,9 +69,8 @@ class DmMembershipsIndex extends React.Component {
                   ? "channel-index-link-active"
                   : ""
               }`}
-              key={guildId}
-              to={`/channels/${guildId}/${channel.id}`}
               key={`channel-${channel.id}`}
+              to={`/channels/@me/${channel.id}`}
             >
               <svg
                 className="channels-index-hashtag"

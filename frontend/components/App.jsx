@@ -17,22 +17,13 @@ const App = () => (
       component={GuildMembershipsIndexContainer}
     />
     <ProtectedRoute
-      exact
-      path="/channels/@me/"
-      component={DmMembershipsIndexContainer}
-    />
-    <ProtectedRoute
-      path="/channels/:guildId/:channelId"
+      path={["/channels/:guildId/:channelId", "/channels/:guildId"]}
       component={props => {
         if (props.match.params.guildId === "@me") {
           return <DmMembershipsIndexContainer />;
         }
         return <GuildChannelsIndexContainer {...props} />;
       }}
-    />
-    <ProtectedRoute
-      path="/channels/@me/"
-      component={DmChannelMessagesIndexContainer}
     />
     <ProtectedRoute
       path="/channels/:guildId/:channelId"

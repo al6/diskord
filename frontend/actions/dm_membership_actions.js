@@ -1,8 +1,8 @@
 import * as APIUtil from "../util/dm_membership_api_util";
 import { receiveErrors } from "./session_actions";
 
-const RECEIVE_DM_MEMBERSHIP = "RECEIVE_DM";
-const RECEIVE_DM_MEMBERSHIPS = "RECEIVE_DM_MEMBERSHIPS";
+export const RECEIVE_DM_MEMBERSHIP = "RECEIVE_DM";
+export const RECEIVE_DM_MEMBERSHIPS = "RECEIVE_DM_MEMBERSHIPS";
 
 export const receiveDmMembership = dm => ({
   type: RECEIVE_DM_MEMBERSHIP,

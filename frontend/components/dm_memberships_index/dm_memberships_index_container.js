@@ -1,15 +1,16 @@
 import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
 import DmMembershipsIndex from "./dm_memberships_index";
 import { logout } from "../../actions/session_actions";
 import { fetchChannels } from "../../actions/channel_actions";
 import { fetchGuildMembers } from "../../actions/guild_membership_actions";
 import { fetchDmMemberships } from "../../actions/dm_membership_actions";
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, ownProps) => {
   return {
     currentUsername: state.entities.members[state.session.id].username,
     currentMemberId: state.session.id,
-    dmMemberships: state.entities.channels
+    channels: state.entities.channels
   };
 };
 
@@ -20,4 +21,6 @@ const mapDispatchToProps = dispatch => ({
   fetchDmMemberships: () => dispatch(fetchDmMemberships())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(DmMembershipsIndex);
+export default withRouter(
+  connect(mapStateToProps, mapDispatchToProps)(DmMembershipsIndex)
+);
