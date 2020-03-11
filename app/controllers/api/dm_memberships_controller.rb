@@ -4,9 +4,8 @@ class Api::DmMembershipsController < ApplicationController
     if @dm_membership.save
       render :show
     else
-      render json: ["DM Membership did not save!!"], status: 400
+      render json: ["That didn't work!"], status: 400
     end
-    render json: ["This does not work yet"], status: 400
   end
 
   private

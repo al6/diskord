@@ -16,7 +16,7 @@ Rails.application.routes.draw do
       get :guild_members, on: :member
     end
 
-    resources :channels, only: [:create, :index, :destroy] do
+    resources :channels, only: [:show, :create, :index, :destroy] do
       get :messages, on: :member
     end
 

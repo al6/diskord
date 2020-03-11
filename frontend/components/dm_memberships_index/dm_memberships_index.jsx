@@ -25,16 +25,19 @@ class DmMembershipsIndex extends React.Component {
   }
 
   componentDidMount() {
-    // const { fetchChannels, fetchGuildMembers, guildId, subscribe } = this.props;
-    // if (Number.parseInt(guildId)) {
-    //   fetchChannels(guildId);
-    //   fetchGuildMembers(guildId);
+    const { fetchDmMemberships, guildId, subscribe } = this.props;
+    // debugger;
+    fetchDmMemberships();
     //   subscribe(guildId);
-    // }
   }
 
   render() {
-    const { logout, currentUsername, currentMemberId } = this.props;
+    const {
+      logout,
+      currentUsername,
+      currentMemberId,
+      channels = []
+    } = this.props;
     return (
       <div className="guild-channels-index">
         <div className="create-channel-container">
@@ -43,12 +46,6 @@ class DmMembershipsIndex extends React.Component {
         <div className="channels-list">
           <div className="text-channel-type">
             <span className="text-channel-type-text">DIRECT MESSAGES</span>
-            {/* <p
-              onClick={() => console.log("test42")}
-              className="create-channel-button-text click-on-hover"
-            >
-              +
-            </p> */}
             <span className="create-channel-modal">
               <Modal>
                 <Modal.Content>
@@ -67,7 +64,7 @@ class DmMembershipsIndex extends React.Component {
               </Modal>
             </span>
           </div>
-          {/* {channels.map(channel => (
+          {channels.map(channel => (
             <Link
               className={`channel-index-link ${
                 `${channel.id}` === this.props.match.params.channelId
@@ -101,7 +98,7 @@ class DmMembershipsIndex extends React.Component {
                 {channel.name}
               </span>
             </Link>
-          ))} */}
+          ))}
         </div>
         <div className="channels-index-footer">
           <div className="channels-index-footer-member-info">
