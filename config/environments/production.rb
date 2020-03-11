@@ -43,8 +43,9 @@ Rails.application.configure do
 
   # Mount Action Cable outside main process or domain
   # config.action_cable.mount_path = nil
-  config.action_cable.url = 'wss://diskord.io/cable'
-  config.action_cable.allowed_request_origins = ['http://diskord.io', 'http://diskord.herokuapp.com', 'https://diskord.io', 'https://diskord.herokuapp.com']
+  
+  config.action_cable.allowed_request_origins = ['https://diskord.herokuapp.com']
+  config.action_cable.url = "wss://diskord.herokuapp.com/cable"
   # config.action_cable.disable_request_forgery_protection = true
   # config.web_socket_server_url = "wss://diskord.io/cable" 
 
