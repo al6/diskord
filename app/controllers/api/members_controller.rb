@@ -1,6 +1,5 @@
 class Api::MembersController < ApplicationController
   def create
-    
     if member_params[:email] == "" && member_params[:username] == "" && member_params[:password] == ""
       render json: ["This field is required", "This field is required", "This field is required"], status: 400
     else
@@ -11,6 +10,19 @@ class Api::MembersController < ApplicationController
       else
         render json: @member.errors.full_messages, status: 409
       end
+    end
+  end
+
+  def dm_memberships
+    if current_member
+      @dm_memberships = DmMembership.where(first_member_id: current_member.id).or(DmMembership.where(second_member_id: current_member.id))
+      if @dm_memberships.empty?
+        render json: ["No dms found!"]
+      else
+        render :dms
+      end
+    else
+      render json: ["No current member!"]
     end
   end
 

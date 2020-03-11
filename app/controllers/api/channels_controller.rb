@@ -26,9 +26,18 @@ class Api::ChannelsController < ApplicationController
     end
   end
 
+  def show
+    @channel = Channel.where(id: params[:id])
+    if @channel.present?
+      render :show
+    else
+      render json: ["No channel found!"]
+    end
+  end
+
   private
   def channel_params
-    params.require(:channel).permit(:name, :guild_id)
+    params.require(:channel).permit(:id, :name, :guild_id)
   end
 end
 

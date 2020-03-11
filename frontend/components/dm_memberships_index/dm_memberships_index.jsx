@@ -10,31 +10,32 @@ class DmMembershipsIndex extends React.Component {
   }
 
   componentDidUpdate(previousProps) {
-    // const { guildId, fetchGuildMembers, subscribe } = this.props;
-    // if (previousProps.guildId !== guildId) {
-    //   this.props.fetchChannels(guildId);
-    //   fetchGuildMembers(guildId);
-    //   subscribe(guildId);
-    // }
-    // if (
-    //   get(previousProps, "channels", []).length === 0 &&
-    //   this.props.channels.length > 0
-    // ) {
-    //   this.props.history.push(`${this.props.channels[0].id}`);
-    // }
+    const { channels, fetchDmMemberships, subscribe } = this.props;
+    if (previousProps.channels.length !== channels.length) {
+      fetchDmMemberships();
+      //   subscribe(guildId);
+    }
+    if (
+      get(previousProps, "channels", []).length === 0 &&
+      this.props.channels.length > 0
+    ) {
+      this.props.history.push(`/channels/@me/${this.props.channels[0].id}`);
+    }
   }
 
   componentDidMount() {
-    // const { fetchChannels, fetchGuildMembers, guildId, subscribe } = this.props;
-    // if (Number.parseInt(guildId)) {
-    //   fetchChannels(guildId);
-    //   fetchGuildMembers(guildId);
+    const { fetchDmMemberships, guildId, subscribe } = this.props;
+    fetchDmMemberships();
     //   subscribe(guildId);
-    // }
   }
 
   render() {
-    const { logout, currentUsername, currentMemberId } = this.props;
+    const {
+      logout,
+      currentUsername,
+      currentMemberId,
+      channels = []
+    } = this.props;
     return (
       <div className="guild-channels-index">
         <div className="create-channel-container">
@@ -43,18 +44,33 @@ class DmMembershipsIndex extends React.Component {
         <div className="channels-list">
           <div className="text-channel-type">
             <span className="text-channel-type-text">DIRECT MESSAGES</span>
-            <p className="create-channel-button-text">+</p>
+            <span className="create-channel-modal">
+              <Modal>
+                <Modal.Content>
+                  <ModalContext.Consumer>
+                    {({ closeModal }) => (
+                      <CreateChannelFormContainer
+                        // memberId={memberId}
+                        closeModal={closeModal}
+                      />
+                    )}
+                  </ModalContext.Consumer>
+                </Modal.Content>
+                <Modal.OpenButton className="create-channel-button">
+                  <p className="create-channel-button-text">+</p>
+                </Modal.OpenButton>
+              </Modal>
+            </span>
           </div>
-          {/* {channels.map(channel => (
+          {channels.map(channel => (
             <Link
               className={`channel-index-link ${
                 `${channel.id}` === this.props.match.params.channelId
                   ? "channel-index-link-active"
                   : ""
               }`}
-              key={guildId}
-              to={`/channels/${guildId}/${channel.id}`}
               key={`channel-${channel.id}`}
+              to={`/channels/@me/${channel.id}`}
             >
               <svg
                 className="channels-index-hashtag"
@@ -79,7 +95,7 @@ class DmMembershipsIndex extends React.Component {
                 {channel.name}
               </span>
             </Link>
-          ))} */}
+          ))}
         </div>
         <div className="channels-index-footer">
           <div className="channels-index-footer-member-info">

@@ -1,6 +1,11 @@
 class Api::DmMembershipsController < ApplicationController
   def create
-    render json: ["This does not work yet"], status: 400
+    @dm_membership = DmMembership.new(dm_membership_params)
+    if @dm_membership.save
+      render :show
+    else
+      render json: ["That didn't work!"], status: 400
+    end
   end
 
   private
