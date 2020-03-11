@@ -4,7 +4,6 @@ import {
   RECEIVE_DM_MEMBERSHIPS
 } from "../actions/dm_membership_actions";
 const channelsReducer = (state = [], action) => {
-  debugger;
   Object.freeze(state);
   let newState;
   switch (action.type) {
