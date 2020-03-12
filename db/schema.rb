@@ -45,8 +45,9 @@ ActiveRecord::Schema.define(version: 2020_02_19_161300) do
 
   create_table "dm_memberships", force: :cascade do |t|
     t.integer "channel_id"
-    t.integer "first_member_id"
-    t.integer "second_member_id"
+    t.integer "first_member_email"
+    t.integer "second_member_email"
+    t.string "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

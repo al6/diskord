@@ -1,6 +1,6 @@
 class Api::DmMembershipsController < ApplicationController
   def create
-    puts params
+    debugger
     @dm_membership = DmMembership.new(dm_membership_params)
     if @dm_membership.save
       @message = Message.new(body: dm_membership_params[:body], author_id: current_member.id, channel_id: @dm_membership.channel_id)
