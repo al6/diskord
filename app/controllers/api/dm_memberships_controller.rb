@@ -16,6 +16,6 @@ class Api::DmMembershipsController < ApplicationController
 
   private
   def dm_membership_params
-    require(:dm_membership).permit(:channel_id, :first_member_id, :second_member_id, :body)
+    require(:dm_membership).permit(:channel_id, :first_member_email, :second_member_email, :body)
   end
 end
