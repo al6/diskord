@@ -1,5 +1,5 @@
 import * as APIUtil from "../util/dm_membership_api_util";
-import { receiveErrors } from "./session_actions";
+import { receiveErrors, RECEIVE_SESSION_ERRORS } from "./session_actions";
 
 export const RECEIVE_DM_MEMBERSHIP = "RECEIVE_DM";
 export const RECEIVE_DM_MEMBERSHIPS = "RECEIVE_DM_MEMBERSHIPS";
@@ -9,7 +9,7 @@ export const receiveDmMembership = dm => ({
   dm_membership
 });
 
-const receiveDmMemberships = dm_memberships => ({
+export const receiveDmMemberships = dm_memberships => ({
   type: RECEIVE_DM_MEMBERSHIPS,
   dm_memberships
 });

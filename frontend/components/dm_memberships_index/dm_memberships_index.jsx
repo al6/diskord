@@ -1,9 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Modal, { ModalContext } from "../modal/modal";
-import CreateChannelFormContainer from "../../components/create_channel_form/create_channel_form_container";
 import get from "lodash/get";
-
+import CreateDmMembershipFormContainer from "../create_dm_membership_form/create_dm_membership_form_container";
 class DmMembershipsIndex extends React.Component {
   constructor(props) {
     super(props);
@@ -49,7 +48,7 @@ class DmMembershipsIndex extends React.Component {
                 <Modal.Content>
                   <ModalContext.Consumer>
                     {({ closeModal }) => (
-                      <CreateChannelFormContainer
+                      <CreateDmMembershipFormContainer
                         // memberId={memberId}
                         closeModal={closeModal}
                       />

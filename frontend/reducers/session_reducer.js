@@ -1,3 +1,4 @@
+
 import { RECEIVE_CURRENT_MEMBER, LOGOUT_CURRENT_MEMBER } from "../actions/session_actions";
 
 const default_state = {
