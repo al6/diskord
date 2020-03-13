@@ -1,9 +1,11 @@
-export const createDmMembership = dm_membership =>
-  $.ajax({
+export const createDmMembership = dm_membership => {
+  console.log(dm_membership);
+  return $.ajax({
     method: "POST",
     url: "/api/dm_memberships",
-    dm_membership
+    data: { dm_membership }
   });
+};
 
 export const fetchMemberships = () =>
   $.ajax({

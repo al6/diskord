@@ -10,7 +10,8 @@ const mapStateToProps = (state, ownProps) => {
   return {
     currentUsername: state.entities.members[state.session.id].username,
     currentMemberId: state.session.id,
-    channels: state.entities.channels
+    channels: state.entities.channels,
+    dms: state.entities.dms
   };
 };
 

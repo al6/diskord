@@ -1,2 +1,3 @@
-json.set! :id, @dm_membership.channel.id, :name, @dm_membership.second_member.username
+json.set! :id, @dm_membership.channel_id
+json.set! :name, @dm_membership.second_member.username
 

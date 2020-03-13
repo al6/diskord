@@ -7,14 +7,16 @@ class CreateDmMembershipForm extends React.Component {
     this.handleCreateChannel = this.handleCreateChannel.bind(this);
     this.update = this.update.bind(this);
     this.state = {
-      channel_id: null,
-      first_member_id: this.props.currentMemberId,
-      second_member_id: null
+      second_member_email: "",
+      body: ""
     };
   }
 
   componentDidUpdate(previousProps) {
-    if (previousProps.channels !== this.props.channels) {
+    if (previousProps.dms !== this.props.dms) {
+      this.props.history.push(
+        `/channels/@me/${this.props.dms[this.props.dms.length - 1].id}`
+      );
       this.props.closeModal();
     }
   }
@@ -24,8 +26,8 @@ class CreateDmMembershipForm extends React.Component {
     this.props.createDmMembership(this.state);
   }
 
-  update() {
-    return e => this.setState({ name: e.currentTarget.value });
+  update(field) {
+    return e => this.setState({ [field]: e.currentTarget.value });
   }
 
   render() {
@@ -34,26 +36,28 @@ class CreateDmMembershipForm extends React.Component {
       <div className="create-channel-form">
         <div className="create-channel-form-headers">
           <div className="create-channel-form-header-main">
-            SEARCH FOR USERNAME
+            SEARCH FOR MEMBER BY EMAIL
           </div>
           <div className="create-channel-form-header-sub">
             Note: Case sensitive
           </div>
         </div>
         <div className="channel-form-input-container">
-          <div className="form-input-label">Username to send message to</div>
+          <div className="form-input-label">
+            Email of member to send message to
+          </div>
           <input
-            value={this.state.name}
-            onChange={this.update()}
-            type="text"
+            value={this.state.second_member_email}
+            onChange={this.update("second_member_email")}
+            type="email"
             className="form-input"
           />
         </div>
         <div className="channel-form-input-container">
           <div className="form-input-label">Message</div>
           <input
-            value={this.state.name}
-            onChange={this.update()}
+            value={this.state.body}
+            onChange={this.update("body")}
             type="text"
             className="form-input"
           />

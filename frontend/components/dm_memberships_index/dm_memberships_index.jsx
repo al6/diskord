@@ -9,8 +9,8 @@ class DmMembershipsIndex extends React.Component {
   }
 
   componentDidUpdate(previousProps) {
-    const { channels, fetchDmMemberships, subscribe } = this.props;
-    if (previousProps.channels.length !== channels.length) {
+    const { dms, fetchDmMemberships, subscribe } = this.props;
+    if (previousProps.dms.length !== dms.length) {
       fetchDmMemberships();
       //   subscribe(guildId);
     }
@@ -24,17 +24,12 @@ class DmMembershipsIndex extends React.Component {
 
   componentDidMount() {
     const { fetchDmMemberships, guildId, subscribe } = this.props;
-    fetchDmMemberships();
+    // fetchDmMemberships();
     //   subscribe(guildId);
   }
 
   render() {
-    const {
-      logout,
-      currentUsername,
-      currentMemberId,
-      channels = []
-    } = this.props;
+    const { logout, currentUsername, currentMemberId, dms = [] } = this.props;
     return (
       <div className="guild-channels-index">
         <div className="create-channel-container">
@@ -61,7 +56,7 @@ class DmMembershipsIndex extends React.Component {
               </Modal>
             </span>
           </div>
-          {channels.map(channel => (
+          {dms.map(channel => (
             <Link
               className={`channel-index-link ${
                 `${channel.id}` === this.props.match.params.channelId
