@@ -5,6 +5,8 @@ import { removeErrors } from "../../actions/session_actions";
 
 const mapStateToProps = (state, ownProps) => {
   return {
+    currentMemberId: state.session.id,
+    channels: state.entities.channels,
     closeModal: ownProps.closeModal,
     guildId: ownProps.guildId,
     errors: state.session.errors

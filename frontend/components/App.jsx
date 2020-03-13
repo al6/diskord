@@ -10,6 +10,7 @@ import ChannelMessagesIndexContainer from "./channel_messages_index/channel_mess
 import GuildMembersIndexContainer from "./guild_members_index/guild_members_index_container";
 import DmMembershipsIndexContainer from "./dm_memberships_index/dm_memberships_index_container";
 import DmChannelMessagesIndexContainer from "./dm_channel_messages_index/dm_channel_messages_index_container";
+
 const App = () => (
   <div className="app-container">
     <ProtectedRoute
@@ -20,18 +21,22 @@ const App = () => (
       path={["/channels/:guildId/:channelId", "/channels/:guildId"]}
       component={props => {
         if (props.match.params.guildId === "@me") {
-          return <DmMembershipsIndexContainer />;
+          return <DmMembershipsIndexContainer {...props} />;
         }
         return <GuildChannelsIndexContainer {...props} />;
       }}
     />
     <ProtectedRoute
       path="/channels/:guildId/:channelId"
-      component={ChannelMessagesIndexContainer}
+      component={props => {
+        if (props.match.params.guildId === "@me") {
+          return <DmChannelMessagesIndexContainer {...props} />;
+        }
+        return <ChannelMessagesIndexContainer {...props} />;
+      }}
     />
     <ProtectedRoute
       path="/channels/:guildId/:channelId"
-      // component={GuildMembersIndexContainer}
       component={props => {
         if (props.match.params.guildId === "@me") {
           return <div></div>;

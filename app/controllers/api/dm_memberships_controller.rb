@@ -1,5 +1,6 @@
 class Api::DmMembershipsController < ApplicationController
   def create
+    
     @dm_membership = DmMembership.new(dm_membership_params)
     if @dm_membership.save
       render :show

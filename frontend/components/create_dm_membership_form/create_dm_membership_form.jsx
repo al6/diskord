@@ -7,14 +7,21 @@ class CreateDmMembershipForm extends React.Component {
     this.handleCreateChannel = this.handleCreateChannel.bind(this);
     this.update = this.update.bind(this);
     this.state = {
-      name: "",
-      guild_id: Number.parseInt(props.guildId)
+      channel_id: null,
+      first_member_id: this.props.currentMemberId,
+      second_member_id: null
     };
+  }
+
+  componentDidUpdate(previousProps) {
+    if (previousProps.channels !== this.props.channels) {
+      this.props.closeModal();
+    }
   }
 
   handleCreateChannel(e) {
     e.preventDefault();
-    this.props.createChannel(this.state);
+    this.props.createDmMembership(this.state);
   }
 
   update() {
@@ -27,12 +34,23 @@ class CreateDmMembershipForm extends React.Component {
       <div className="create-channel-form">
         <div className="create-channel-form-headers">
           <div className="create-channel-form-header-main">
-            CREATE TEXT CHANNEL
+            SEARCH FOR USERNAME
           </div>
-          <div className="create-channel-form-header-sub">in Text Channels</div>
+          <div className="create-channel-form-header-sub">
+            Note: Case sensitive
+          </div>
         </div>
         <div className="channel-form-input-container">
-          <div className="form-input-label">CHANNEL NAME</div>
+          <div className="form-input-label">Username to send message to</div>
+          <input
+            value={this.state.name}
+            onChange={this.update()}
+            type="text"
+            className="form-input"
+          />
+        </div>
+        <div className="channel-form-input-container">
+          <div className="form-input-label">Message</div>
           <input
             value={this.state.name}
             onChange={this.update()}
@@ -41,7 +59,7 @@ class CreateDmMembershipForm extends React.Component {
           />
         </div>
         <div className="channel-privacy">
-          Channels are public for now so be careful!
+          Direct Messages are public for now so be careful!
         </div>
         <div className="channel-form-footer">
           <div className="channel-form-buttons-container">
@@ -51,11 +69,10 @@ class CreateDmMembershipForm extends React.Component {
             <Button
               onClick={e => {
                 this.handleCreateChannel(e);
-                closeModal();
               }}
               color="blue"
             >
-              Create Channel
+              Send Message
             </Button>
           </div>
         </div>
