@@ -12,19 +12,18 @@ class DmMembershipsIndex extends React.Component {
     const { dms, fetchDmMemberships, subscribe } = this.props;
     if (previousProps.dms.length !== dms.length) {
       fetchDmMemberships();
+
       //   subscribe(guildId);
     }
-    if (
-      get(previousProps, "channels", []).length === 0 &&
-      this.props.channels.length > 0
-    ) {
-      this.props.history.push(`/channels/@me/${this.props.channels[0].id}`);
+    if (get(previousProps, "dms", []).length === 0 && dms.length > 0) {
+      this.props.history.push(`/channels/@me/${dms[0].id}`);
     }
   }
 
   componentDidMount() {
     const { fetchDmMemberships, guildId, subscribe } = this.props;
-    // fetchDmMemberships();
+    fetchDmMemberships();
+    
     //   subscribe(guildId);
   }
 
@@ -64,7 +63,7 @@ class DmMembershipsIndex extends React.Component {
                   : ""
               }`}
               key={`channel-${channel.id}`}
-              to={`/channels/@me/${channel.id}`}
+              to={channel ? `/channels/@me/${channel.id}` : `/channels/@me/`}
             >
               <svg
                 className="channels-index-hashtag"

@@ -15,14 +15,14 @@ class GuildMembershipsIndex extends React.Component {
   }
 
   render() {
-    const { guilds } = this.props;
+    const { guilds, firstDm = { id: 0 } } = this.props;
     return (
       <div className="guild_memberships_index">
         <Link
           className={`guild-membership ${
             this.props.match.params.guildId === `@me` ? "guild-link-active" : ""
           }`}
-          to={`/channels/@me`}
+          to={`/channels/@me/${firstDm.id}`}
         >
           <img
             className="placeholder-logo-home"

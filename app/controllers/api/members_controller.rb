@@ -17,12 +17,12 @@ class Api::MembersController < ApplicationController
     if current_member
       @dm_memberships = DmMembership.where(first_member_id: current_member.id).or(DmMembership.where(second_member_id: current_member.id))
       if @dm_memberships.empty?
-        render json: ["No dms found!"]
+        render json: ["No dms found!"], status: 400
       else
         render :dms
       end
     else
-      render json: ["No current member!"]
+      render json: ["No current member!"], status: 400
     end
   end
 

@@ -5,6 +5,7 @@ class Api::MessagesController < ApplicationController
       message_payload = {
         id: @message.id,
         body: @message.body,
+        author: @message.author,
         author_id: @message.author_id,
         channel_id: @message.channel_id,
         created_at: @message.created_at,

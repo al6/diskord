@@ -16,9 +16,6 @@ const dmsReducer = (state = [], action) => {
         return newState.concat(action.dm);
       }
     case RECEIVE_DM_MEMBERSHIP:
-      // if (state.find(channel => channel.id === action.channel.id)) {
-      //   return state;
-      // }
       newState = JSON.parse(JSON.stringify(state));
       return newState.concat(action.dm_membership);
     case RECEIVE_DM_MEMBERSHIPS:

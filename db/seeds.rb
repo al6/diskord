@@ -4,9 +4,9 @@ GuildMembership.delete_all
 
 require 'open-uri'
 
+albert = Member.create!(email: "albert@a.com", username: "albert", password: "hunter2")
 dommy  = Member.create!(email: "dt@a.com", username: "dommy tuek", password: "hunter2")
 zalvin = Member.create!(email: "zalvin@a.com", username: "zalvin ablan", password: "hunter2")
-albert = Member.create!(email: "albert@a.com", username: "albert", password: "hunter2")
 tjfan  = Member.create!(email: "tjfan@a.com", username: "trader joes fanatic", password: "hunter2")
 
 aA     = Guild.create!(name: "App Academy", owner_id: dommy.id)
@@ -17,7 +17,8 @@ nyc    = Guild.create(name: "New York City", owner_id: albert.id)
 sf    = Guild.create(name: "San Francisco", owner_id: albert.id)
 tjs  = Guild.create!(name: "Trader Joes Worshippers", owner_id: tjfan.id)
 
-# dm = DmMembership.create(first_member_email: "albert@a.com", second_member_email: "dt@a.com", body: "Hello!")
+dm_membership = DmMembership.create(first_member_id: albert.id, second_member_id: dommy.id)
+message = Message.create(author_id: albert.id, channel_id: dm_membership.channel_id, body: "Thanks for checking out my project! :)")
 
 aA_emblem = File.open('app/assets/images/aalogo.png')
 aA.emblem.attach(io: aA_emblem, filename: 'aalogo.png')
