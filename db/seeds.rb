@@ -18,7 +18,7 @@ sf    = Guild.create!(name: "San Francisco", owner_id: albert.id)
 tjs  = Guild.create!(name: "Trader Joes Worshippers", owner_id: tjfan.id)
 
 dm_membership = DmMembership.create(first_member_id: albert.id, second_member_id: dommy.id)
-message = Message.create(author_id: albert.id, channel_id: dm_membership.channel_id, body: "Thanks for checking out my project! :)")
+message = Message.create(author_id: albert.id, channel_id: dm_membership.channel_id, body: "Thanks for checking out my project!")
 welcome_gif = File.open('app/assets/images/welcome.gif')
 message.image.attach(io: welcome_gif, filename: 'welcome.gif')
 
