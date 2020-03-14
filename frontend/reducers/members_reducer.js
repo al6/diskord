@@ -10,10 +10,7 @@ const membersReducer = (state = {}, action) => {
     case RECEIVE_GUILD_MEMBER:
       return Object.assign({}, state, { [action.member.id]: action.member });
     case RECEIVE_DM_MEMBERSHIP:
-      const { members } = action.dm;
-      const memberObj = {};
-      members.forEach(member => memberObj[member.id] = member);
-      return Object.assign({}, state, memberObj);
+      return Object.assign({}, state, action.dm_membership);
     case RECEIVE_GUILD_MEMBERS:
       return action.guild_members;
     default:
