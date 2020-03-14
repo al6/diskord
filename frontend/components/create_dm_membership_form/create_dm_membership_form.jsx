@@ -44,7 +44,7 @@ class CreateDmMembershipForm extends React.Component {
         </div>
         <div className="channel-form-input-container">
           <div className="form-input-label">
-            Email of member to send message to. Try albert@a.com or tjfan@a.com.
+            Email of member to send message to. Try zalvin@a.com or tjfan@a.com.
           </div>
           <input
             value={this.state.second_member_email}

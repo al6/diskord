@@ -9,7 +9,8 @@ class Api::MessagesController < ApplicationController
         author_id: @message.author_id,
         channel_id: @message.channel_id,
         created_at: @message.created_at,
-        updated_at: @message.updated_at
+        updated_at: @message.updated_at,
+        username: @message.author.username
       }
       
       if @message.image.attached?

@@ -1,10 +1,10 @@
 import { connect } from "react-redux";
-import DmChannelMessagesIndexContainer from "./dm_channel_messages_index";
 import {
   createMessage,
   fetchMessages,
   receiveMessage
 } from "../../actions/message_actions";
+import DmChannelMessagesIndexContainer from "./dm_channel_messages_index";
 
 let subscription;
 
@@ -30,10 +30,11 @@ const mapStateToProps = (state, ownProps) => {
     return message;
   });
   const currentMemberId = state.session.id;
-  const channel = state.entities.channels.find(
+  const channel = state.entities.dms.find(
     channel => channel.id === Number.parseInt(channelId)
   );
   return {
+    dms: state.entities.dms,
     guildId: Number.parseInt(guildId),
     channelId: Number.parseInt(channelId),
     channel,
