@@ -177,18 +177,32 @@
   height: 100%;
 }
 
-.welcome-to-channel {
+.welcome-to-channel, .welcome-to-dm-channel {
   color: #b9bbbe;
-  min-width: 23rem;
-  padding-top: 3rem;
+  padding: 1rem;
   padding-left: 1rem;
-  position: absolute;
+  position: relative;
   margin-left: 0.5rem;
 }
 
 .welcome-to-channel-img-left,
 .welcome-to-channel-img-right {
   max-height: 5rem;
+  display: none;
+}
+
+@media (min-width: 1030px) {
+  .welcome-to-channel-img-left, .welcome-to-channel-img-right {
+    display: block;
+  }
+
+  .welcome-to-channel {
+  color: #b9bbbe;
+  padding-top: 3rem;
+  padding-left: 1rem;
+  position: absolute;
+  margin: 0 0.5rem;
+  }
 }
 
 .message-image {
