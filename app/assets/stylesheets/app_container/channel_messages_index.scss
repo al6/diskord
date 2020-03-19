@@ -63,7 +63,7 @@
 .channel-messages-index-main {
   border-top: 1px solid #2c2c32;
   max-width: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
   width: 100%;
   height: 100%;
   padding-bottom: 1rem;
@@ -227,4 +227,18 @@
   right: 0;
   text-align: right;
   top: 0;
+}
+
+
+::-webkit-scrollbar {
+  width: 1em;
+}
+ 
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
 }
