@@ -38,11 +38,11 @@
   min-width: 3rem;
   max-width: 3rem;
   margin-bottom: 0.5rem;
-  transition: 1s;
+  transition: .15s;
   &:hover {
     background-color: #7189da;
     border-radius: 1rem;
-    transition: 0.5s;
+    transition: 0.15s;
   }
   overflow: hidden;
 }
@@ -61,13 +61,13 @@
 .hover-green-transition {
   background-color: #37383f;
   color: #43b581;
-  transition: 1s;
+  transition: .15s;
 }
 
 .hover-green-transition:hover {
   background-color: #43b581;
   color: white;
-  transition: 0.5s;
+  transition: 0.15s;
 }
 
 .placeholder-logo-home {
