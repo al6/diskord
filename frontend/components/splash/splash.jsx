@@ -19,7 +19,6 @@ class Splash extends React.Component {
         <div className="splash-container">
           <nav className="splash-nav">
             <div className="left-splash-nav">
-              {/* <img className="diskord-logo" src={diskordLogo}/> */}
               <a
                 href="http://github.com/al6/diskord"
                 className="splash-nav-item"
@@ -41,7 +40,7 @@ class Splash extends React.Component {
                     src="https://diskord-pro.s3.amazonaws.com/linkedin.svg"
                   />
                 </a>
-                <a href="https://angel.co/">
+                <a href="https://angel.co/albertlee">
                   <img
                     className="angellist-button"
                     src="https://diskord-pro.s3.amazonaws.com/angellist.png"
