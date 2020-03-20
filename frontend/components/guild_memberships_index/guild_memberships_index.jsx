@@ -31,11 +31,15 @@ class GuildMembershipsIndex extends React.Component {
         </Link>
         {guilds.map(guild => (
           <Link
-            className={`guild-membership guild-index-name ${
-              this.props.match.params.guildId === `${guild.id}`
-                ? "guild-link-active"
-                : ""
-            }`}
+            className={
+              guild.emblem
+                ? `guild-membership guild-index-name remove-blue-hover`
+                : `guild-membership guild-index-name ${
+                    this.props.match.params.guildId === `${guild.id}`
+                      ? "guild-link-active"
+                      : ""
+                  }`
+            }
             key={`guild-${guild.id}`}
             to={`/channels/${guild.id}/${guild.initial_channel}`}
           >

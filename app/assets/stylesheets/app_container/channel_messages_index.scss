@@ -90,7 +90,7 @@
   color: #dcddde;
   font-size: 1rem;
   font-weight: 300;
-  width: 100%;
+  // width: 100%;
   margin: 0.5rem;
 }
 
@@ -122,19 +122,28 @@
 }
 
 .message-index-width {
+  max-width: 500rem;
+  min-width: 100%;
+
   &:hover {
     background-color: #2f3036;
   }
+}
+
+.embedded-message-link {
+  color: blue;
+  font-weight: 400;
+  mix-blend-mode: difference;
 }
 
 .message-width-container {
   display: flex;
   min-height: 3rem;
   margin: 1rem;
+  width: 100%;
 }
 
 .message-container {
-  // align-items: center;
   display: flex;
   justify-content: space-evenly;
 }
@@ -177,7 +186,8 @@
   height: 100%;
 }
 
-.welcome-to-channel, .welcome-to-dm-channel {
+.welcome-to-channel,
+.welcome-to-dm-channel {
   color: #b9bbbe;
   padding: 1rem;
   padding-left: 1rem;
@@ -192,16 +202,17 @@
 }
 
 @media (min-width: 1030px) {
-  .welcome-to-channel-img-left, .welcome-to-channel-img-right {
+  .welcome-to-channel-img-left,
+  .welcome-to-channel-img-right {
     display: block;
   }
 
   .welcome-to-channel {
-  color: #b9bbbe;
-  padding-top: 3rem;
-  padding-left: 1rem;
-  position: absolute;
-  margin: 0 0.5rem;
+    color: #b9bbbe;
+    padding-top: 3rem;
+    padding-left: 1rem;
+    position: absolute;
+    margin: 0 0.5rem;
   }
 }
 
@@ -243,15 +254,14 @@
   top: 0;
 }
 
-
 ::-webkit-scrollbar {
   width: 1em;
 }
- 
+
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
- 
+
 ::-webkit-scrollbar-thumb {
   background-color: darkgrey;
   outline: 1px solid slategrey;

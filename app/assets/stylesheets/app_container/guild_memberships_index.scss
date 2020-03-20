@@ -38,13 +38,19 @@
   min-width: 3rem;
   max-width: 3rem;
   margin-bottom: 0.5rem;
-  transition: .15s;
+  transition: 0.15s;
   &:hover {
     background-color: #7189da;
     border-radius: 1rem;
     transition: 0.15s;
   }
   overflow: hidden;
+}
+
+.remove-blue-hover {
+  &:hover {
+    background-color: #37383f;
+  }
 }
 
 .guild-index-name {
@@ -61,7 +67,7 @@
 .hover-green-transition {
   background-color: #37383f;
   color: #43b581;
-  transition: .15s;
+  transition: 0.15s;
 }
 
 .hover-green-transition:hover {

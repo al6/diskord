@@ -127,7 +127,19 @@ class DmChannelMessagesIndex extends React.Component {
                             .join(" ")}
                         </span>
                       </div>
-                      <div className="message-body">{message.body} </div>
+                      <div className="message-body">
+                        {message.body.split(" ").map(word => {
+                          if (word.slice(0, 8) === "https://") {
+                            return (
+                              <a className="embedded-message-link" href={word}>
+                                {word + " "}
+                              </a>
+                            );
+                          } else {
+                            return word + " ";
+                          }
+                        })}{" "}
+                      </div>
                       <img className="message-image" src={message.image} />
                     </div>
                   </div>
