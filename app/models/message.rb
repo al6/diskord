@@ -1,6 +1,6 @@
 class Message < ApplicationRecord
   validates :body, :author_id, :channel_id, presence: true
-  validates :body, length: {maximum: 100}
+  validates :body, length: {maximum: 150}
   validate :image_validation
   has_one_attached :image
 
