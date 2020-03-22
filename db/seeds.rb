@@ -18,9 +18,18 @@ sf    = Guild.create!(name: "San Francisco", owner_id: albert.id)
 tjs  = Guild.create!(name: "Trader Joes Worshippers", owner_id: tjfan.id)
 
 dm_membership = DmMembership.create(first_member_id: albert.id, second_member_id: dommy.id)
-message = Message.create(author_id: albert.id, channel_id: dm_membership.channel_id, body: "Thanks for checking out my project!")
+
+welcome_message = Message.create(author_id: albert.id, channel_id: dm_membership.channel_id, body: "Thanks for checking out my project!")
 welcome_gif = File.open('app/assets/images/welcome.gif')
-message.image.attach(io: welcome_gif, filename: 'welcome.gif')
+welcome_message.image.attach(io: welcome_gif, filename: 'welcome.gif')
+
+space_demo_message = Message.create(author_id: albert.id, channel_id: dm_membership.channel_id, body: "https://albertlee.io/space-blasters Checkout this game if you like Star Wars (and even if you don't)")
+sb_gif = File.open('app/assets/images/space_blasters.gif')
+space_demo_message.image.attach(io: sb_gif, filename: 'space_blasters.gif')
+
+dash_demo_message = Message.create(author_id: albert.id, channel_id: dm_membership.channel_id, body: "https://themorningdash.herokuapp.com Get your weather, commute, and calendar in once place here")
+dash_image = File.open('app/assets/images/tmd_teaser.png')
+dash_demo_message.image.attach(io: dash_image, filename: 'tmd_teaser.png')
 
 aA_emblem = File.open('app/assets/images/aalogo.png')
 aA.emblem.attach(io: aA_emblem, filename: 'aalogo.png')
