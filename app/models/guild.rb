@@ -16,7 +16,7 @@ class Guild < ApplicationRecord
 
   def emblem_validation
     if emblem.attached?
-      if emblem.blob.byte_size > 1000000
+      if emblem.blob.byte_size > 10000000
         emblem.purge
         render json: ["Image too big"], status: 400
       end
