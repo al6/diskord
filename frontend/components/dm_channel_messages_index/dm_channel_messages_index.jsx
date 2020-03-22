@@ -1,5 +1,25 @@
 import React from "react";
 import get from "lodash/get";
+
+export function Attachment({ attachment = "" }) {
+  if (
+    attachment.indexOf(".png") > 0 ||
+    attachment.indexOf(".gif") > 0 ||
+    attachment.indexOf(".jpg") > 0 ||
+    attachment.indexOf(".jpeg") > 0
+  ) {
+    return <img className="message-image" src={attachment} />;
+  } else if (attachment.indexOf(".pdf") > 0) {
+    return (
+      <embed
+        key={attachment.id}
+        src={attachment}
+        type="application/pdf"
+      ></embed>
+    );
+  }
+  return null;
+}
 class DmChannelMessagesIndex extends React.Component {
   constructor(props) {
     super(props);
@@ -131,16 +151,20 @@ class DmChannelMessagesIndex extends React.Component {
                         {message.body.split(" ").map(word => {
                           if (word.slice(0, 8) === "https://") {
                             return (
-                              <a className="embedded-message-link" href={word}>
+                              <a
+                                key={word}
+                                className="embedded-message-link"
+                                href={word}
+                              >
                                 {word + " "}
                               </a>
                             );
                           } else {
                             return word + " ";
                           }
-                        })}{" "}
+                        })}
                       </div>
-                      <img className="message-image" src={message.image} />
+                      <Attachment attachment={message.image} />
                     </div>
                   </div>
                 </div>
