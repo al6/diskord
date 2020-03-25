@@ -29,7 +29,7 @@ class Member < ApplicationRecord
       welcome_gif = File.open('app/assets/images/welcome.gif')
       welcome_message.image.attach(io: welcome_gif, filename: 'welcome.gif')
 
-      resume_message = Message.create!(author_id: albert.id, channel_id: dm_membership.channel_id, body: "https://albertlee.io Here's my personal site and resume in case you want fast access")
+      resume_message = Message.create!(author_id: albert.id, channel_id: dm_membership.channel_id, body: "https://albertlee.io Here's my site and resume in case you want fast access")
       resume_image = File.open('app/assets/images/resume.pdf')
       resume_message.image.attach(io: resume_image, filename: 'resume.pdf')
 
