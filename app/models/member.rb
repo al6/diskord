@@ -29,10 +29,7 @@ class Member < ApplicationRecord
       welcome_gif = File.open('app/assets/images/welcome.gif')
       welcome_message.image.attach(io: welcome_gif, filename: 'welcome.gif')
 
-      resume_message = Message.create!(author_id: albert.id, channel_id: dm_membership.channel_id, body: "https://albertlee.io Here's my site and resume in case you want fast access")
-      resume_image = File.open('app/assets/images/resume.pdf')
-      resume_message.image.attach(io: resume_image, filename: 'resume.pdf')
-
+      resume_message = Message.create!(author_id: albert.id, channel_id: dm_membership.channel_id, body: " Here's my site https://albertlee.io and resume https://albertlee.io/images/resume.pdf")
 
       space_demo_message = Message.create!(author_id: albert.id, channel_id: dm_membership.channel_id, body: "https://albertlee.io/space-blasters Check out this game if you like Star Wars")
       sb_gif = File.open('app/assets/images/space_blasters.gif')
