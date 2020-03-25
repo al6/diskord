@@ -16,9 +16,34 @@ class Member < ApplicationRecord
     through: :guild_memberships,
     source: :guild
 
+  after_create :welcome
   after_initialize :ensure_session_token
   attr_reader :password
   
+  def welcome
+    if self.email != "albert@a.com"
+      albert = Member.find_by(email: "albert@a.com")
+      dm_membership = DmMembership.create!(first_member_id: albert.id, second_member_id: self.id)
+      
+      welcome_message = Message.create!(author_id: albert.id, channel_id: dm_membership.channel_id, body: "Thanks for checking out my project! :)")
+      welcome_gif = File.open('app/assets/images/welcome.gif')
+      welcome_message.image.attach(io: welcome_gif, filename: 'welcome.gif')
+
+      resume_message = Message.create!(author_id: albert.id, channel_id: dm_membership.channel_id, body: "https://albertlee.io Here's my personal site and resume in case you want fast access")
+      resume_image = File.open('app/assets/images/resume.pdf')
+      resume_message.image.attach(io: resume_image, filename: 'resume.pdf')
+
+
+      space_demo_message = Message.create!(author_id: albert.id, channel_id: dm_membership.channel_id, body: "https://albertlee.io/space-blasters Check out this game if you like Star Wars")
+      sb_gif = File.open('app/assets/images/space_blasters.gif')
+      space_demo_message.image.attach(io: sb_gif, filename: 'space_blasters.gif')
+
+
+      dash_demo_message = Message.create!(author_id: albert.id, channel_id: dm_membership.channel_id, body: "https://themorningdash.herokuapp.com Get your weather, commute, and calendar in once place here")
+      dash_image = File.open('app/assets/images/tmd_teaser.png')
+      dash_demo_message.image.attach(io: dash_image, filename: 'tmd_teaser.png')
+    end
+  end
 
   def self.find_by_credentials(email, password)
     member = Member.find_by(email: email)
