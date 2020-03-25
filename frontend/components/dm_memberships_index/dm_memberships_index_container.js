@@ -14,7 +14,6 @@ function subscribeToOwnDms(memberId, dispatch) {
     { channel: "DmChannel", memberId: memberId },
     {
       received: data => {
-        console.log(data);
         dispatch(data);
       }
     }
