@@ -18,6 +18,11 @@ class DmMembership < ApplicationRecord
   def create_dm_channel
     new_channel = Channel.create(name: self.second_member.username)
     self.update(channel_id: new_channel.id)
+    new_channel.name = self.first_member.username
+    redux_action = {
+      type: "RECEIVE_DM",
+      channel: new_channel.as_json
+    }
+    DmChannel.send_data("member_#{new_channel.second_members.first.id}", redux_action.as_json)
   end
 end
-

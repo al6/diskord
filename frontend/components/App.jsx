@@ -10,6 +10,7 @@ import ChannelMessagesIndexContainer from "./channel_messages_index/channel_mess
 import GuildMembersIndexContainer from "./guild_members_index/guild_members_index_container";
 import DmMembershipsIndexContainer from "./dm_memberships_index/dm_memberships_index_container";
 import DmChannelMessagesIndexContainer from "./dm_channel_messages_index/dm_channel_messages_index_container";
+import PlaceHolder from "./dm_channel_messages_index/placeholder";
 
 const App = () => (
   <div className="app-container">
@@ -18,30 +19,21 @@ const App = () => (
       component={GuildMembershipsIndexContainer}
     />
     <ProtectedRoute
-      exact
-      path="/channels/:guildId/"
-      component={props => {
-        if (props.match.params.guildId === "@me") {
-          return <DmMembershipsIndexContainer {...props} />;
-        }
-      }}
-    />
-    <ProtectedRoute
-      exact
-      path="/channels/:guildId/"
-      component={props => {
-        if (props.match.params.guildId === "@me") {
-          return <DmChannelMessagesIndexContainer {...props} />;
-        }
-      }}
-    />
-    <ProtectedRoute
       path={["/channels/:guildId/:channelId", "/channels/:guildId"]}
       component={props => {
         if (props.match.params.guildId === "@me") {
           return <DmMembershipsIndexContainer {...props} />;
         }
         return <GuildChannelsIndexContainer {...props} />;
+      }}
+    />
+    <ProtectedRoute
+      exact
+      path="/channels/:guildId/"
+      component={props => {
+        if (props.match.params.guildId === "@me") {
+          return <PlaceHolder />;
+        }
       }}
     />
     <ProtectedRoute

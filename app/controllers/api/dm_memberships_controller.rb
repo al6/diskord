@@ -1,10 +1,10 @@
 class Api::DmMembershipsController < ApplicationController
   def create
-    second_member_id = Member.find_by(email: params["dm_membership"]["second_member_email"]).id
-    if second_member_id.nil?
+    second_member = Member.find_by(email: params["dm_membership"]["second_member_email"])
+    if second_member.nil?
       render json: ["That email doesn't exist"], status: 400
     else
-      payload = {first_member_id: current_member.id, second_member_id: second_member_id}
+      payload = {first_member_id: current_member.id, second_member_id: second_member.id}
       @dm_membership = DmMembership.new(payload)
       if @dm_membership.save
         message = Message.new(author_id: current_member.id, channel_id: @dm_membership.channel_id, body: params["dm_membership"]["body"])

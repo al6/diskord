@@ -7,3 +7,28 @@
     cursor: pointer;
   }
 }
+
+.avatar-background {
+  background-color: grey;
+  border-radius: 2rem;
+  max-height: 2rem;
+  max-width: 2rem;
+  margin: 0 1rem;
+}
+.avatar-placeholder {
+  max-height: 4rem;
+  position: relative;
+  right: 16px;
+  bottom: 16px;
+}
+
+.dm-index-link {
+  align-items: center;
+  border-radius: 0.25rem;
+  display: flex;
+  font-size: 0.9rem;
+  height: 2rem;
+  width: 90%;
+  margin: 0.5rem auto;
+  margin-top: 3px;
+}

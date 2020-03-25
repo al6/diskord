@@ -1,10 +1,25 @@
+import { logout } from "../../actions/session_actions";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
-import DmMembershipsIndex from "./dm_memberships_index";
-import { logout } from "../../actions/session_actions";
-import { fetchChannels } from "../../actions/channel_actions";
-import { fetchGuildMembers } from "../../actions/guild_membership_actions";
 import { fetchDmMemberships } from "../../actions/dm_membership_actions";
+import DmMembershipsIndex from "./dm_memberships_index";
+
+let subscription;
+
+function subscribeToOwnDms(memberId, dispatch) {
+  if (subscription) {
+    subscription = subscription.unsubscribe();
+  }
+  subscription = App.cable.subscriptions.create(
+    { channel: "DmChannel", memberId: memberId },
+    {
+      received: data => {
+        console.log(data);
+        dispatch(data);
+      }
+    }
+  );
+}
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -16,10 +31,9 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  logout: () => dispatch(logout()),
-  fetchChannels: guildId => dispatch(fetchChannels(guildId)),
-  fetchGuildMembers: guildId => dispatch(fetchGuildMembers(guildId)),
-  fetchDmMemberships: () => dispatch(fetchDmMemberships())
+  subscribe: memberId => subscribeToOwnDms(memberId, dispatch),
+  fetchDmMemberships: () => dispatch(fetchDmMemberships()),
+  logout: () => dispatch(logout())
 });
 
 export default withRouter(
