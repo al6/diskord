@@ -8,11 +8,22 @@ export function Attachment({ attachment = "" }) {
     attachment.indexOf(".jpg") > 0 ||
     attachment.indexOf(".jpeg") > 0
   ) {
-    return <img className="message-image" src={attachment} />;
+    return (
+      <img
+        key={
+          attachment.path ? attachment.path.slice(18, this.length - 4) : null
+        }
+        className="message-image"
+        src={attachment}
+      />
+    );
   } else if (attachment.indexOf(".pdf") > 0) {
     return (
       <embed
-        key={attachment.id}
+        key={
+          attachment.path ? attachment.path.slice(18, this.length - 4) : null
+        }
+        className="resume-embed"
         src={attachment}
         type="application/pdf"
       ></embed>
@@ -155,6 +166,7 @@ class DmChannelMessagesIndex extends React.Component {
                                 key={word}
                                 className="embedded-message-link"
                                 href={word}
+                                target="_blank"
                               >
                                 {word + " "}
                               </a>
