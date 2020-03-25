@@ -10,7 +10,7 @@
   min-width: 20rem;
 }
 
-.no-friends {
+.messages-placeholder {
   background-image: url("https://diskord-pro.s3.amazonaws.com/nofriends.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -218,7 +218,7 @@
 
 .message-image {
   margin-left: 1rem;
-  max-width: 15rem;
+  max-width: 20rem;
   width: 100%;
   height: auto;
 }
