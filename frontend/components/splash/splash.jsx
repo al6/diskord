@@ -22,25 +22,30 @@ class Splash extends React.Component {
               <a
                 href="http://github.com/al6/diskord"
                 className="splash-nav-item"
+                target="_blank"
               >
                 Diskord on Github
               </a>
             </div>
             <div className="right-splash-nav">
               <div className="network-buttons">
-                <a href="http://github.com/al6">
+                <a href="http://github.com/al6" target="_blank">
                   <img
                     className="github-button"
                     src="https://diskord-pro.s3.amazonaws.com/github-logo.png"
+                    target="_blank"
                   />
                 </a>
-                <a href="https://www.linkedin.com/in/albertlee3/">
+                <a
+                  href="https://www.linkedin.com/in/albertlee3/"
+                  target="_blank"
+                >
                   <img
                     className="linkedin-button"
                     src="https://diskord-pro.s3.amazonaws.com/linkedin.svg"
                   />
                 </a>
-                <a href="https://angel.co/albertlee">
+                <a href="https://angel.co/albertlee" target="_blank">
                   <img
                     className="angellist-button"
                     src="https://diskord-pro.s3.amazonaws.com/angellist.png"
