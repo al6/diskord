@@ -13,14 +13,14 @@ Diskord was built using React, Redux, Ruby on Rails, ActionCable, Active Storage
 ## Features
 
 ### Members
-* Can join and create guilds
-* Can upload an optional custom guild emblem when creating a guild
-* Can create channels
-* Can create and send messages
-* Can upload an optional custom image file when creating and sending a message
-* Can see currently selected guild's members
-* Can navigate around guilds and channels by clicking corresponding links
-* Can see new channels and messages in real time that another member creates (assuming the member's internet connection does not block port 80 required for this implementation of WebSockets)
+- [x] Can join and create guilds
+- [x] Can upload an optional custom guild emblem when creating a guild
+- [x] Can create channels
+- [x] Can create and send messages
+- [x] Can upload an optional custom image file when creating and sending a message
+- [x] Can see currently selected guild's members
+- [x] Can navigate around guilds and channels by clicking corresponding links
+- [x] Can see new channels and messages in real time that another member creates (assuming the member's internet connection does not block port 80 required for this implementation of WebSockets)
 
 # Action Cable Implementation 
 I wanted to keep my React presentational component as readable and simple as possible, so I chose to compose a function and pass it down with dispatch to that same presentational component. Code related to implementing action cable is shown below.
