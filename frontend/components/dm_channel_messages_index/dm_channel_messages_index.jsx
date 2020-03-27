@@ -195,7 +195,11 @@ class DmChannelMessagesIndex extends React.Component {
           >
             <label className="message-image-upload">
               +
-              <input type="file" onChange={this.handleUpload} />
+              <input
+                class="smaller-input-field"
+                type="file"
+                onChange={this.handleUpload}
+              />
             </label>
 
             <input
