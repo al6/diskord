@@ -25,11 +25,9 @@ class Member < ApplicationRecord
       albert = Member.find_by(email: "albert@a.com")
       dm_membership = DmMembership.create!(first_member_id: albert.id, second_member_id: self.id)
       
-      welcome_message = Message.create!(author_id: albert.id, channel_id: dm_membership.channel_id, body: "Thanks for checking out my project! :)")
+      welcome_message = Message.create!(author_id: albert.id, channel_id: dm_membership.channel_id, body: "Thanks for checking out my project! :) Personal site: https://albertlee.io Resume: https://albertlee.io/images/resume.pdf")
       welcome_gif = File.open('app/assets/images/welcome.gif')
       welcome_message.image.attach(io: welcome_gif, filename: 'welcome.gif')
-
-      resume_message = Message.create!(author_id: albert.id, channel_id: dm_membership.channel_id, body: " Here's my site https://albertlee.io and resume https://albertlee.io/images/resume.pdf")
 
       space_demo_message = Message.create!(author_id: albert.id, channel_id: dm_membership.channel_id, body: "https://albertlee.io/space-blasters Check out this game if you like Star Wars")
       sb_gif = File.open('app/assets/images/space_blasters.gif')
