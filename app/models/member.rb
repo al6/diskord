@@ -25,7 +25,7 @@ class Member < ApplicationRecord
       albert = Member.find_by(email: "albert@a.com")
       dm_membership = DmMembership.create!(first_member_id: albert.id, second_member_id: self.id)
       
-      welcome_message = Message.create!(author_id: albert.id, channel_id: dm_membership.channel_id, body: "Thanks for checking out my project! :) Personal site: https://albertlee.io Resume: https://albertlee.io/images/resume.pdf")
+      welcome_message = Message.create!(author_id: albert.id, channel_id: dm_membership.channel_id, body: "Thanks for checking out my project! :) Personal site: https://albertlee.io Resume: https://albertlee.io/assets/css/images/site-resume.pdf")
       welcome_gif = File.open('app/assets/images/welcome.gif')
       welcome_message.image.attach(io: welcome_gif, filename: 'welcome.gif')
 
