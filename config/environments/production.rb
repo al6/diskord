@@ -47,7 +47,6 @@ Rails.application.configure do
   config.action_cable.allowed_request_origins = ['https://diskord.herokuapp.com']
   config.action_cable.url = "wss://diskord.herokuapp.com/cable"
   # config.action_cable.disable_request_forgery_protection = true
-  # config.web_socket_server_url = "wss://diskord.io/cable" 
 
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
